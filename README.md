@@ -24,11 +24,10 @@
 
   2 - `new_project_name` - Name of the project
 
-**API** - _[POST]_ => `/projects`
+  **API** - _[POST]_ => `/projects`
 
-**Payload :**
-
-`https://docs.gitlab.com/ee/api/projects.html#create-project`
+  **Payload :**
+  `https://docs.gitlab.com/ee/api/projects.html#create-project`
 
 - ```js
   gitlab projects [project_name] update [project_description]
@@ -42,14 +41,13 @@
 
   2 - `project_description` - Descripton of the projects needs to be updated.
 
-**API**: _[PUT]_ => `/projects/:id`
+  **API**: _[PUT]_ => `/projects/:id`
 
-**Payload**:
+  **Payload**:
+  `https://docs.gitlab.com/ee/api/projects.html#edit-project`
 
-`https://docs.gitlab.com/ee/api/projects.html#edit-project`
-
-- ```js
-  gitlab projects [project_name] star
+* ```js
+    gitlab projects [project_name] star
   ```
 
   **Star** a project.
@@ -58,11 +56,8 @@
 
   1 - `project_name` - Name of the project from the dropdown
 
-​ **API:** _[POST]_ => `/projects/:id/star`
-
-​ **Payload** :
-
-​ `https://docs.gitlab.com/ee/api/projects.html#star-a-project`
+  ​ **API:** _[POST]_ => `/projects/:id/star` <br />
+  ​ **Payload** :`https://docs.gitlab.com/ee/api/projects.html#star-a-project`
 
 - ```js
   gitlab projects [project_name] unstar
@@ -74,14 +69,13 @@
 
   1 - `project_name` - Name of the project from the dropdown
 
-**API:** _[POST]_ => `/projects/:id/unstar`
+  **API:** _[POST]_ => `/projects/:id/unstar`
 
-**Payload** :
-
-`https://docs.gitlab.com/ee/api/projects.html#unstar-a-project`
+  **Payload** :
+  `https://docs.gitlab.com/ee/api/projects.html#unstar-a-project`
 
 - ```js
-  gitlab projects [project_name] remove
+    gitlab projects [project_name] remove
   ```
 
   **Remove** a project.
@@ -90,10 +84,9 @@
 
   1 - `project_name` - Name of the project from the dropdown.
 
-​ **API**: _[DELETE]_ => `/projects/:id`
-​ **Payload**:
-
-​ `https://docs.gitlab.com/ee/api/projects.html#remove-project`
+  ​ **API**: _[DELETE]_ => `/projects/:id`
+  ​ **Payload**:
+  ​ `https://docs.gitlab.com/ee/api/projects.html#remove-project`
 
 - ```js
   gitlab projects [project_name]
@@ -120,9 +113,9 @@
 
   1 - `project_name` - Name of the project from the dropdown.
 
-**API:** _[GET]_ => `/projects/:id/repository/branches`
-**Payload:**
-`https://docs.gitlab.com/ee/api/branches.html#list-repository-branches`
+  **API:** _[GET]_ => `/projects/:id/repository/branches` <br/>
+  **Payload:**
+  `https://docs.gitlab.com/ee/api/branches.html#list-repository-branches`
 
 - ```js
   gitlab projects [project_name] branches new [branch_name]
@@ -133,9 +126,9 @@
   1 - `project_name` - Name of the project from the dropdown.
   2 - `branch_name` - New branch name
 
-**API:** _[POST]_ => `/projects/:id/repository/branches`
-**Payload**:
-`https://docs.gitlab.com/ee/api/branches.html#create-repository-branch`
+  **API:** _[POST]_ => `/projects/:id/repository/branches` <br/>
+  **Payload**:
+  `https://docs.gitlab.com/ee/api/branches.html#create-repository-branch`
 
 - ```js
   gitlab projects [project_name] branches [branch_name] delete
@@ -182,7 +175,7 @@
 
   1 - `project_name` - Name of the project from the dropdown.
 
-**API:** _[GET]_ => `/projects/:id/merge_requests`
+  **API:** _[GET]_ => `/projects/:id/merge_requests`
 
 - ```js
   gitlab projects [project_name] merge_requests new [new_merge_request_title]
@@ -212,9 +205,9 @@
   2 - `mr_name` - Name of merge request from dropdown.
   3 - `mr_description` - Description of the merge request.
 
-**API:** **[PUT]** => `/projects/:id/merge_requests/:merge_request_iid`
-**Payload**:
-`https://docs.gitlab.com/ee/api/merge_requests.html#update-mr`
+  **API:** **[PUT]** => `/projects/:id/merge_requests/:merge_request_iid`
+  **Payload**:
+  `https://docs.gitlab.com/ee/api/merge_requests.html#update-mr`
 
 - ```js
   gitlab projects [project_name] merge_requests [mr_name] delete
@@ -294,10 +287,8 @@
 
   4 - `new_updated_note` - updated content of the note
 
-**API:** _[PUT]_ =>`/projects/:id/merge_requests/:merge_request_iid/notes/:note_id`
-**Payload**:
-
-`https://docs.gitlab.com/ee/api/notes.html#modify-existing-merge-request-note`
+  **API:** _[PUT]_ =>`/projects/:id/merge_requests/:merge_request_iid/notes/:note_id` <br />
+  **Payload**:`https://docs.gitlab.com/ee/api/notes.html#modify-existing-merge-request-note`
 
 - ```js
   gitlab projects [project_name] merge_request [mr_name] notes [note] delete
@@ -327,9 +318,9 @@
 
   1 - `project_name` - Name of the project from the dropdown.
 
-**API**: _[GET]_ => `/issues?state=opened`
-**Payload**:
-`https://docs.gitlab.com/ee/api/issues.html#list-issues`
+  **API**: _[GET]_ => `/issues?state=opened`
+  **Payload**:
+  `https://docs.gitlab.com/ee/api/issues.html#list-issues`
 
 - ```js
   gitlab projects [project_name] issues new [issue_name]
@@ -343,10 +334,8 @@
 
   2 - `issue_name` - New issue name
 
-**API**: _[POST]_ => `/projects/:id/issues`
-**Payload:**
-
-`https://docs.gitlab.com/ee/api/issues.html#new-issue`
+  **API**: _[POST]_ => `/projects/:id/issues`
+  **Payload:**`https://docs.gitlab.com/ee/api/issues.html#new-issue`
 
 - ```js
   gitlab projects [project_name] issues [issue_name] update [issue_description]
@@ -431,10 +420,9 @@
 
   4 - `new_updated_note` - updated content of the note
 
-**API:** _[PUT]_ =>`/projects/:id/merge_requests/:merge_request_iid/notes/:note_id`
-**Payload**:
-
-`https://docs.gitlab.com/ee/api/notes.html#modify-existing-merge-request-note`
+  **API:** _[PUT]_ =>`/projects/:id/merge_requests/:merge_request_iid/notes/:note_id` <br/>
+  **Payload**:
+  `https://docs.gitlab.com/ee/api/notes.html#modify-existing-merge-request-note`
 
 - ```js
   gitlab projects [project_name] merge_request [mr_name] notes [note] delete
