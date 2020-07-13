@@ -2,7 +2,7 @@ import { token } from "./constants";
 import { api } from "./helper";
 
 const commonHeaders = {
-  Authorization: `Bearer ${token}`,
+  "Private-Token": `${token}`,
 };
 
 class Request {
