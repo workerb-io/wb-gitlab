@@ -1,0 +1,12 @@
+{
+	"name" : "branches",
+	"description" : "branches cheatsheet",
+	"scripts" : [
+		{
+			"name" : "new",
+			"file" : "new.js",
+			"type" : "command",
+			"description" : "Create a new branch"
+		}
+	]
+}
