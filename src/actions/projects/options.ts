@@ -1,21 +1,10 @@
 /* eslint-disable consistent-return */
 import { getAllProjects, getUserInfo } from "../../utils/api";
-import { currentUser } from "../../utils/constants";
 import { decodeApiResponse, handleErrors } from "../../utils/helper";
 
 export default () => {
-  if (!("id" in currentUser.user)) {
-    const result = getUserInfo();
-    const { response } = decodeApiResponse(result);
-
-    currentUser.setUser({
-      id: response.id,
-      name: response.name,
-      email: response.email,
-    });
-  }
-
-  const { user } = currentUser;
+  const userData = getUserInfo();
+  const { response: user } = decodeApiResponse(userData);
 
   const response = getAllProjects(user.id);
   const result = decodeApiResponse(response);

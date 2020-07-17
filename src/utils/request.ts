@@ -3,6 +3,7 @@ import { api } from "./helper";
 
 const commonHeaders = {
   "Private-Token": `${token}`,
+  "content-type": "application/json",
 };
 
 class Request {
@@ -29,8 +30,8 @@ class Request {
     });
   }
 
-  post(uri: string, headers = {}) {
-    return httpPost(this.api(uri), {
+  post(uri: string, data = {}, headers = {}) {
+    return httpPost(this.api(uri), JSON.stringify(data), {
       ...commonHeaders,
       ...headers,
     });

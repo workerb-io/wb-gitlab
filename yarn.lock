@@ -855,6 +855,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.22.tgz#23ea4d88189cec7d58f9e6b66f786b215eb61bdc"
   integrity sha512-emeGcJvdiZ4Z3ohbmw93E/64jRzUHAItSHt8nF7M4TGgQTiWqFVGB8KNpLGFmUHmHLvjvBgFwVlqNcq+VuGv9g==
 
+"@types/workerb-api@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/workerb-api/-/workerb-api-1.0.1.tgz#5d88571eb9367c5438d955c9dff35ac8c87d0e1c"
+  integrity sha512-p9FDoC0GbwPXGEJhprBslUVjbMxtwZ/J891OhB/mcJs9jizThNjo0lXrZEm8zRS3Gwo9ryrQAC696z9AIkPaEQ==
+
 "@typescript-eslint/eslint-plugin@^3.4.0":
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-3.6.0.tgz#ba2b6cae478b8fca3f2e58ff1313e4198eea2d8a"

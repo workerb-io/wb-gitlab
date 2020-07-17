@@ -8,16 +8,13 @@ interface User {
   email: string;
 }
 
-class User {
-  private userInfo: User = {} as User;
+const storageSetter = {
+  setData(key: string, data: any) {
+    localStorage.setItem(key, JSON.stringify(data));
+  },
+  getData(key: string) {
+    return JSON.parse(localStorage.getItem(key) as string);
+  },
+};
 
-  setUser(info: any) {
-    this.userInfo = info;
-  }
-
-  get user() {
-    return this.userInfo;
-  }
-}
-
-export const currentUser = new User();
+export const store = storageSetter;

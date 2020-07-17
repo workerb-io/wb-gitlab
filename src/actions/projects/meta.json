@@ -1,0 +1,12 @@
+{
+  "name": "projects",
+  "description": "projects cheat sheet",
+  "scripts": [
+    {
+      "name": "new",
+      "file": "new.js",
+      "type": "command",
+      "description": "add new projects"
+    }
+  ]
+}
