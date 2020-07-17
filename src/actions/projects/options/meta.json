@@ -13,6 +13,12 @@
 			"file" : "update.js",
 			"type" : "command",
 			"description" : "Add/Edit description of a project"
+		},
+		{
+			"name" : "branches",
+			"file" : "branches",
+			"type" : "node",
+			"description" : "branches cheat sheet"
 		}
 	]
 }
