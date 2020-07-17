@@ -10,3 +10,5 @@ export const createNewProject = (data: object) =>
   request.post(`/projects`, data);
 
 export const removeProject = (id: string | number) => request.delete(`/projects/${id}`);
+
+export const updateProject = (id: string | number, data: object) => request.put(`/projects/${id}`, data);

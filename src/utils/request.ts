@@ -23,8 +23,8 @@ class Request {
     });
   }
 
-  put(uri: string, headers = {}) {
-    return httpPut(this.api(uri), {
+  put(uri: string, data = {}, headers = {}) {
+    return httpPut(this.api(uri), JSON.stringify(data), {
       ...commonHeaders,
       ...headers,
     });

@@ -7,6 +7,12 @@
 			"file" : "remove.js",
 			"type" : "command",
 			"description" : "Remove a project"
+		},
+		{
+			"name" : "update",
+			"file" : "update.js",
+			"type" : "command",
+			"description" : "Add/Edit description of a project"
 		}
 	]
 }
