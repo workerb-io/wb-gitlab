@@ -1,0 +1,12 @@
+{
+	"name" : "projects",
+	"description" : "projects cheat sheet",
+	"scripts" : [
+		{
+			"name" : "remove",
+			"file" : "remove.js",
+			"type" : "command",
+			"description" : "Remove a project"
+		}
+	]
+}

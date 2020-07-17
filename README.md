@@ -13,16 +13,15 @@
   **API** - _[GET]_ => `/projects`
 
 * ```js
-  gitlab projects [[project_type]] [new_project_name]
+  gitlab projects new [new_project_name] ["private"]
   ```
 
   **Create** new project.
 
   **Args**:
 
-  1 - `project_type` - new_private || new_public
-
-  2 - `new_project_name` - Name of the project
+  1 - `new_project_name` - Name of the project
+  2 - `private` - if new repository type is private
 
   **API** - _[POST]_ => `/projects`
 
@@ -45,34 +44,6 @@
 
   **Payload**:
   `https://docs.gitlab.com/ee/api/projects.html#edit-project`
-
-* ```js
-    gitlab projects [project_name] star
-  ```
-
-  **Star** a project.
-
-  **Args:**
-
-  1 - `project_name` - Name of the project from the dropdown
-
-  ​ **API:** _[POST]_ => `/projects/:id/star` <br />
-  ​ **Payload** :`https://docs.gitlab.com/ee/api/projects.html#star-a-project`
-
-- ```js
-  gitlab projects [project_name] unstar
-  ```
-
-  **Star** a project.
-
-  **Args:**
-
-  1 - `project_name` - Name of the project from the dropdown
-
-  **API:** _[POST]_ => `/projects/:id/unstar`
-
-  **Payload** :
-  `https://docs.gitlab.com/ee/api/projects.html#unstar-a-project`
 
 - ```js
     gitlab projects [project_name] remove

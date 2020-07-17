@@ -8,3 +8,5 @@ export const getAllProjects = (userId: number) =>
 
 export const createNewProject = (data: object) =>
   request.post(`/projects`, data);
+
+export const removeProject = (id: string | number) => request.delete(`/projects/${id}`);

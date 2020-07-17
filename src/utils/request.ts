@@ -16,8 +16,8 @@ class Request {
     });
   }
 
-  delete(uri: string, headers = {}) {
-    return httpDelete(this.api(uri), {
+  delete(uri: string, data = {}, headers = {}) {
+    return httpDelete(this.api(uri), JSON.stringify(data), {
       ...commonHeaders,
       ...headers,
     });
