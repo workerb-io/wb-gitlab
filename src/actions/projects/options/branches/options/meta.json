@@ -1,0 +1,12 @@
+{
+  "name" : "branches",
+  "description" : "branches description",
+  "scripts" : [
+    {
+      "name" : "remove",
+      "file" : "remove.js",
+      "type" : "command",
+      "description": "remove branch"
+    }
+  ]
+}

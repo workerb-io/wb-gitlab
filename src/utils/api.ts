@@ -16,3 +16,5 @@ export const updateProject = (id: string | number, data: object) => request.put(
 export const listAllBranches = (projectId: string | number) => request.get(`/projects/${projectId}/repository/branches`);
 
 export const createNewBranch = (projectId: string | number, data : object) => request.post(`/projects/${projectId}/repository/branches`, data);
+
+export const removeBranch = (projectId: string | number, branchName : string) => request.delete(`/projects/${projectId}/repository/branches/${branchName}`);
