@@ -4,7 +4,7 @@
 
 ## List of Commands
 
-- ```javascript
+- ```markdown
   gitlab projects
   ```
 
@@ -12,7 +12,7 @@
 
   **API** - _[GET]_ => `/projects`
 
-* ```js
+* ```markdown
   gitlab projects new [new_project_name] ["private"]
   ```
 
@@ -28,7 +28,7 @@
   **Payload :**
   `https://docs.gitlab.com/ee/api/projects.html#create-project`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] update [project_description]
   ```
 
@@ -45,7 +45,7 @@
   **Payload**:
   `https://docs.gitlab.com/ee/api/projects.html#edit-project`
 
-- ```js
+- ```markdown
     gitlab projects [project_name] remove
   ```
 
@@ -59,7 +59,7 @@
   ​ **Payload**:
   ​ `https://docs.gitlab.com/ee/api/projects.html#remove-project`
 
-- ```js
+- ```markdown
   gitlab projects [project_name]
   ```
 
@@ -74,7 +74,7 @@
   **Payload**:
   `https://gitlab.com/search?utf8=%E2%9C%93&search=[project_name]`
 
-* ```js
+* ```markdown
   gitlab projects [project_name] branches
   ```
 
@@ -88,20 +88,21 @@
   **Payload:**
   `https://docs.gitlab.com/ee/api/branches.html#list-repository-branches`
 
-- ```js
-  gitlab projects [project_name] branches new [branch_name]
+- ```markdown
+  gitlab projects [project_name] branches new [branch_name] ref [reffered_branch_name]
   ```
 
   **Creates** a new **branch** in a project.
   Args:
   1 - `project_name` - Name of the project from the dropdown.
   2 - `branch_name` - New branch name
+  3 - `ref` - default is master but can be a reffered branch name.  
 
   **API:** _[POST]_ => `/projects/:id/repository/branches` <br/>
   **Payload**:
   `https://docs.gitlab.com/ee/api/branches.html#create-repository-branch`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] branches [branch_name] delete
   ```
 
@@ -116,7 +117,7 @@
   **Payload**:
   `https://docs.gitlab.com/ee/api/branches.html#delete-repository-branch`
 
-- ```js
+- ```markdown
   getlab projects [project_name] branches delete_merged
   ```
 
@@ -127,7 +128,7 @@
   **Payload**:
   `https://docs.gitlab.com/ee/api/branches.html#delete-merged-branches`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] branches [branch_name]
   ```
 
@@ -137,7 +138,21 @@
   1 - `project_name` - Name of the project from the dropdown.
   2 - `branch_name` - New branch name from dropdown.
 
-* ```js
+- ```javascript
+  gitlab project [priject_name] branches [branch_name] new_mr [mr_name] ref [reffered_branch_name]
+  ```
+  
+  **Creates** a new merge request from a branch name.
+  
+  **Args:** <br />
+  1 - `project_name` - Name of the project from the dropdown. <br/>
+  2 - `branch_name` - New branch name from dropdown. <br/>
+  3 - `mr_name` - New merge request title.
+  4 - `reffered_branch_name` - Target branch name. 
+  
+  **API**: _[POST]_ => `https://docs.gitlab.com/ee/api/merge_requests.html#create-mr`
+
+* ```markdown
   gitlab projects [project_name] merge_requests
   ```
 
@@ -148,7 +163,7 @@
 
   **API:** _[GET]_ => `/projects/:id/merge_requests`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] merge_requests new [new_merge_request_title]
   ```
 
@@ -164,7 +179,7 @@
   **Payload**:
   `https://docs.gitlab.com/ee/api/merge_requests.html#create-mr`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] merge_requests [mr_name] update [mr_description]
   ```
 
@@ -180,7 +195,7 @@
   **Payload**:
   `https://docs.gitlab.com/ee/api/merge_requests.html#update-mr`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] merge_requests [mr_name] delete
   ```
 
@@ -195,7 +210,7 @@
 
   `https://docs.gitlab.com/ee/api/merge_requests.html#delete-a-merge-request`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] merge_requests [mr_name] accept
   ```
 
@@ -211,7 +226,7 @@
   **Payload:**
   `https://docs.gitlab.com/ee/api/merge_requests.html#delete-a-merge-request`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] merge_request [mr_name] notes
   ```
 
@@ -227,7 +242,7 @@
 
   `https://docs.gitlab.com/ee/api/notes.html#list-all-merge-request-notes`
 
-* ```js
+* ```markdown
   gitlab projects [project_name] merge_request [mr_name] notes new [new_note]
   ```
 
@@ -243,7 +258,7 @@
 
   `https://docs.gitlab.com/ee/api/notes.html#create-new-merge-request-note`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] merge_request [mr_name] notes [note] update [new_updated_note]
   ```
 
@@ -261,7 +276,7 @@
   **API:** _[PUT]_ =>`/projects/:id/merge_requests/:merge_request_iid/notes/:note_id` <br />
   **Payload**:`https://docs.gitlab.com/ee/api/notes.html#modify-existing-merge-request-note`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] merge_request [mr_name] notes [note] delete
   ```
 
@@ -279,7 +294,7 @@
 
   `https://docs.gitlab.com/ee/api/notes.html#delete-a-merge-request-note`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] issues
   ```
 
@@ -293,7 +308,7 @@
   **Payload**:
   `https://docs.gitlab.com/ee/api/issues.html#list-issues`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] issues new [issue_name]
   ```
 
@@ -308,7 +323,7 @@
   **API**: _[POST]_ => `/projects/:id/issues`
   **Payload:**`https://docs.gitlab.com/ee/api/issues.html#new-issue`
 
-- ```js
+- ```markdown
   gitlab projects [project_name] issues [issue_name] update [issue_description]
   ```
 
@@ -327,7 +342,7 @@
 
   `https://docs.gitlab.com/ee/api/issues.html#edit-issue`
 
-* ```js
+* ```markdown
   gitlab projects [project_name] issues [issue_name] delete
   ```
 
@@ -343,72 +358,3 @@
   **Payload**:
 
   `https://docs.gitlab.com/ee/api/issues.html#delete-an-issue`
-
-- ```js
-  gitlab projects [project_name] issues [issue_name] notes
-  ```
-
-  **Lists** all the notes on a merge request.
-  **Args:**
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  2 - `issue_name` - Name of issue from dropdown.
-
-  **API:** _[GET]_ => `/projects/:id/issues/:issue_iid/notes?sort=asc&order_by=updated_at`
-  **Payload**:
-
-  `https://docs.gitlab.com/ee/api/notes.html#list-project-issue-notes`
-
-* ```js
-  gitlab projects [project_name] issues [issue_name] notes new [new_note]
-  ```
-
-  **Creates** a new note on the merge_request.**Args:**
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  2 - `issue_name` - Name of issue from dropdown.
-  3 - `new_note` - New note to be created on a paticulat merge request.
-
-  **API:** _[POST]_ =>`/projects/:id/issues/:issue_iid/notes`
-  **Payload**:
-
-  `https://docs.gitlab.com/ee/api/notes.html#create-new-issue-note`
-
-- ```js
-  gitlab projects [project_name] merge_request [mr_name] notes [note] update [new_updated_note]
-  ```
-
-  **Adds/Updates** a existing note on the merge_request.
-
-  **Args:**
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  2 - `mr_name` - Name of merge request from dropdown.
-  3 - `note` - Name of note selected from dropdown.
-
-  4 - `new_updated_note` - updated content of the note
-
-  **API:** _[PUT]_ =>`/projects/:id/merge_requests/:merge_request_iid/notes/:note_id` <br/>
-  **Payload**:
-  `https://docs.gitlab.com/ee/api/notes.html#modify-existing-merge-request-note`
-
-- ```js
-  gitlab projects [project_name] merge_request [mr_name] notes [note] delete
-  ```
-
-  **Deletes** a note from a merge_request.
-
-  **Args:**
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  2 - `mr_name` - Name of merge request from dropdown.
-  3 - `note` - Name of note selected from dropdown.
-
-  **API:** _[DELETE]_ =>`/projects/:id/merge_requests/:merge_request_iid/notes/:note_id`
-  **Payload**:
-
-  `https://docs.gitlab.com/ee/api/notes.html#delete-a-merge-request-note`

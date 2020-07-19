@@ -18,15 +18,13 @@ if (options?.projects) {
 
   const branchName: string = refIndex === -1 ? branchesName : branchNameArgs.slice(0, refIndex).join(' ');
 
-  log({ subBranchName, branchName }, 'white');
-
   const response = createNewBranch(id, { branch: branchName, ref: subBranchName });
   const result = decodeApiResponse(response);
 
   if (!(result.status >= 200 && result.status <= 299)) {
     handleErrors(result.status, result.response.message);
   } else {
-    notify("Branch Created", "success", 300);
+    notify("Branch Created", "success", 3000);
     open(result.response.web_url);
   }
 }

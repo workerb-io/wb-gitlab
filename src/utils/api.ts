@@ -19,4 +19,6 @@ export const createNewBranch = (projectId: string | number, data : object) => re
 
 export const removeBranch = (projectId: string | number, branchName : string) => request.delete(`/projects/${projectId}/repository/branches/${branchName}`);
 
-export const deleteMergedBranches = (projectId: string | number) => request.delete(`/projects/${projectId}/repository/merged_branches`)
+export const deleteMergedBranches = (projectId: string | number) => request.delete(`/projects/${projectId}/repository/merged_branches`);
+
+export const createNewMR = (projectId: string, data : object) => request.post(`/projects/${projectId}/merge_requests`, data);

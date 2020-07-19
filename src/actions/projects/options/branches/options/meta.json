@@ -7,6 +7,12 @@
       "file" : "remove.js",
       "type" : "command",
       "description": "remove branch"
+    },
+    {
+      "name" : "new_mr",
+      "file" : "new_mr.js",
+      "type" : "command",
+      "description": "Creates a new merge request from a branch"
     }
   ]
 }
