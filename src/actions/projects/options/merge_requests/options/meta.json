@@ -1,0 +1,12 @@
+{
+  "name" : "merge_requests",
+  "description" : "merge requests cheat sheet",
+  "scripts" : [
+    {
+      "name" : "merge",
+      "file" : "merge.js",
+      "type" : "command",
+      "description" : "merge request"
+    }
+  ]
+}

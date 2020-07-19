@@ -19,6 +19,12 @@
 			"file" : "branches",
 			"type" : "node",
 			"description" : "branches cheat sheet"
+		},
+		{
+			"name" : "merge_requests",
+			"file" : "merge_requests",
+			"type" : "node",
+			"description" : "merge requests cheat sheet"
 		}
 	]
 }

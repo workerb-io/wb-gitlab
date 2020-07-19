@@ -21,4 +21,8 @@ export const removeBranch = (projectId: string | number, branchName : string) =>
 
 export const deleteMergedBranches = (projectId: string | number) => request.delete(`/projects/${projectId}/repository/merged_branches`);
 
-export const createNewMR = (projectId: string, data : object) => request.post(`/projects/${projectId}/merge_requests`, data);
+export const createNewMR = (projectId: string | number, data : object) => request.post(`/projects/${projectId}/merge_requests`, data);
+
+export const getAllMergeRequest = (projectId: string | number) => request.get(`/projects/${projectId}/merge_requests`);
+
+export const mergeMR = (projectId: string | number, mrId: number) => request.put(`/projects/${projectId}/merge_requests/${mrId}/merge`);
