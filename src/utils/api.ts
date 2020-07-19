@@ -34,3 +34,5 @@ export const getAllIssuesList = (projectId: string | number) => request.get(`/pr
 export const createNewIssue = (projectId: string | number, data : object) => request.post(`/projects/${projectId}/issues`, data);
 
 export const updateIssue = (projectId: string | number, issueId : number, data : object) => request.put(`/projects/${projectId}/issues/${issueId}`, data);
+
+export const deleteIssue = (projectId: string | number, issueId : number) => request.delete(`/projects/${projectId}/issues/${issueId}`);

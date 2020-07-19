@@ -9,10 +9,10 @@
       "description" : "merge request"
     },
     {
-      "name" : "reject",
-      "file" : "reject.js",
+      "name" : "delete",
+      "file" : "delete.js",
       "type" : "command",
-      "description" : "delete a merge request"
+      "description" : "deletes an issue"
     }
   ]
 }
