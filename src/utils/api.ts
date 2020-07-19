@@ -26,3 +26,5 @@ export const createNewMR = (projectId: string | number, data : object) => reques
 export const getAllMergeRequest = (projectId: string | number) => request.get(`/projects/${projectId}/merge_requests`);
 
 export const mergeMR = (projectId: string | number, mrId: number) => request.put(`/projects/${projectId}/merge_requests/${mrId}/merge`);
+
+export const deleteMR = (projectId: string | number, mrId: number) => request.delete(`/projects/${projectId}/merge_requests/${mrId}`);

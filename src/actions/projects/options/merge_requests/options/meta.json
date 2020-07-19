@@ -7,6 +7,12 @@
       "file" : "merge.js",
       "type" : "command",
       "description" : "merge request"
+    },
+    {
+      "name" : "reject",
+      "file" : "reject.js",
+      "type" : "command",
+      "description" : "delete a merge request"
     }
   ]
 }
