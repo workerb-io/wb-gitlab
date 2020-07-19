@@ -25,6 +25,12 @@
 			"file" : "merge_requests",
 			"type" : "node",
 			"description" : "merge requests cheat sheet"
+		},
+		{
+			"name" : "issues",
+			"file" : "issues",
+			"type" : "node",
+			"description" : "issues cheat sheet"
 		}
 	]
 }

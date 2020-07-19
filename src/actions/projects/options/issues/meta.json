@@ -1,0 +1,12 @@
+{
+  "name" : "issues",
+  "description" : "issues cheat sheet",
+  "scripts" : [
+    {
+      "name" : "new",
+      "file" : "new.js",
+      "type" : "command",
+      "description" : "create a new issue"
+    }
+  ]
+}

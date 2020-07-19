@@ -28,3 +28,9 @@ export const getAllMergeRequest = (projectId: string | number) => request.get(`/
 export const mergeMR = (projectId: string | number, mrId: number) => request.put(`/projects/${projectId}/merge_requests/${mrId}/merge`);
 
 export const deleteMR = (projectId: string | number, mrId: number) => request.delete(`/projects/${projectId}/merge_requests/${mrId}`);
+
+export const getAllIssuesList = (projectId: string | number) => request.get(`/projects/${projectId}/issues`);
+
+export const createNewIssue = (projectId: string | number, data : object) => request.post(`/projects/${projectId}/issues`, data);
+
+export const updateIssue = (projectId: string | number, issueId : number, data : object) => request.put(`/projects/${projectId}/issues/${issueId}`, data);
