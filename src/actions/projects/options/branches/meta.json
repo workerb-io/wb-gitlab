@@ -3,12 +3,6 @@
 	"description" : "branches cheatsheet",
 	"scripts" : [
 		{
-			"name" : "new",
-			"file" : "new.js",
-			"type" : "command",
-			"description" : "Create a new branch"
-		},
-		{
 			"name" : "delete_merged",
 			"file" : "delete_merged.js",
 			"type" : "command",

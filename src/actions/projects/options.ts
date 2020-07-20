@@ -6,7 +6,7 @@ export default () => {
   const userData = getUserInfo();
   const { response: user } = decodeApiResponse(userData);
 
-  const response = getAllProjects(user.id);
+  const response = getAllProjects();
   const result = decodeApiResponse(response);
 
   if (!(result.status >= 200 && result.status <= 299)) {

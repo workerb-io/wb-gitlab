@@ -13,6 +13,12 @@
       "file" : "new_mr.js",
       "type" : "command",
       "description": "Creates a new merge request from a branch"
+    },
+    {
+      "name" : "new_sub_branch",
+      "file" : "new_sub_branch.js",
+      "type" : "command",
+      "description": "Create a new sub branch from a branch"
     }
   ]
 }
