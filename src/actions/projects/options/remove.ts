@@ -13,7 +13,7 @@ if (options.projects) {
       result.response.message ? result.response.message : result.response.error
     );
   } else {
-    notify("Project Deleted", "success", 300);
+    notify("Project Deleted", "success", 3000);
     open('https://gitlab.com');
   }
 }

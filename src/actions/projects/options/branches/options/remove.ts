@@ -14,7 +14,7 @@ if (options?.projects && options.branches) {
       result.response.message ? result.response.message : result.response.error
     );
   } else {
-    notify("Branch removed", "success", 300);
+    notify("Branch removed", "success", 3000);
     open(html_url);
   }
 }

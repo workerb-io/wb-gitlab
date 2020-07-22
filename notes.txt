@@ -1,0 +1,11 @@
+Pipelines
+1 - Create / Run a pipeline
+gitlab projects [project_name] pipelines new [branch_name]
+
+2 - Retry a pipeline
+gitlab projects [project_name] pipelines [pineline] run
+
+3 - Remove a pipeline
+gitlab projects [project_name] pipelines [pineline] remove
+
+

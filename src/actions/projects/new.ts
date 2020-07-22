@@ -40,6 +40,6 @@ if (!(result.status >= 200 && result.status <= 299)) {
     result.response.message ? result.response.message : result.response.error
   );
 } else {
-  notify("Project Created", "success", 300);
+  notify("Project Created", "success", 3000);
   open(result.response.web_url);
 }

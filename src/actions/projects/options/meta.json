@@ -31,6 +31,12 @@
 			"file" : "issues",
 			"type" : "node",
 			"description" : "issues cheat sheet"
+		},
+		{
+			"name" : "pipelines",
+			"file" : "pipelines",
+			"type" : "node",
+			"description" : "pipelines cheat sheet"
 		}
 	]
 }

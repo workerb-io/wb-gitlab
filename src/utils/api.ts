@@ -3,11 +3,9 @@ import request from "./request";
 
 export const getUserInfo = () => request.get("/user");
 
-export const getAllProjects = () =>
-  request.get(`/projects?owned=true`);
+export const getAllProjects = () => request.get(`/projects?owned=true`);
 
-export const createNewProject = (data: object) =>
-  request.post(`/projects`, data);
+export const createNewProject = (data: object) => request.post(`/projects`, data);
 
 export const removeProject = (id: string | number) => request.delete(`/projects/${id}`);
 
@@ -36,3 +34,9 @@ export const createNewIssue = (projectId: string | number, data : object) => req
 export const updateIssue = (projectId: string | number, issueId : number, data : object) => request.put(`/projects/${projectId}/issues/${issueId}`, data);
 
 export const deleteIssue = (projectId: string | number, issueId : number) => request.delete(`/projects/${projectId}/issues/${issueId}`);
+
+export const getAllPipelines = (projectId: string | number) => request.get(`/projects/${projectId}/pipelines`);
+
+export const createNewPipeline = (projectId: string | number, data: object) => request.post(`/projects/${projectId}/pipeline`, data);
+
+export const deletePipeline = (project: string | number, pipelineId: number) => request.delete(`/projects/${project}/pipelines/${pipelineId}`);
