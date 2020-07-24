@@ -61,9 +61,9 @@
 
 * [`gitlab projects ${project_name} issues ${issue_name}`](./src/actions/projects/options/issues/options/index.ts) - Opens a current issue.
 
-* [`gitlab projects ${project_name} issues ${issue_name} update close`](./src/actions/projects/options/issues/options/index.ts) - Close an issue.
+* [`gitlab projects ${project_name} issues ${issue_name} update close`](./src/actions/projects/options/issues/options/update.ts) - Close an issue.
 
-* [`gitlab projects ${project_name} issues ${issue_name} update reopen`](./src/actions/projects/options/issues/options/index.ts) - Reopen a closed issue.
+* [`gitlab projects ${project_name} issues ${issue_name} update reopen`](./src/actions/projects/options/issues/options/update.ts) - Reopen a closed issue.
 
 ### Merge Requests
 * [`gitlab projects ${project_name} merge_requests`](./src/actions/projects/options/merge_requests/options.ts) - List all merge_requests in project.
