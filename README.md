@@ -7,7 +7,7 @@
 - To install project dependencies, run `yarn install`.
 - To build the project, run `yarn build`.
 - To continuously build the project, run `yarn watch`.
-- Create `.env` file inside your root folder and add your personal access tokenwith respective key `GITLAB_PERSONAL_TOKEN`. Checkout [`.env.example`](./.env.example) for more .
+- Create `.env` file inside your root folder and add your personal access tokenwith respective key `GITLAB_PERSONAL_TOKEN`. Checkout [`.env.example`](./.env.example) for more.
 
 ## To load the project in the [workerB extension](https://chrome.google.com/webstore/detail/jdbakbjkiklbibfccegfejjdlcgpnnpe)
 
@@ -23,13 +23,11 @@
 ## List of Commands
 
 ### Projects
-* [`gitlab projects`](./src/actions/projects/options/index.ts) - Lists all the users project.
+* [`gitlab projects`](./src/actions/projects/options.ts) - Lists all the users project.
 
 * [`gitlab projects ${project_name}`](./src/actions/projects/options/index.ts) - Select the current project from the projects lists.
 
 * [`gitlab projects new ${project_name}`](./src/actions/projects/new.ts) - Creates a public project.
-
-* [`gitlab projects new ${project_name} private`](./src/actions/projects/new.ts) - Creates a private project.
 
 * [`gitlab projects new ${project_name} private`](./src/actions/projects/new.ts) - Creates a private project.
 
@@ -42,47 +40,46 @@
 
 * [`gitlab projects ${project_name} branches delete_merged `](./src/actions/projects/options/branches/delete_merged.ts) - Delete all merged branches.
 
-* [`gitlab projects ${project_name} branches [branch_name] `](./src/actions/projects/options/branches/options/index.ts) - Opens the current branch.
+* [`gitlab projects ${project_name} branches ${branch_name} `](./src/actions/projects/options/branches/options/index.ts) - Opens the current branch.
 
-* [`gitlab projects ${project_name} branches [branch_name] `](./src/actions/projects/options/branches/options/index.ts) - Opens the current branch.
+* [`gitlab projects ${project_name} branches ${branch_name} `](./src/actions/projects/options/branches/options/index.ts) - Opens the current branch.
 
-* [`gitlab projects ${project_name} branches [branch_name] remove`](./src/actions/projects/options/branches/options/remove.ts) - Remove/Delete branch from the project.
+* [`gitlab projects ${project_name} branches ${branch_name} remove`](./src/actions/projects/options/branches/options/remove.ts) - Remove/Delete branch from the project.
 
-* [`gitlab projects ${project_name} branches [branch_name] new_sub_branch [new_sub_branch_name`](./src/actions/projects/options/branches/options/new_sub_branch.ts) - Creates sub-branch from the reffered branch.
+* [`gitlab projects ${project_name} branches ${branch_name} new_sub_branch ${new_sub_branch_name}`](./src/actions/projects/options/branches/options/new_sub_branch.ts) - Creates sub-branch from the reffered branch.
 
-* [`gitlab projects ${project_name} branches [branch_name] new_mr [new_mr_name]`](./src/actions/projects/options/branches/options/new_sub_branch.ts) - Creates a merge request from the current branch to master.
+* [`gitlab projects ${project_name} branches ${branch_name} new_mr ${new_mr_name}`](./src/actions/projects/options/branches/options/new_sub_branch.ts) - Creates a merge request from the current branch to master.
 
-* [`gitlab projects ${project_name} branches [branch_name] new_mr [new_mr_name] ref [target_branch]`](./src/actions/projects/options/branches/options/new_sub_branch.ts) - Creates a merge request from the current branch to a target branch.
+* [`gitlab projects ${project_name} branches ${branch_name} new_mr ${new_mr_name} ref ${target_branch}`](./src/actions/projects/options/branches/options/new_sub_branch.ts) - Creates a merge request from the current branch to a target branch.
 
 ### Issues
 * [`gitlab projects ${project_name} issues`](./src/actions/projects/options/issues/options.ts) - List all project issues.
 
-* [`gitlab projects ${project_name} issues new [issue_name]`](./src/actions/projects/options/issues/new.ts) - Creates a new issue in the project.
+* [`gitlab projects ${project_name} issues new ${issue_name}`](./src/actions/projects/options/issues/new.ts) - Creates a new issue in the project.
 
-* [`gitlab projects ${project_name} issues [issue_name] delete`](./src/actions/projects/options/issues/options/delete.ts) - Deletes a issue from the project.
+* [`gitlab projects ${project_name} issues ${issue_name} delete`](./src/actions/projects/options/issues/options/delete.ts) - Deletes a issue from the project.
 
-* [`gitlab projects ${project_name} issues [issue_name]`](./src/actions/projects/options/issues/options/index.ts) - Opens a current issue.
+* [`gitlab projects ${project_name} issues ${issue_name}`](./src/actions/projects/options/issues/options/index.ts) - Opens a current issue.
 
-* [`gitlab projects ${project_name} issues [issue_name] update close`](./src/actions/projects/options/issues/options/index.ts) - Close an issue.
+* [`gitlab projects ${project_name} issues ${issue_name} update close`](./src/actions/projects/options/issues/options/index.ts) - Close an issue.
 
-* [`gitlab projects ${project_name} issues [issue_name] update reopen`](./src/actions/projects/options/issues/options/index.ts) - Reopen a closed issue.
+* [`gitlab projects ${project_name} issues ${issue_name} update reopen`](./src/actions/projects/options/issues/options/index.ts) - Reopen a closed issue.
 
 ### Merge Requests
 * [`gitlab projects ${project_name} merge_requests`](./src/actions/projects/options/merge_requests/options.ts) - List all merge_requests in project.
 
-* [`gitlab projects ${project_name} merge_requests [merge_request]`](./src/actions/projects/options/merge_requests/options/index.ts) - Opens the current merge request.
+* [`gitlab projects ${project_name} merge_requests ${merge_request}`](./src/actions/projects/options/merge_requests/options/index.ts) - Opens the current merge request.
 
-* [`gitlab projects ${project_name} merge_requests [merge_request] merge`](./src/actions/projects/options/merge_requests/options/merge.ts) - Merge the current merge request.
+* [`gitlab projects ${project_name} merge_requests ${merge_request} merge`](./src/actions/projects/options/merge_requests/options/merge.ts) - Merge the current merge request.
 
-* [`gitlab projects ${project_name} merge_requests [merge_request] reject`](./src/actions/projects/options/merge_requests/options/reject.ts) - Deletes a merge_request.
+* [`gitlab projects ${project_name} merge_requests ${merge_request} reject`](./src/actions/projects/options/merge_requests/options/reject.ts) - Deletes a merge_request.
 
 ### Pipelines
 * [`gitlab projects ${project_name} pipelines`](./src/actions/projects/options/pipelines/options.ts) - List all pipelines in a project.
 
 * [`gitlab projects ${project_name} pipelines new`](./src/actions/projects/options/pipelines/new.ts) - Creates a new pipeline.
 
-* [`gitlab projects ${project_name} pipelines [pipeline`](./src/actions/projects/options/pipelines/options/index.ts) - Opens the current pipeline.
+* [`gitlab projects ${project_name} pipelines ${pipeline}`](./src/actions/projects/options/pipelines/options/index.ts) - Opens the current pipeline.
 
-* [`gitlab projects ${project_name} pipelines [pipeline]`](./src/actions/projects/options/pipelines/options/index.ts) - Opens the current pipeline.
+* [`gitlab projects ${project_name} pipelines ${pipeline} remove`](./src/actions/projects/options/pipelines/options/remove.ts) - Remove/Delete the pipeline.
 
-* [`gitlab projects ${project_name} pipelines [pipeline] remove`](./src/actions/projects/options/pipelines/options/remove.ts) - Remove/Delete the pipeline.
