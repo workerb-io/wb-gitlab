@@ -7,6 +7,12 @@
       "file" : "remove.js",
       "type" : "command",
       "description" : "Remove a pipeline"
+    },
+    {
+      "name" : "rerun",
+      "file" : "rerun.js",
+      "type" : "command",
+      "description" : "Re-run a pipeline"
     }
   ]
 }

@@ -40,3 +40,5 @@ export const getAllPipelines = (projectId: string | number) => request.get(`/pro
 export const createNewPipeline = (projectId: string | number, data: object) => request.post(`/projects/${projectId}/pipeline`, data);
 
 export const deletePipeline = (project: string | number, pipelineId: number) => request.delete(`/projects/${project}/pipelines/${pipelineId}`);
+
+export const rerunPipeline = (projectId: string | number, pipelineId: number) => request.post(`/projects/${projectId}/pipelines/${pipelineId}/retry`);

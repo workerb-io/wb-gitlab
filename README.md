@@ -22,290 +22,67 @@
 
 ## List of Commands
 
-- ```markdown
-  gitlab projects
-  ```
+### Projects
+* [`gitlab projects`](./src/actions/projects/options/index.ts) - Lists all the users project.
 
-  List out all the projecst.
+* [`gitlab projects ${project_name}`](./src/actions/projects/options/index.ts) - Select the current project from the projects lists.
 
-  **API** - _[GET]_ => `/projects`
+* [`gitlab projects new ${project_name}`](./src/actions/projects/new.ts) - Creates a public project.
 
-* ```markdown
-  gitlab projects new [new_project_name] ["private"]
-  ```
+* [`gitlab projects new ${project_name} private`](./src/actions/projects/new.ts) - Creates a private project.
 
-  **Create** new project.
+* [`gitlab projects new ${project_name} private`](./src/actions/projects/new.ts) - Creates a private project.
 
-  **Args**:
+* [`gitlab projects ${project_name} remove`](./src/actions/projects/options/remove.ts) - Remove a project owned by the user.
 
-  1 - `new_project_name` - Name of the project <br />
-  2 - `private` - [optional] if new repository type is private
+* [`gitlab projects ${project_name} update`](./src/actions/projects/options/update.ts) - Add/Update description to a project.
 
-  **API** - _[POST]_ => `/projects`
+### Branches
+* [`gitlab projects ${project_name} branches`](./src/actions/projects/options/branches/options.ts) - List all project branches.
 
-  **Payload :**
-  `https://docs.gitlab.com/ee/api/projects.html#create-project`
+* [`gitlab projects ${project_name} branches delete_merged `](./src/actions/projects/options/branches/delete_merged.ts) - Delete all merged branches.
 
-- ```markdown
-  gitlab projects [project_name] update [project_description]
-  ```
+* [`gitlab projects ${project_name} branches [branch_name] `](./src/actions/projects/options/branches/options/index.ts) - Opens the current branch.
 
-  Adds **description** to a project.
+* [`gitlab projects ${project_name} branches [branch_name] `](./src/actions/projects/options/branches/options/index.ts) - Opens the current branch.
 
-  **Args**:
+* [`gitlab projects ${project_name} branches [branch_name] remove`](./src/actions/projects/options/branches/options/remove.ts) - Remove/Delete branch from the project.
 
-  1 - `project_name` - Name of the project from the dropdown
+* [`gitlab projects ${project_name} branches [branch_name] new_sub_branch [new_sub_branch_name`](./src/actions/projects/options/branches/options/new_sub_branch.ts) - Creates sub-branch from the reffered branch.
 
-  2 - `project_description` - Descripton of the projects needs to be updated.
+* [`gitlab projects ${project_name} branches [branch_name] new_mr [new_mr_name]`](./src/actions/projects/options/branches/options/new_sub_branch.ts) - Creates a merge request from the current branch to master.
 
-  **API**: _[PUT]_ => `/projects/:id`
+* [`gitlab projects ${project_name} branches [branch_name] new_mr [new_mr_name] ref [target_branch]`](./src/actions/projects/options/branches/options/new_sub_branch.ts) - Creates a merge request from the current branch to a target branch.
 
-  **Payload**:
-  `https://docs.gitlab.com/ee/api/projects.html#edit-project`
+### Issues
+* [`gitlab projects ${project_name} issues`](./src/actions/projects/options/issues/options.ts) - List all project issues.
 
-- ```markdown
-    gitlab projects [project_name] remove
-  ```
+* [`gitlab projects ${project_name} issues new [issue_name]`](./src/actions/projects/options/issues/new.ts) - Creates a new issue in the project.
 
-  **Remove** a project.
+* [`gitlab projects ${project_name} issues [issue_name] delete`](./src/actions/projects/options/issues/options/delete.ts) - Deletes a issue from the project.
 
-  **Args:**
+* [`gitlab projects ${project_name} issues [issue_name]`](./src/actions/projects/options/issues/options/index.ts) - Opens a current issue.
 
-  1 - `project_name` - Name of the project from the dropdown.
+* [`gitlab projects ${project_name} issues [issue_name] update close`](./src/actions/projects/options/issues/options/index.ts) - Close an issue.
 
-  ​ **API**: _[DELETE]_ => `/projects/:id`
-  ​ **Payload**:
-  ​ `https://docs.gitlab.com/ee/api/projects.html#remove-project`
+* [`gitlab projects ${project_name} issues [issue_name] update reopen`](./src/actions/projects/options/issues/options/index.ts) - Reopen a closed issue.
 
-- ```markdown
-  gitlab projects [project_name]
-  ```
+### Merge Requests
+* [`gitlab projects ${project_name} merge_requests`](./src/actions/projects/options/merge_requests/options.ts) - List all merge_requests in project.
 
-  **Searches** project on Gitlab.
+* [`gitlab projects ${project_name} merge_requests [merge_request]`](./src/actions/projects/options/merge_requests/options/index.ts) - Opens the current merge request.
 
-  **Args**:
+* [`gitlab projects ${project_name} merge_requests [merge_request] merge`](./src/actions/projects/options/merge_requests/options/merge.ts) - Merge the current merge request.
 
-  1 - `project_name` - query not from dropdown
+* [`gitlab projects ${project_name} merge_requests [merge_request] reject`](./src/actions/projects/options/merge_requests/options/reject.ts) - Deletes a merge_request.
 
-  **API**: _[GET]_ => `/projects`
+### Pipelines
+* [`gitlab projects ${project_name} pipelines`](./src/actions/projects/options/pipelines/options.ts) - List all pipelines in a project.
 
-  **Payload**:
-  `https://gitlab.com/search?utf8=%E2%9C%93&search=[project_name]`
+* [`gitlab projects ${project_name} pipelines new`](./src/actions/projects/options/pipelines/new.ts) - Creates a new pipeline.
 
-* ```markdown
-  gitlab projects [project_name] branches
-  ```
+* [`gitlab projects ${project_name} pipelines [pipeline`](./src/actions/projects/options/pipelines/options/index.ts) - Opens the current pipeline.
 
-  Get all **branches** in a project.
+* [`gitlab projects ${project_name} pipelines [pipeline]`](./src/actions/projects/options/pipelines/options/index.ts) - Opens the current pipeline.
 
-  **Args**:
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  **API:** _[GET]_ => `/projects/:id/repository/branches` <br/>
-  **Payload:**
-  `https://docs.gitlab.com/ee/api/branches.html#list-repository-branches`
-
-- ```markdown
-  gitlab projects [project_name] branches new [branch_name] ref [reffered_branch_name]
-  ```
-
-  **Creates** a new **branch** in a project.
-  
-  **Args:**
-  
-  1 - `project_name` - Name of the project from the dropdown. <br />
-  2 - `branch_name` - New branch name <br />
-  3 - `ref` - default is master but can be a reffered branch name. <br />  
-
-  **API:** _[POST]_ => `/projects/:id/repository/branches` <br/>
-  **Payload**:
-  `https://docs.gitlab.com/ee/api/branches.html#create-repository-branch`
-
-- ```markdown
-  gitlab projects [project_name] branches [branch_name] delete
-  ```
- 
-  **Deletes** a branch from a project.
-
-  **Args:** <br />
-  1 - `project_name` - Name of the project from the dropdown. <br />
-  2 - `branch_name` - New branch name from dropdown.
-
-  **API:** _[DELETE]_ => `/projects/:id/repository/branches/:branch`
-  **Payload**:
-  `https://docs.gitlab.com/ee/api/branches.html#delete-repository-branch`
-
-- ```markdown
-  gitlab projects [project_name] branches delete_merged
-  ```
-
-  **Deletes** all merged branches from a project.
-  1 - `project_name` - Name of the project from the dropdown.
-
-  **API:** _[POST]_ => `/projects/:id/repository/merged_branches`
-  **Payload**:
-  `https://docs.gitlab.com/ee/api/branches.html#delete-merged-branches`
-
-- ```markdown
-  gitlab projects [project_name] branches [branch_name]
-  ```
-
-  **Opens** a particular branch in broswer.
-
-  **Args:**
-  1 - `project_name` - Name of the project from the dropdown.
-  2 - `branch_name` - New branch name from dropdown.
-
-- ```markdown
-  gitlab project [priject_name] branches [branch_name] new_mr [mr_name] ref [reffered_branch_name]
-  ```
-  
-  **Creates** a new merge request from a branch name.
-  
-  **Args:** <br />
-  1 - `project_name` - Name of the project from the dropdown. <br/>
-  2 - `branch_name` - New branch name from dropdown. <br/>
-  3 - `mr_name` - New merge request title.
-  4 - `reffered_branch_name` - Target branch name. 
-  
-  **API**: _[POST]_ => `https://docs.gitlab.com/ee/api/merge_requests.html#create-mr`
-
-* ```markdown
-  gitlab projects [project_name] merge_requests
-  ```
-
-  **Gets** all merge requests of a project i.e open.
-  **Args:**
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  **API:** _[GET]_ => `/projects/:id/merge_requests`
-
-- ```markdown
-  gitlab projects [project_name] merge_requests new [new_merge_request_title]
-  ```
-
-  **Creates** a new merge request.
-  **Args:**
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  2 - `new_merge_request_title` - Name of new merge request.
-
-  **API:** _[POST]_ => `/projects/:id/merge_requests`
-
-  **Payload**:
-  `https://docs.gitlab.com/ee/api/merge_requests.html#create-mr`
-
-- ```markdown
-  gitlab projects [project_name] merge_requests [mr_name] update [mr_description]
-  ```
-
-  Add **description** to the merge request.
-
-  **Args**:
-  1 - `project_name` - Name of the project from the dropdown.
-
-  2 - `mr_name` - Name of merge request from dropdown.
-  3 - `mr_description` - Description of the merge request.
-
-  **API:** **[PUT]** => `/projects/:id/merge_requests/:merge_request_iid`
-  **Payload**:
-  `https://docs.gitlab.com/ee/api/merge_requests.html#update-mr`
-
-- ```markdown
-  gitlab projects [project_name] merge_requests [mr_name] delete
-  ```
-
-  **Deletes** a merge request.
-  **Args**:
-  1 - `project_name` - Name of the project from the dropdown.
-
-  2 - `mr_name` - Name of merge request from dropdown.
-
-  **API**: _[DELETE]_ => `/projects/:id/merge_requests/:merge_request_iid`
-  **Payload:**
-
-  `https://docs.gitlab.com/ee/api/merge_requests.html#delete-a-merge-request`
-
-- ```markdown
-  gitlab projects [project_name] merge_requests [mr_name] accept
-  ```
-
-  **Accepts** a merge request only if an merge request is opened.
-  **Args:**
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  2 - `mr_name` - Name of merge request from dropdown.
-
-  **API**: _[PUT]_ => `/projects/:id/merge_requests/:merge_request_iid/merge`
-
-  **Payload:**
-  `https://docs.gitlab.com/ee/api/merge_requests.html#delete-a-merge-request`
-
-- ```markdown
-  gitlab projects [project_name] issues
-  ```
-
-  **List** all the open issues.
-
-  **Args:**
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  **API**: _[GET]_ => `/issues?state=opened`
-  **Payload**:
-  `https://docs.gitlab.com/ee/api/issues.html#list-issues`
-
-- ```markdown
-  gitlab projects [project_name] issues new [issue_name]
-  ```
-
-  **Creates** a new issue.
-
-  **Args:**
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  2 - `issue_name` - New issue name
-
-  **API**: _[POST]_ => `/projects/:id/issues`
-  **Payload:**`https://docs.gitlab.com/ee/api/issues.html#new-issue`
-
-- ```markdown
-  gitlab projects [project_name] issues [issue_name] update [issue_description]
-  ```
-
-  **Adds/Update** description of the issue.
-
-  **Args**:
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  2 - `issue_name` - Issue name from the dropdown
-
-  3 - `issue_description` - Issue description to be added/updated
-
-  **API**: _[PUT]_ => `/projects/:id/issues/:issue_iid`
-  **Payload:**
-
-  `https://docs.gitlab.com/ee/api/issues.html#edit-issue`
-
-* ```markdown
-  gitlab projects [project_name] issues [issue_name] delete
-  ```
-
-  **Deletes** an issue.
-
-  **Args:**
-
-  1 - `project_name` - Name of the project from the dropdown.
-
-  2 - `issue_name` - Issue name from the dropdown
-
-  **API**: _[DELETE]_ => `/projects/:id/issues/:issue_iid`
-  **Payload**:
-
-  `https://docs.gitlab.com/ee/api/issues.html#delete-an-issue`
+* [`gitlab projects ${project_name} pipelines [pipeline] remove`](./src/actions/projects/options/pipelines/options/remove.ts) - Remove/Delete the pipeline.
