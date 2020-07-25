@@ -7,7 +7,7 @@
 - To install project dependencies, run `yarn install`.
 - To build the project, run `yarn build`.
 - To continuously build the project, run `yarn watch`.
-- Create `.env` file inside your root folder and add your personal access tokenwith respective key `GITLAB_PERSONAL_TOKEN`. Checkout [`.env.example`](./.env.example) for more.
+- Create `.env` file inside your root folder and add your personal access token with respective key `GITLAB_PERSONAL_TOKEN`. Checkout [`.env.example`](./.env.example) for more.
 
 ## To load the project in the [workerB extension](https://chrome.google.com/webstore/detail/jdbakbjkiklbibfccegfejjdlcgpnnpe)
 
@@ -62,7 +62,7 @@
 * [`gitlab projects ${project_name} issues ${issue_name}`](./src/actions/projects/options/issues/options/index.ts) - Opens a current issue.
 
 * [`gitlab projects ${project_name} issues ${issue_name} update close`](./src/actions/projects/options/issues/options/update.ts) - Close an issue.
-
+ 
 * [`gitlab projects ${project_name} issues ${issue_name} update reopen`](./src/actions/projects/options/issues/options/update.ts) - Reopen a closed issue.
 
 ### Merge Requests
@@ -77,7 +77,7 @@
 ### Pipelines
 * [`gitlab projects ${project_name} pipelines`](./src/actions/projects/options/pipelines/options.ts) - List all pipelines in a project.
 
-* [`gitlab projects ${project_name} pipelines new`](./src/actions/projects/options/pipelines/new.ts) - Creates a new pipeline.
+* [`gitlab projects ${project_name} pipelines run [reffered_brach]`](src/actions/projects/options/pipelines/run.ts) - Creates a new pipeline.
 
 * [`gitlab projects ${project_name} pipelines ${pipeline}`](./src/actions/projects/options/pipelines/options/index.ts) - Opens the current pipeline.
 
