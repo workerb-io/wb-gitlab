@@ -77,7 +77,7 @@
 ### Pipelines
 * [`gitlab projects ${project_name} pipelines`](./src/actions/projects/options/pipelines/options.ts) - List all pipelines in a project.
 
-* [`gitlab projects ${project_name} pipelines new`](./src/actions/projects/options/pipelines/new.ts) - Creates a new pipeline.
+* [`gitlab projects ${project_name} pipelines run [reffered_brach]`](src/actions/projects/options/pipelines/run.ts) - Creates a new pipeline.
 
 * [`gitlab projects ${project_name} pipelines ${pipeline}`](./src/actions/projects/options/pipelines/options/index.ts) - Opens the current pipeline.
 
