@@ -1,6 +1,6 @@
 {
-  "name": "gitlab-app",
-  "description": "gitlab app cheatsheet",
+  "name": "gitlab",
+  "description": "workerB package for gitlab.com",
   "sites": ["https://gitlab.com"],
   "scripts": [
     {
