@@ -5,7 +5,7 @@
     {
       "name" : "remove",
       "file" : "remove.js",
-      "type" : "action",
+      "type" : "command",
       "description" : "Remove a pipeline"
     }
   ]

@@ -5,13 +5,13 @@
     {
       "name" : "update",
       "file" : "update.js",
-      "type" : "action",
+      "type" : "command",
       "description" : "merge request"
     },
     {
       "name" : "delete",
       "file" : "delete.js",
-      "type" : "action",
+      "type" : "command",
       "description" : "deletes an issue"
     }
   ]

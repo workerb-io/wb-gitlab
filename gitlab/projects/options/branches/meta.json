@@ -5,7 +5,7 @@
 		{
 			"name" : "delete_merged",
 			"file" : "delete_merged.js",
-			"type" : "action",
+			"type" : "command",
 			"description" : "Deletes all merged branches"
 		}
 	]

@@ -5,13 +5,13 @@
     {
       "name" : "merge",
       "file" : "merge.js",
-      "type" : "action",
+      "type" : "command",
       "description" : "merge request"
     },
     {
       "name" : "reject",
       "file" : "reject.js",
-      "type" : "action",
+      "type" : "command",
       "description" : "delete a merge request"
     }
   ]

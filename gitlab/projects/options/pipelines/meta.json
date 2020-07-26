@@ -5,7 +5,7 @@
     {
       "name" : "run",
       "file" : "run.js",
-      "type" : "action",
+      "type" : "command",
       "description" : "Create a new pipeline"
     }
   ]

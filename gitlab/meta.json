@@ -1,12 +1,12 @@
 {
-  "name": "gitlab",
-  "description": "workerB package for gitlab.com",
+  "name": "gitlab-app",
+  "description": "gitlab app cheatsheet",
   "sites": ["https://gitlab.com"],
   "scripts": [
     {
       "name": "projects",
       "file": "projects",
-      "type": "folder",
+      "type": "node",
       "description": "projects cheat sheet"
     }
   ]

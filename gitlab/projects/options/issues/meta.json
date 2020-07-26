@@ -5,7 +5,7 @@
     {
       "name" : "new",
       "file" : "new.js",
-      "type" : "action",
+      "type" : "command",
       "description" : "create a new issue"
     }
   ]
