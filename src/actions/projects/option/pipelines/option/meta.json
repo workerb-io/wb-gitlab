@@ -3,10 +3,10 @@
   "description": "pipelines cheat sheet",
   "scripts": [
     {
-      "name" : "run",
-      "file" : "run.js",
+      "name" : "remove",
+      "file" : "remove.js",
       "type" : "action",
-      "description" : "Create a new pipeline"
+      "description" : "Remove a pipeline"
     }
   ]
 }

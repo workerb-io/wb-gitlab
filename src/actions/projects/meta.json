@@ -7,6 +7,18 @@
       "file": "new.js",
       "type": "action",
       "description": "add new projects"
+    },
+    {
+      "name": "option",
+      "file": "option",
+      "type": "folder",
+      "description": "actions for selected project"
+    },
+    {
+      "name": "get_options",
+      "file": "get_options.js",
+      "type": "action",
+      "description": "list options"
     }
   ]
 }

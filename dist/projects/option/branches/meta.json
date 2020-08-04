@@ -1,0 +1,24 @@
+{
+  "name": "branches",
+  "description": "branches cheatsheet",
+  "scripts": [
+    {
+      "name": "delete_merged",
+      "file": "delete_merged.js",
+      "type": "action",
+      "description": "Deletes all merged branches"
+    },
+    {
+      "name": "option",
+      "file": "option",
+      "type": "folder",
+      "description": "actions for selected branch"
+    },
+    {
+      "name": "get_options",
+      "file": "get_options.js",
+      "type": "action",
+      "description": "branch options"
+    }
+  ]
+}
