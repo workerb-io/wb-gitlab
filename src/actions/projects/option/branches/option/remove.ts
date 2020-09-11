@@ -2,7 +2,7 @@ import { removeBranch } from "../../../../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../../../../utils/helper";
 
 if (options?.projects && options.branches) {
-  const { id, html_url } = options.projects;
+  const { id, html_url, name: projectName } = options.projects;
   const { name } = options.branches;
 
   const response = removeBranch(id, name);
@@ -16,5 +16,6 @@ if (options?.projects && options.branches) {
   } else {
     notify("Branch removed", "success", 3000);
     open(html_url);
+    reIndex(["gitlab", "projects", projectName, "branches"]);
   }
 }

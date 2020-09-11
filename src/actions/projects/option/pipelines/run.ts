@@ -4,10 +4,10 @@ import { decodeApiResponse, handleErrors } from "../../../../utils/helper";
 if (options?.projects) {
   const { id: projectId } = options.projects;
 
-  const ref = args.filter(Boolean).join(' ').trim();
+  const ref = args.filter(Boolean).join(" ").trim();
 
   const response = createNewPipeline(projectId, {
-    ref: ref || 'master'
+    ref: ref || "master",
   });
 
   const result = decodeApiResponse(response);

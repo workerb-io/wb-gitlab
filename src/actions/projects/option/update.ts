@@ -4,10 +4,10 @@ import { decodeApiResponse, handleErrors } from "../../../utils/helper";
 if (options.projects) {
   const { id, html_url } = options.projects;
 
-  let description = args.filter(Boolean).join(' ');
+  let description = args.filter(Boolean).join(" ");
 
   if (!description) {
-    description = prompt('Enter Description');
+    description = prompt("Enter Description");
   }
 
   const response = updateProject(id, { description });
@@ -21,5 +21,6 @@ if (options.projects) {
   } else {
     notify("Project Update", "success", 300);
     open(html_url);
+    reIndex(["gitlab", "projects"]);
   }
 }

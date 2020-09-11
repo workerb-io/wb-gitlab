@@ -2,15 +2,15 @@ import { createNewIssue } from "../../../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../../../utils/helper";
 
 if (options?.projects) {
-  const { id: projectId } = options.projects;
-  let issueName = args.filter(Boolean).join(' ');
+  const { id: projectId, name: projectName } = options.projects;
+  let issueName = args.filter(Boolean).join(" ");
 
   if (!issueName) {
-    issueName = prompt('Enter New Issue Title');
+    issueName = prompt("Enter New Issue Title");
   }
 
   const response = createNewIssue(projectId, {
-    title: issueName
+    title: issueName,
   });
 
   const result = decodeApiResponse(response);
@@ -23,5 +23,6 @@ if (options?.projects) {
   } else {
     notify("Issue Created", "success", 3000);
     open(result.response.web_url);
+    reIndex(["gitlab", "projects", projectName, "issues"]);
   }
 }

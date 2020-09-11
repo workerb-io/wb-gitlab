@@ -14,6 +14,7 @@ if (options.projects) {
     );
   } else {
     notify("Project Deleted", "success", 3000);
-    open('https://gitlab.com');
+    open("https://gitlab.com");
+    reIndex(["gitlab", "projects"]);
   }
 }

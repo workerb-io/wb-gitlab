@@ -42,4 +42,5 @@ if (!(result.status >= 200 && result.status <= 299)) {
 } else {
   notify("Project Created", "success", 3000);
   open(result.response.web_url);
+  reIndex(["gitlab", "projects"]);
 }
