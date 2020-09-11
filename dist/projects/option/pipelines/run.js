@@ -128,7 +128,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.store = exports.token = exports.uri = void 0;\n/* eslint-disable import/prefer-default-export */\nexports.uri = \"https://gitlab.com/api/v4\";\nexports.token = \"dTmP9KiQ356cXdARsVRs\";\nvar storageSetter = {\n    setData: function (key, data) {\n        localStorage.setItem(key, JSON.stringify(data));\n    },\n    getData: function (key) {\n        return JSON.parse(localStorage.getItem(key));\n    },\n};\nexports.store = storageSetter;\n\n\n//# sourceURL=webpack://main/./src/utils/constants.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.store = exports.token = exports.uri = void 0;\n/* eslint-disable import/prefer-default-export */\nexports.uri = \"https://gitlab.com/api/v4\";\nexports.token = VARS.GITLAB_PERSONAL_TOKEN;\nvar storageSetter = {\n    setData: function (key, data) {\n        localStorage.setItem(key, JSON.stringify(data));\n    },\n    getData: function (key) {\n        return JSON.parse(localStorage.getItem(key));\n    },\n};\nexports.store = storageSetter;\n\n\n//# sourceURL=webpack://main/./src/utils/constants.ts?");
 
 /***/ }),
 
