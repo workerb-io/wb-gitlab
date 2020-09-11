@@ -1,0 +1,12 @@
+{
+	"name" : "branches",
+	"description" : "branches cheatsheet",
+	"scripts" : [
+		{
+			"name" : "delete_merged",
+			"file" : "delete_merged.js",
+			"type" : "action",
+			"description" : "Deletes all merged branches"
+		}
+	]
+}

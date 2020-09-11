@@ -1,0 +1,12 @@
+{
+  "name" : "pipelines",
+  "description": "pipelines cheat sheet",
+  "scripts": [
+    {
+      "name" : "remove",
+      "file" : "remove.js",
+      "type" : "action",
+      "description" : "Remove a pipeline"
+    }
+  ]
+}

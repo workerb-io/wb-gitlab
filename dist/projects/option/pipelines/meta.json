@@ -1,18 +1,18 @@
 {
-  "name": "projects",
-  "description": "projects cheat sheet",
+  "name": "pipelines",
+  "description": "pipelines cheat sheet",
   "scripts": [
     {
-      "name": "new",
-      "file": "new.js",
+      "name": "run",
+      "file": "run.js",
       "type": "action",
-      "description": "add new projects"
+      "description": "Create a new pipeline"
     },
     {
       "name": "option",
       "file": "option",
       "type": "folder",
-      "description": "actions for selected project"
+      "description": "actions for selected pipeline"
     },
     {
       "name": "get_options",

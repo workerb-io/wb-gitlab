@@ -1,0 +1,12 @@
+{
+  "name": "pipelines",
+  "description": "pipelines cheat sheet",
+  "scripts": [
+    {
+      "name": "run",
+      "file": "run.js",
+      "type": "action",
+      "description": "Create a new pipeline"
+    }
+  ]
+}

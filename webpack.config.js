@@ -20,7 +20,7 @@ module.exports = {
     return result;
   }, {}),
   output: {
-    path: path.resolve(__dirname, "gitlab"),
+    path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
     globalObject: "this",
     libraryTarget: "umd",

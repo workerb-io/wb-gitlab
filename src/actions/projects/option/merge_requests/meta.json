@@ -1,18 +1,12 @@
 {
-  "name": "projects",
-  "description": "projects cheat sheet",
+  "name": "merge_requests",
+  "description": "merge request cheatsheet",
   "scripts": [
-    {
-      "name": "new",
-      "file": "new.js",
-      "type": "action",
-      "description": "add new projects"
-    },
     {
       "name": "option",
       "file": "option",
       "type": "folder",
-      "description": "actions for selected project"
+      "description": "actions for selected merge request"
     },
     {
       "name": "get_options",
