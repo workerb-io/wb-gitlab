@@ -8,6 +8,18 @@
       "file": "projects",
       "type": "folder",
       "description": "projects cheat sheet"
+    },
+    {
+      "name": "get_options",
+      "file": "get_options.js",
+      "type": "action",
+      "description": "get option"
+    },
+    {
+      "name": "setup",
+      "file": "setup.js",
+      "type": "action",
+      "description": "setup gitlab secrets"
     }
   ]
 }

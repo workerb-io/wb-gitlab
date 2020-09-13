@@ -14,11 +14,15 @@ export default () => {
       return;
     }
 
-    return JSON.stringify(
-      result.response.map((branch: {name : string, web_url : string}) => ({
+    const branches = result.response.map(
+      (branch: { name: string; web_url: string }) => ({
         name: branch.name,
         html_url: branch.web_url,
-      }))
+      })
     );
+
+    return JSON.stringify({
+      add: branches,
+    });
   }
 };

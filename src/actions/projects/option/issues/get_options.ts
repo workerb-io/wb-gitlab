@@ -12,14 +12,16 @@ export default function () {
       handleErrors(result.status, result.response.message);
     }
 
-    return JSON.stringify(
-      result.response.map((mr: any) => ({
-        name: mr.title,
-        html_url: mr.web_url,
-        id: mr.iid,
-        state: mr.state
-      }))
-    );
+    const issues = result.response.map((mr: any) => ({
+      name: mr.title,
+      html_url: mr.web_url,
+      id: mr.iid,
+      state: mr.state,
+    }));
+
+    return JSON.stringify({
+      add: issues,
+    });
   }
   return [];
 }
