@@ -2,10 +2,10 @@ import { deletePipeline } from "../../../../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../../../../utils/helper";
 
 if (options?.projects && options?.pipelines) {
-  const { id: projectId, html_url } = options.projects;
+  const { id: projectId, html_url, name: projectName } = options.projects;
   const { id: pipelineId } = options.pipelines;
 
-  const ref = args.filter(Boolean).join(' ').trim();
+  const ref = args.filter(Boolean).join(" ").trim();
 
   const response = deletePipeline(projectId, pipelineId);
 
@@ -19,5 +19,6 @@ if (options?.projects && options?.pipelines) {
   } else {
     notify("Pipeline Removed", "success", 3000);
     open(`${html_url}/-/pipelines`);
+    reIndex(["gitlab", "projects", projectName, "pipelines"]);
   }
 }

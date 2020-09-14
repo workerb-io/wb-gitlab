@@ -4,7 +4,7 @@ import { decodeApiResponse, handleErrors } from "../../../../../utils/helper";
 
 if (options?.projects && options?.issues) {
   // eslint-disable-next-line camelcase
-  const { id: projectId, html_url } = options.projects;
+  const { id: projectId, html_url, name: projectName } = options.projects;
   const { id } = options.issues;
 
   const response = deleteIssue(projectId, id);
@@ -15,5 +15,6 @@ if (options?.projects && options?.issues) {
   } else {
     notify("Issue Deleted", "success", 3000);
     open(`${html_url}/-/issues`);
+    reIndex(["gitlab", "projects", projectName, "issues"]);
   }
 }

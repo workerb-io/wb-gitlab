@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar api_1 = __webpack_require__(/*! ../../../utils/api */ \"./src/utils/api.ts\");\nvar helper_1 = __webpack_require__(/*! ../../../utils/helper */ \"./src/utils/helper.ts\");\nif (options.projects) {\n    var _a = options.projects, id = _a.id, html_url = _a.html_url;\n    var description = args.filter(Boolean).join(' ');\n    if (!description) {\n        description = prompt('Enter Description');\n    }\n    var response = api_1.updateProject(id, { description: description });\n    var result = helper_1.decodeApiResponse(response);\n    if (!(result.status >= 200 && result.status <= 299)) {\n        helper_1.handleErrors(result.status, result.response.message ? result.response.message : result.response.error);\n    }\n    else {\n        notify(\"Project Update\", \"success\", 300);\n        open(html_url);\n    }\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/update.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar api_1 = __webpack_require__(/*! ../../../utils/api */ \"./src/utils/api.ts\");\nvar helper_1 = __webpack_require__(/*! ../../../utils/helper */ \"./src/utils/helper.ts\");\nif (options.projects) {\n    var _a = options.projects, id = _a.id, html_url = _a.html_url;\n    var description = args.filter(Boolean).join(\" \");\n    if (!description) {\n        description = prompt(\"Enter Description\");\n    }\n    var response = api_1.updateProject(id, { description: description });\n    var result = helper_1.decodeApiResponse(response);\n    if (!(result.status >= 200 && result.status <= 299)) {\n        helper_1.handleErrors(result.status, result.response.message ? result.response.message : result.response.error);\n    }\n    else {\n        notify(\"Project Update\", \"success\", 300);\n        open(html_url);\n        reIndex([\"gitlab\", \"projects\"]);\n    }\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/update.ts?");
 
 /***/ }),
 
@@ -128,7 +128,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.store = exports.token = exports.uri = void 0;\n/* eslint-disable import/prefer-default-export */\nexports.uri = \"https://gitlab.com/api/v4\";\nexports.token = \"xxCBh7oqZyxKTNnKRS7W\";\nvar storageSetter = {\n    setData: function (key, data) {\n        localStorage.setItem(key, JSON.stringify(data));\n    },\n    getData: function (key) {\n        return JSON.parse(localStorage.getItem(key));\n    },\n};\nexports.store = storageSetter;\n\n\n//# sourceURL=webpack://main/./src/utils/constants.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.store = exports.token = exports.uri = void 0;\n/* eslint-disable import/prefer-default-export */\nexports.uri = \"https://gitlab.com/api/v4\";\nexports.token = VARS.GITLAB_PERSONAL_TOKEN;\nvar storageSetter = {\n    setData: function (key, data) {\n        localStorage.setItem(key, JSON.stringify(data));\n    },\n    getData: function (key) {\n        return JSON.parse(localStorage.getItem(key));\n    },\n};\nexports.store = storageSetter;\n\n\n//# sourceURL=webpack://main/./src/utils/constants.ts?");
 
 /***/ }),
 

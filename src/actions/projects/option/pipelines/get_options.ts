@@ -12,14 +12,17 @@ export default () => {
       return;
     }
 
-    // eslint-disable-next-line consistent-return
-    return JSON.stringify(
-      // eslint-disable-next-line camelcase
-      result.response.map(({ web_url, id }: {web_url : string, id: number}) => ({
+    const pipelines = result.response.map(
+      ({ web_url, id }: { web_url: string; id: number }) => ({
         id,
         name: `Pipeline: #${id}`,
         html_url: web_url,
-      }))
+      })
     );
+
+    // eslint-disable-next-line consistent-return
+    return JSON.stringify({
+      add: pipelines,
+    });
   }
 };
