@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar token = prompt(\"Please provide your GitLab token\");\nif (!token) {\n    notify(\"Trello Secrets can't be empty\", \"error\", 3000);\n}\nelse {\n    setVar(\"trello\", [\n        {\n            name: \"GITLAB_PERSONAL_TOKEN\",\n            value: token,\n        },\n    ]);\n    notify(\"Secrets added successfully\", \"success\", 3000);\n    reIndex();\n}\n\n\n//# sourceURL=webpack://main/./src/actions/setup.ts?");
+eval("\nvar token = prompt(\"Please provide your GitLab token\");\nif (!token) {\n    notify(\"GitHub Secrets can't be empty\", \"error\", 3000);\n}\nelse {\n    setVar(\"gitlab\", [\n        {\n            name: \"GITLAB_PERSONAL_TOKEN\",\n            value: token,\n        },\n    ]);\n    notify(\"Secrets added successfully\", \"success\", 3000);\n    reIndex();\n}\n\n\n//# sourceURL=webpack://main/./src/actions/setup.ts?");
 
 /***/ })
 
