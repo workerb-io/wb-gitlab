@@ -1,9 +1,9 @@
 const token = prompt("Please provide your GitLab token");
 
 if (!token) {
-  notify("Trello Secrets can't be empty", "error", 3000);
+  notify("GitHub Secrets can't be empty", "error", 3000);
 } else {
-  setVar("trello", [
+  setVar("gitlab", [
     {
       name: "GITLAB_PERSONAL_TOKEN",
       value: token,
