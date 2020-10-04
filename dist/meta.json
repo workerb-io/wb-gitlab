@@ -4,10 +4,10 @@
   "sites": ["https://gitlab.com"],
   "scripts": [
     {
-      "name": "projects",
-      "file": "projects",
+      "name": "repos",
+      "file": "repos",
       "type": "folder",
-      "description": "projects cheat sheet"
+      "description": "repos cheat sheet"
     },
     {
       "name": "get_options",
