@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nif (options.branches) {\n    open(options.branches.html_url);\n}\nelse {\n    open('https://gitlab.com');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/branches/option/index.ts?");
+eval("\r\nif (options.branches) {\r\n    open(options.branches.html_url);\r\n}\r\nelse {\r\n    open('https://gitlab.com');\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/branches/option/index.ts?");
 
 /***/ })
 

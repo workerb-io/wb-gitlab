@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nif (options.projects) {\n    open(options.projects.html_url);\n}\nelse if (args.length > 0) {\n    open(\"https://gitlab.com/search?search=\" + args.filter(Boolean).join(' '));\n}\nelse {\n    open('https://gitlab.com');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/index.ts?");
+eval("\r\nif (options.projects) {\r\n    open(options.projects.html_url);\r\n}\r\nelse if (args.length > 0) {\r\n    open(\"https://gitlab.com/search?search=\" + args.filter(Boolean).join(' '));\r\n}\r\nelse {\r\n    open('https://gitlab.com');\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/index.ts?");
 
 /***/ })
 

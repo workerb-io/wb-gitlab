@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nif (options.merge_requests) {\n    open(options.merge_requests.html_url);\n}\nelse {\n    open('https://gitlab.com');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/merge_requests/option/index.ts?");
+eval("\r\nif (options.merge_requests) {\r\n    open(options.merge_requests.html_url);\r\n}\r\nelse {\r\n    open('https://gitlab.com');\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/merge_requests/option/index.ts?");
 
 /***/ })
 

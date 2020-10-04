@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar constants_1 = __webpack_require__(/*! ../utils/constants */ \"./src/utils/constants.ts\");\nvar returnOptions = function () {\n    if (!constants_1.token) {\n        return JSON.stringify({\n            remove: [\"projects\"],\n        });\n    }\n    return JSON.stringify({\n        remove: [\"setup\"],\n    });\n};\nexports.default = returnOptions;\n\n\n//# sourceURL=webpack://main/./src/actions/get_options.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar constants_1 = __webpack_require__(/*! ../utils/constants */ \"./src/utils/constants.ts\");\r\nvar returnOptions = function () {\r\n    if (!constants_1.token) {\r\n        return JSON.stringify({\r\n            remove: [\"projects\"],\r\n        });\r\n    }\r\n    return JSON.stringify({\r\n        remove: [\"setup\"],\r\n    });\r\n};\r\nexports.default = returnOptions;\r\n\n\n//# sourceURL=webpack://main/./src/actions/get_options.ts?");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar co
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.store = exports.token = exports.uri = void 0;\n/* eslint-disable import/prefer-default-export */\nexports.uri = \"https://gitlab.com/api/v4\";\nexports.token = VARS.GITLAB_PERSONAL_TOKEN;\nvar storageSetter = {\n    setData: function (key, data) {\n        localStorage.setItem(key, JSON.stringify(data));\n    },\n    getData: function (key) {\n        return JSON.parse(localStorage.getItem(key));\n    },\n};\nexports.store = storageSetter;\n\n\n//# sourceURL=webpack://main/./src/utils/constants.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.store = exports.token = exports.uri = void 0;\r\n/* eslint-disable import/prefer-default-export */\r\nexports.uri = \"https://gitlab.com/api/v4\";\r\nexports.token = VARS.GITLAB_PERSONAL_TOKEN;\r\nvar storageSetter = {\r\n    setData: function (key, data) {\r\n        localStorage.setItem(key, JSON.stringify(data));\r\n    },\r\n    getData: function (key) {\r\n        return JSON.parse(localStorage.getItem(key));\r\n    },\r\n};\r\nexports.store = storageSetter;\r\n\n\n//# sourceURL=webpack://main/./src/utils/constants.ts?");
 
 /***/ })
 

@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nif ((options === null || options === void 0 ? void 0 : options.projects) && (options === null || options === void 0 ? void 0 : options.pipelines)) {\n    open(options.pipelines.html_url);\n}\nelse {\n    open('https://gitlab.com');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/pipelines/option/index.ts?");
+eval("\r\nif ((options === null || options === void 0 ? void 0 : options.projects) && (options === null || options === void 0 ? void 0 : options.pipelines)) {\r\n    open(options.pipelines.html_url);\r\n}\r\nelse {\r\n    open('https://gitlab.com');\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/pipelines/option/index.ts?");
 
 /***/ })
 

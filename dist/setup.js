@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar token = prompt(\"Please provide your GitLab token\");\nif (!token) {\n    notify(\"GitHub Secrets can't be empty\", \"error\", 3000);\n}\nelse {\n    setVar(\"gitlab\", [\n        {\n            name: \"GITLAB_PERSONAL_TOKEN\",\n            value: token,\n        },\n    ]);\n    notify(\"Secrets added successfully\", \"success\", 3000);\n    reIndex();\n}\n\n\n//# sourceURL=webpack://main/./src/actions/setup.ts?");
+eval("\r\nvar token = null;\r\nif (args[0]) {\r\n    token = args[0];\r\n}\r\nelse {\r\n    open(\"https://gitlab.com/profile/personal_access_tokens\");\r\n    var tokenName = \"workerb-\" + new Date().getTime();\r\n    type(tokenName, 'Name', { method: 'by_label' });\r\n    click('api', {});\r\n    click('read_user', {});\r\n    click('read_api', {});\r\n    click('read_repository', {});\r\n    click('write_repository', {});\r\n    click('read_registry', {});\r\n    click('write_registry', {});\r\n    submit('Name', {\r\n        method: 'by_label',\r\n        expectReload: true\r\n    });\r\n    token = read('#created-personal-access-token', { method: 'by_query_selector' });\r\n}\r\nif (!token) {\r\n    notify(\"GitHub Secrets can't be empty\", \"error\", 3000);\r\n}\r\nelse {\r\n    setVar(\"gitlab\", [\r\n        {\r\n            name: \"GITLAB_PERSONAL_TOKEN\",\r\n            value: token,\r\n        },\r\n    ]);\r\n    notify(\"Secrets added successfully\", \"success\", 3000);\r\n    reIndex();\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/setup.ts?");
 
 /***/ })
 
