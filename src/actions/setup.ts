@@ -16,8 +16,11 @@ if (args[0]) {
   click('read_registry', {})
   click('write_registry', {})
 
+  //@ts-ignore
   submit('Name', {
+    //@ts-ignore
     method: 'by_label',
+    //@ts-ignore
     expectReload: true
   })
 
@@ -33,6 +36,6 @@ if (!token) {
       value: token,
     },
   ]);
-  notify("Secrets added successfully", "success", 3000);
+  notify("Gitlab added successfully", "success", 3000);
   reIndex();
 }

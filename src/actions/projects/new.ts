@@ -14,6 +14,12 @@ if (argsArr[argsArr.length - 1] === "private") {
   projectName = argsArr.join(" ");
 }
 
+log(projectName)
+
+if (!projectName) {
+  projectName = prompt("Github project name")
+}
+
 const additionalProjectOptions = {
   issues_access_level: isPrivateProject ? "private" : "enabled",
   repository_access_level: "enabled",
