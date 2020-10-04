@@ -10,6 +10,7 @@ export default function () {
 
     if (result.status >= 400) {
       handleErrors(result.status, result.response.message);
+      return;
     }
 
     const issues = result.response.map((mr: any) => ({
