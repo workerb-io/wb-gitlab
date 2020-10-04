@@ -8,8 +8,6 @@ export default function () {
     const response = getAllMergeRequest(id);
     const result = decodeApiResponse(response);
 
-    log(result)
-
     if (result.status >= 400) {
       handleErrors(result.status, result.response.message);
     }
