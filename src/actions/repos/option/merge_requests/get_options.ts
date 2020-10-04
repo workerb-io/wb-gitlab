@@ -10,7 +10,7 @@ export default function () {
 
     log(result)
 
-    if (!(result.status >= 200 && result.status <= 299)) {
+    if (result.status >= 400) {
       handleErrors(result.status, result.response.message);
     }
 

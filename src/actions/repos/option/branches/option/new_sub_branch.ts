@@ -16,7 +16,7 @@ if (options?.repos) {
   });
   const result = decodeApiResponse(response);
 
-  if (!(result.status >= 200 && result.status <= 299)) {
+  if (result.status >= 400) {
     handleErrors(result.status, result.response.message);
   } else {
     notify("Branch Created", "success", 3000);

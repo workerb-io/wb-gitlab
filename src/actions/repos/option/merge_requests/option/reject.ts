@@ -9,7 +9,7 @@ if (options?.repos && options?.merge_requests) {
   const response = deleteMR(projectId, id);
   const result = decodeApiResponse(response);
 
-  if (!(result.status >= 200 && result.status <= 299)) {
+  if (result.status >= 400) {
     handleErrors(result.status, result.response.message);
   } else {
     notify("Merge Request Deleted", "success", 3000);

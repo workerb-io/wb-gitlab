@@ -31,7 +31,7 @@ if (options?.repos && options?.branches) {
     });
     const result = decodeApiResponse(response);
 
-    if (!(result.status >= 200 && result.status <= 299)) {
+    if (result.status >= 400) {
       handleErrors(result.status, result.response.message);
     } else {
       notify("Merge request created", "success", 3000);
