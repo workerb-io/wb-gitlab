@@ -91,32 +91,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/get_options.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/repos/option/index.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/actions/get_options.ts":
-/*!************************************!*\
-  !*** ./src/actions/get_options.ts ***!
-  \************************************/
+/***/ "./src/actions/repos/option/index.ts":
+/*!*******************************************!*\
+  !*** ./src/actions/repos/option/index.ts ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar constants_1 = __webpack_require__(/*! ../utils/constants */ \"./src/utils/constants.ts\");\r\nvar returnOptions = function () {\r\n    if (!constants_1.token) {\r\n        return JSON.stringify({\r\n            remove: [\"repos\"],\r\n        });\r\n    }\r\n    return JSON.stringify({\r\n        remove: [\"setup\"],\r\n    });\r\n};\r\nexports.default = returnOptions;\r\n\n\n//# sourceURL=webpack://main/./src/actions/get_options.ts?");
-
-/***/ }),
-
-/***/ "./src/utils/constants.ts":
-/*!********************************!*\
-  !*** ./src/utils/constants.ts ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.store = exports.token = exports.uri = void 0;\r\n/* eslint-disable import/prefer-default-export */\r\nexports.uri = \"https://gitlab.com/api/v4\";\r\nexports.token = VARS.GITLAB_PERSONAL_TOKEN;\r\nvar storageSetter = {\r\n    setData: function (key, data) {\r\n        localStorage.setItem(key, JSON.stringify(data));\r\n    },\r\n    getData: function (key) {\r\n        return JSON.parse(localStorage.getItem(key));\r\n    },\r\n};\r\nexports.store = storageSetter;\r\n\n\n//# sourceURL=webpack://main/./src/utils/constants.ts?");
+eval("\r\nif (options.projects) {\r\n    open(options.projects.html_url);\r\n}\r\nelse if (args.length > 0) {\r\n    open(\"https://gitlab.com/search?search=\" + args.filter(Boolean).join(' '));\r\n}\r\nelse {\r\n    open('https://gitlab.com');\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/repos/option/index.ts?");
 
 /***/ })
 
