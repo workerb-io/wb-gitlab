@@ -14,7 +14,6 @@ if (options.repos) {
     );
   } else {
     notify("Project Deleted", "success", 3000);
-    open("https://gitlab.com");
     reIndex(["gitlab", "repos"]);
   }
 }
