@@ -21,6 +21,6 @@ if (options.repos) {
   } else {
     notify("Project Update", "success", 300);
     open(html_url);
-    reIndex(["gitlab", "projects"]);
+    reIndex(["gitlab", "repos"]);
   }
 }

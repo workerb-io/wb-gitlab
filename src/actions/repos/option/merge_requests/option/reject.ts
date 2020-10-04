@@ -14,6 +14,6 @@ if (options?.repos && options?.merge_requests) {
   } else {
     notify("Merge Request Deleted", "success", 3000);
     open(html_url);
-    reIndex(["gitlab", "projects", projectName, "merge_requests"]);
+    reIndex(["gitlab", "repos", projectName, "merge_requests"]);
   }
 }

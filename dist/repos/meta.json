@@ -1,12 +1,12 @@
 {
-  "name": "projects",
-  "description": "projects cheat sheet",
+  "name": "repos",
+  "description": "repos cheat sheet",
   "scripts": [
     {
       "name": "new",
       "file": "new.js",
       "type": "action",
-      "description": "add new projects"
+      "description": "add new repos"
     },
     {
       "name": "option",

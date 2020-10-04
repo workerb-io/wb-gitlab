@@ -1,6 +1,6 @@
 {
-	"name" : "projects",
-	"description" : "projects cheat sheet",
+	"name" : "repos",
+	"description" : "repos cheat sheet",
 	"scripts" : [
 		{
 			"name" : "remove",

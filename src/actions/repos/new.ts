@@ -46,5 +46,5 @@ if (result.status >= 400) {
 } else {
   notify("Project Created", "success", 3000);
   open(result.response.web_url);
-  reIndex(["gitlab", "projects"]);
+  reIndex(["gitlab", "repos"]);
 }

@@ -36,7 +36,7 @@ if (options?.repos && options?.branches) {
     } else {
       notify("Merge request created", "success", 3000);
       open(result.response.web_url);
-      reIndex(["gitlab", "projects", projectName, "branches"]);
+      reIndex(["gitlab", "repos", projectName, "branches"]);
     }
   }
 }

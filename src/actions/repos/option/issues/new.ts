@@ -23,6 +23,6 @@ if (options?.repos) {
   } else {
     notify("Issue Created", "success", 3000);
     open(result.response.web_url);
-    reIndex(["gitlab", "projects", projectName, "issues"]);
+    reIndex(["gitlab", "repos", projectName, "issues"]);
   }
 }

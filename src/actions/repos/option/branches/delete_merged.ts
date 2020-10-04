@@ -15,6 +15,6 @@ if (options?.repos) {
   } else {
     notify("Branch removed", "success", 300);
     open(html_url);
-    reIndex(["gitlab", "projects", projectName, "branches"]);
+    reIndex(["gitlab", "repos", projectName, "branches"]);
   }
 }

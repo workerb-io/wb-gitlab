@@ -14,13 +14,13 @@ export default () => {
     return;
   }
 
-  const projects = result.response.map((project: any) => ({
+  const repos = result.response.map((project: any) => ({
     name: project.name,
     html_url: project.web_url,
     id: project.id,
   }));
 
   return JSON.stringify({
-    add: projects,
+    add: repos,
   });
 };

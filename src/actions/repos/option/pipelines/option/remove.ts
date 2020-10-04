@@ -19,6 +19,6 @@ if (options?.repos && options?.pipelines) {
   } else {
     notify("Pipeline Removed", "success", 3000);
     open(`${html_url}/-/pipelines`);
-    reIndex(["gitlab", "projects", projectName, "pipelines"]);
+    reIndex(["gitlab", "repos", projectName, "pipelines"]);
   }
 }

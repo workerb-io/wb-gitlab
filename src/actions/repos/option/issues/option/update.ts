@@ -31,7 +31,7 @@ if (options.repos && options.issues) {
     } else {
       notify(`Issue ${newState} `, "success", 3000);
       open(result.response.web_url);
-      reIndex(["gitlab", "projects", projectName, "issues"]);
+      reIndex(["gitlab", "repos", projectName, "issues"]);
     }
   }
 }

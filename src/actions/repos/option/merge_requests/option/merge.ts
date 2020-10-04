@@ -21,7 +21,7 @@ if (options.repos && options.merge_requests) {
     } else {
       notify("Request Merged", "success", 3000);
       open(result.response.web_url);
-      reIndex(["gitlab", "projects", projectName, "merge_requests"]);
+      reIndex(["gitlab", "repos", projectName, "merge_requests"]);
     }
   }
 }

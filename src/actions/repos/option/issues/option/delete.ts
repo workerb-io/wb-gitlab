@@ -15,6 +15,6 @@ if (options?.repos && options?.issues) {
   } else {
     notify("Issue Deleted", "success", 3000);
     open(`${html_url}/-/issues`);
-    reIndex(["gitlab", "projects", projectName, "issues"]);
+    reIndex(["gitlab", "repos", projectName, "issues"]);
   }
 }
