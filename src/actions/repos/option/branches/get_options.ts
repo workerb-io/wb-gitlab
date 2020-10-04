@@ -4,7 +4,7 @@ import { decodeApiResponse, handleErrors } from "../../../../utils/helper";
 
 export default () => {
   if (options?.repos) {
-    const { id } = options.projects;
+    const { id } = options.repos;
 
     const response = listAllBranches(id);
     const result = decodeApiResponse(response);

@@ -2,7 +2,7 @@ import { createNewBranch } from "../../../../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../../../../utils/helper";
 
 if (options?.repos) {
-  const { id, name: projectName } = options.projects;
+  const { id, name: projectName } = options.repos;
   const { name: targetBranchName } = options.branches;
 
   let branchName = args.filter(Boolean).join(" ");

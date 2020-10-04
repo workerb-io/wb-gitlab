@@ -1,8 +1,8 @@
 import { removeProject } from "../../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../../utils/helper";
 
-if (options.projects) {
-  const { id } = options.projects;
+if (options.repos) {
+  const { id } = options.repos;
 
   const response = removeProject(id);
   const result = decodeApiResponse(response);

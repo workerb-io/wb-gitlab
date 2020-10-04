@@ -2,7 +2,7 @@ import { createNewIssue } from "../../../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../../../utils/helper";
 
 if (options?.repos) {
-  const { id: projectId, name: projectName } = options.projects;
+  const { id: projectId, name: projectName } = options.repos;
   let issueName = args.filter(Boolean).join(" ");
 
   if (!issueName) {

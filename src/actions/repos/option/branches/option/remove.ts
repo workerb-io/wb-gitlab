@@ -2,7 +2,7 @@ import { removeBranch } from "../../../../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../../../../utils/helper";
 
 if (options?.repos && options.branches) {
-  const { id, html_url, name: projectName } = options.projects;
+  const { id, html_url, name: projectName } = options.repos;
   const { name } = options.branches;
 
   const response = removeBranch(id, name);

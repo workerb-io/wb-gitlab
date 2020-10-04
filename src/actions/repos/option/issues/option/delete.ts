@@ -4,7 +4,7 @@ import { decodeApiResponse, handleErrors } from "../../../../../utils/helper";
 
 if (options?.repos && options?.issues) {
   // eslint-disable-next-line camelcase
-  const { id: projectId, html_url, name: projectName } = options.projects;
+  const { id: projectId, html_url, name: projectName } = options.repos;
   const { id } = options.issues;
 
   const response = deleteIssue(projectId, id);

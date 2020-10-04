@@ -2,7 +2,7 @@ import { createNewMR } from "../../../../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../../../../utils/helper";
 
 if (options?.repos && options?.branches) {
-  const { id, name: projectName } = options.projects;
+  const { id, name: projectName } = options.repos;
   const { name: sourceBranchName } = options.branches;
 
   let mrPayload = args.filter(Boolean).join(" ");

@@ -1,8 +1,8 @@
 import { mergeMR } from "../../../../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../../../../utils/helper";
 
-if (options.projects && options.merge_requests) {
-  const { id: projectId, name: projectName } = options.projects;
+if (options.repos && options.merge_requests) {
+  const { id: projectId, name: projectName } = options.repos;
   const { state, id } = options.merge_requests;
 
   if (state === "closed" || state === "merged") {

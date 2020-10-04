@@ -2,7 +2,7 @@ import { deletePipeline } from "../../../../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../../../../utils/helper";
 
 if (options?.repos && options?.pipelines) {
-  const { id: projectId, html_url, name: projectName } = options.projects;
+  const { id: projectId, html_url, name: projectName } = options.repos;
   const { id: pipelineId } = options.pipelines;
 
   const ref = args.filter(Boolean).join(" ").trim();

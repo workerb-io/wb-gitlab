@@ -2,7 +2,7 @@ import { deleteMergedBranches } from "../../../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../../../utils/helper";
 
 if (options?.repos) {
-  const { id, html_url, name: projectName } = options.projects;
+  const { id, html_url, name: projectName } = options.repos;
 
   const response = deleteMergedBranches(id);
   const result = decodeApiResponse(response);

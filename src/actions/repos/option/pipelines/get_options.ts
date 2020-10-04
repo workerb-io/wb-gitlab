@@ -3,7 +3,7 @@ import { getAllPipelines } from "../../../../utils/api";
 
 export default () => {
   if (options?.repos) {
-    const { id: projectId } = options.projects;
+    const { id: projectId } = options.repos;
     const response = getAllPipelines(projectId);
     const result = decodeApiResponse(response);
 
