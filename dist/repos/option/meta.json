@@ -37,6 +37,13 @@
 			"file" : "pipelines",
 			"type" : "folder",
 			"description" : "pipelines cheat sheet"
+		},
+		{
+			"name" : "index",
+			"file" : "index",
+			"type" : "folder",
+			"description" : "index cheat sheet",
+			"alternateName": "open"
 		}
 	]
 }
