@@ -41,7 +41,7 @@
 		{
 			"name" : "index",
 			"file" : "index",
-			"type" : "folder",
+			"type" : "action",
 			"description" : "index cheat sheet",
 			"alternateName": "open"
 		}
