@@ -22,7 +22,7 @@
     },
 		{
 			"name" : "index",
-			"file" : "index",
+			"file" : "index.js",
 			"type" : "action",
 			"description" : "index cheat sheet",
 			"alternateName": "open"
