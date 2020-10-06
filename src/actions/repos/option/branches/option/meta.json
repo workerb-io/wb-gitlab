@@ -1,31 +1,31 @@
 {
-  "name" : "branches",
-  "description" : "branches description",
-  "scripts" : [
-    {
-      "name" : "remove",
-      "file" : "remove.js",
-      "type" : "action",
-      "description": "remove branch"
-    },
-    {
-      "name" : "new_mr",
-      "file" : "new_mr.js",
-      "type" : "action",
-      "description": "Creates a new merge request from a branch"
-    },
-    {
-      "name" : "new_sub_branch",
-      "file" : "new_sub_branch.js",
-      "type" : "action",
-      "description": "Create a new sub branch from a branch"
-    },
+	"name": "branches",
+	"description": "branches description",
+	"scripts": [
 		{
-			"name" : "index",
-			"file" : "index.js",
-			"type" : "action",
-			"description" : "index cheat sheet",
+			"name": "remove",
+			"file": "remove.js",
+			"type": "action",
+			"description": "remove branch"
+		},
+		{
+			"name": "new_mr",
+			"file": "new_mr.js",
+			"type": "action",
+			"description": "Creates a new merge request from a branch"
+		},
+		{
+			"name": "new_sub_branch",
+			"file": "new_sub_branch.js",
+			"type": "action",
+			"description": "Create a new sub branch from a branch"
+		},
+		{
+			"name": "index",
+			"file": "index.js",
+			"type": "action",
+			"description": "index cheat sheet",
 			"alternateName": "open"
 		}
-  ]
+	]
 }
