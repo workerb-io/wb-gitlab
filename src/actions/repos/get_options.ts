@@ -3,7 +3,10 @@ import { getAllProjects, getUserInfo } from "../../utils/api";
 import { decodeApiResponse, handleErrors } from "../../utils/helper";
 
 export default () => {
-  const response = getAllProjects();
+  const userData = getUserInfo();
+  const { response: user } = decodeApiResponse(userData);
+
+  const response = getAllProjects(user.id);
   const result = decodeApiResponse(response);
 
   if (result.status >= 400) {
