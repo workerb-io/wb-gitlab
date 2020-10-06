@@ -8,8 +8,7 @@ export default () => {
     const result = decodeApiResponse(response);
 
     if (result.status >= 400) {
-      handleErrors(result.status, result.response.message);
-      return;
+      return {};
     }
 
     const pipelines = result.response.map(
@@ -25,4 +24,6 @@ export default () => {
       add: pipelines,
     });
   }
+
+  return {}
 };
