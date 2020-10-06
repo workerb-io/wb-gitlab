@@ -3,7 +3,7 @@ import request from "./request";
 
 export const getUserInfo = () => request.get("/user");
 
-export const getAllProjects = () => request.get(`/projects?owned=true`);
+export const getAllProjects = () => request.get(`/projects`);
 
 export const createNewProject = (data: object) => request.post(`/projects`, data);
 

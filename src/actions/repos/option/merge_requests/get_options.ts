@@ -9,8 +9,7 @@ export default function () {
     const result = decodeApiResponse(response);
 
     if (result.status >= 400) {
-      handleErrors(result.status, result.response.message);
-      return;
+      return {};
     }
 
     const merge_requests = result.response.map((mr: any) => ({
@@ -24,5 +23,5 @@ export default function () {
       add: merge_requests,
     });
   }
-  return [];
+  return {};
 }
