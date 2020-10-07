@@ -24,8 +24,7 @@
 			"name": "index",
 			"file": "index.js",
 			"type": "action",
-			"description": "Search all projects",
-			"alternateName": "search"
+			"description": "Search all projects"
 		}
 	]
 }
