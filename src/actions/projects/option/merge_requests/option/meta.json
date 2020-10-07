@@ -1,0 +1,18 @@
+{
+	"name": "merge_requests",
+	"description": "merge requests cheat sheet",
+	"scripts": [
+		{
+			"name": "merge",
+			"file": "merge.js",
+			"type": "action",
+			"description": "merge request"
+		},
+		{
+			"name": "reject",
+			"file": "reject.js",
+			"type": "action",
+			"description": "delete a merge request"
+		}
+	]
+}

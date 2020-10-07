@@ -101,58 +101,9 @@ return /******/ (function(modules) { // webpackBootstrap
   !*** ./src/actions/repos/option/branches/option/new_sub_branch.ts ***!
   \********************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar api_1 = __webpack_require__(/*! ../../../../../utils/api */ \"./src/utils/api.ts\");\nvar helper_1 = __webpack_require__(/*! ../../../../../utils/helper */ \"./src/utils/helper.ts\");\nif (options === null || options === void 0 ? void 0 : options.repos) {\n    var _a = options.repos, id = _a.id, projectName = _a.name;\n    var targetBranchName = options.branches.name;\n    var branchName = args.filter(Boolean).join(' ');\n    if (!branchName) {\n        branchName = prompt('Enter branch name');\n    }\n    var response = api_1.createNewBranch(id, {\n        branch: branchName,\n        ref: targetBranchName,\n    });\n    var result = helper_1.decodeApiResponse(response);\n    if (result.status >= 400) {\n        helper_1.handleErrors(result.status, result.response.message);\n    }\n    else {\n        notify('Branch Created', 'success', 3000);\n        open(result.response.web_url);\n        reIndex(['gitlab', 'repos', projectName, 'branches']);\n    }\n}\n\n\n//# sourceURL=webpack://main/./src/actions/repos/option/branches/option/new_sub_branch.ts?");
-
-/***/ }),
-
-/***/ "./src/utils/api.ts":
-/*!**************************!*\
-  !*** ./src/utils/api.ts ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.rerunPipeline = exports.deletePipeline = exports.createNewPipeline = exports.getAllPipelines = exports.deleteIssue = exports.updateIssue = exports.createNewIssue = exports.getAllIssuesList = exports.deleteMR = exports.mergeMR = exports.getAllMergeRequest = exports.createNewMR = exports.deleteMergedBranches = exports.removeBranch = exports.createNewBranch = exports.listAllBranches = exports.updateProject = exports.removeProject = exports.createNewProject = exports.getAllProjects = exports.getUserInfo = void 0;\n/* eslint-disable import/prefer-default-export */\nvar request_1 = __importDefault(__webpack_require__(/*! ./request */ \"./src/utils/request.ts\"));\nexports.getUserInfo = function () { return request_1.default.get('/user'); };\nexports.getAllProjects = function (userId) { return request_1.default.get(\"/projects?membership=true\"); };\nexports.createNewProject = function (data) { return request_1.default.post(\"/projects\", data); };\nexports.removeProject = function (id) { return request_1.default.delete(\"/projects/\" + id); };\nexports.updateProject = function (id, data) { return request_1.default.put(\"/projects/\" + id, data); };\nexports.listAllBranches = function (projectId) { return request_1.default.get(\"/projects/\" + projectId + \"/repository/branches\"); };\nexports.createNewBranch = function (projectId, data) {\n    return request_1.default.post(\"/projects/\" + projectId + \"/repository/branches\", data);\n};\nexports.removeBranch = function (projectId, branchName) {\n    return request_1.default.delete(\"/projects/\" + projectId + \"/repository/branches/\" + branchName);\n};\nexports.deleteMergedBranches = function (projectId) {\n    return request_1.default.delete(\"/projects/\" + projectId + \"/repository/merged_branches\");\n};\nexports.createNewMR = function (projectId, data) {\n    return request_1.default.post(\"/projects/\" + projectId + \"/merge_requests\", data);\n};\nexports.getAllMergeRequest = function (projectId) { return request_1.default.get(\"/projects/\" + projectId + \"/merge_requests\"); };\nexports.mergeMR = function (projectId, mrId) {\n    return request_1.default.put(\"/projects/\" + projectId + \"/merge_requests/\" + mrId + \"/merge\");\n};\nexports.deleteMR = function (projectId, mrId) {\n    return request_1.default.delete(\"/projects/\" + projectId + \"/merge_requests/\" + mrId);\n};\nexports.getAllIssuesList = function (projectId) { return request_1.default.get(\"/projects/\" + projectId + \"/issues\"); };\nexports.createNewIssue = function (projectId, data) {\n    return request_1.default.post(\"/projects/\" + projectId + \"/issues\", data);\n};\nexports.updateIssue = function (projectId, issueId, data) {\n    return request_1.default.put(\"/projects/\" + projectId + \"/issues/\" + issueId, data);\n};\nexports.deleteIssue = function (projectId, issueId) {\n    return request_1.default.delete(\"/projects/\" + projectId + \"/issues/\" + issueId);\n};\nexports.getAllPipelines = function (projectId) { return request_1.default.get(\"/projects/\" + projectId + \"/pipelines\"); };\nexports.createNewPipeline = function (projectId, data) {\n    return request_1.default.post(\"/projects/\" + projectId + \"/pipeline\", data);\n};\nexports.deletePipeline = function (project, pipelineId) {\n    return request_1.default.delete(\"/projects/\" + project + \"/pipelines/\" + pipelineId);\n};\nexports.rerunPipeline = function (projectId, pipelineId) {\n    return request_1.default.post(\"/projects/\" + projectId + \"/pipelines/\" + pipelineId + \"/retry\");\n};\n\n\n//# sourceURL=webpack://main/./src/utils/api.ts?");
-
-/***/ }),
-
-/***/ "./src/utils/constants.ts":
-/*!********************************!*\
-  !*** ./src/utils/constants.ts ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.store = exports.token = exports.uri = void 0;\n/* eslint-disable import/prefer-default-export */\nexports.uri = \"https://gitlab.com/api/v4\";\nexports.token = VARS.GITLAB_PERSONAL_TOKEN;\nvar storageSetter = {\n    setData: function (key, data) {\n        localStorage.setItem(key, JSON.stringify(data));\n    },\n    getData: function (key) {\n        return JSON.parse(localStorage.getItem(key));\n    },\n};\nexports.store = storageSetter;\n\n\n//# sourceURL=webpack://main/./src/utils/constants.ts?");
-
-/***/ }),
-
-/***/ "./src/utils/helper.ts":
-/*!*****************************!*\
-  !*** ./src/utils/helper.ts ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.handleErrors = exports.decodeApiResponse = exports.api = void 0;\n/* eslint-disable default-case */\nvar constants_1 = __webpack_require__(/*! ./constants */ \"./src/utils/constants.ts\");\nfunction api(endpoint) {\n    return \"\" + constants_1.uri + endpoint;\n}\nexports.api = api;\nfunction decodeApiResponse(apiResponse) {\n    var result = apiResponse;\n    if (!result.response) {\n        return {\n            response: {},\n            status: result.status,\n        };\n    }\n    return {\n        response: JSON.parse(result.response),\n        status: result.status,\n    };\n}\nexports.decodeApiResponse = decodeApiResponse;\nexports.handleErrors = function (status, response) {\n    switch (status) {\n        case 401:\n        case 500:\n        case 403:\n        case 404:\n        case 400:\n            notify(response, \"error\", 3000);\n    }\n};\n\n\n//# sourceURL=webpack://main/./src/utils/helper.ts?");
-
-/***/ }),
-
-/***/ "./src/utils/request.ts":
-/*!******************************!*\
-  !*** ./src/utils/request.ts ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nvar __assign = (this && this.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar constants_1 = __webpack_require__(/*! ./constants */ \"./src/utils/constants.ts\");\nvar helper_1 = __webpack_require__(/*! ./helper */ \"./src/utils/helper.ts\");\nvar commonHeaders = {\n    \"Private-Token\": \"\" + constants_1.token,\n    \"content-type\": \"application/json\",\n};\nvar Request = /** @class */ (function () {\n    function Request() {\n        this.api = helper_1.api;\n    }\n    Request.prototype.get = function (uri, headers) {\n        if (headers === void 0) { headers = {}; }\n        return httpGet(this.api(uri), __assign(__assign({}, commonHeaders), headers));\n    };\n    Request.prototype.delete = function (uri, data, headers) {\n        if (data === void 0) { data = {}; }\n        if (headers === void 0) { headers = {}; }\n        return httpDelete(this.api(uri), JSON.stringify(data), __assign(__assign({}, commonHeaders), headers));\n    };\n    Request.prototype.put = function (uri, data, headers) {\n        if (data === void 0) { data = {}; }\n        if (headers === void 0) { headers = {}; }\n        return httpPut(this.api(uri), JSON.stringify(data), __assign(__assign({}, commonHeaders), headers));\n    };\n    Request.prototype.post = function (uri, data, headers) {\n        if (data === void 0) { data = {}; }\n        if (headers === void 0) { headers = {}; }\n        return httpPost(this.api(uri), JSON.stringify(data), __assign(__assign({}, commonHeaders), headers));\n    };\n    return Request;\n}());\nvar request = new Request();\nexports.default = request;\n\n\n//# sourceURL=webpack://main/./src/utils/request.ts?");
+eval("throw new Error(\"Module build failed (from ./node_modules/ts-loader/index.js):\\nError: ENOENT: no such file or directory, open '/Users/workerb/workspace/packages/wb-gitlab/src/actions/repos/option/branches/option/new_sub_branch.ts'\");\n\n//# sourceURL=webpack://main/./src/actions/repos/option/branches/option/new_sub_branch.ts?");
 
 /***/ })
 
