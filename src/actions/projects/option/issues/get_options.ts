@@ -3,8 +3,8 @@ import { decodeApiResponse, handleErrors } from '../../../../utils/helper'
 
 // eslint-disable-next-line func-names
 export default function () {
-	if (options?.repos) {
-		const { id } = options.repos
+	if (options?.projects) {
+		const { id } = options.projects
 		const response = getAllIssuesList(id)
 		const result = decodeApiResponse(response)
 

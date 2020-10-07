@@ -10,14 +10,14 @@ export default () => {
 		return {}
 	}
 
-	const repos = result.response.map((project: any) => ({
-		name: project.name,
+	const projects = result.response.map((project: any) => ({
+		name: project.name_with_namespace,
 		html_url: project.web_url,
 		id: project.id,
 		identifier: project.id,
 	}))
 
 	return JSON.stringify({
-		add: repos,
+		add: projects,
 	})
 }

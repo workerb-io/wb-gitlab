@@ -1,8 +1,8 @@
 import { createNewPipeline } from '../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../utils/helper'
 
-if (options?.repos) {
-	const { id: projectId } = options.repos
+if (options?.projects) {
+	const { id: projectId } = options.projects
 
 	const ref = args.filter(Boolean).join(' ').trim()
 

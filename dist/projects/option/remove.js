@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar api_1 = __webpack_require__(/*! ../../../utils/api */ \"./src/utils/api.ts\");\nvar helper_1 = __webpack_require__(/*! ../../../utils/helper */ \"./src/utils/helper.ts\");\nif (options.repos) {\n    var id = options.repos.id;\n    var response = api_1.removeProject(id);\n    var result = helper_1.decodeApiResponse(response);\n    if (result.status >= 400) {\n        helper_1.handleErrors(result.status, result.response.message ? result.response.message : result.response.error);\n    }\n    else {\n        notify('Project Deleted', 'success', 3000);\n        reIndex(['gitlab', 'projects']);\n    }\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/remove.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar api_1 = __webpack_require__(/*! ../../../utils/api */ \"./src/utils/api.ts\");\nvar helper_1 = __webpack_require__(/*! ../../../utils/helper */ \"./src/utils/helper.ts\");\nif (options.projects) {\n    var id = options.projects.id;\n    var response = api_1.removeProject(id);\n    var result = helper_1.decodeApiResponse(response);\n    if (result.status >= 400) {\n        helper_1.handleErrors(result.status, result.response.message ? result.response.message : result.response.error);\n    }\n    else {\n        notify('Project Deleted', 'success', 3000);\n        reIndex(['gitlab', 'projects']);\n    }\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/remove.ts?");
 
 /***/ }),
 

@@ -1,8 +1,8 @@
 import { createNewIssue } from '../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../utils/helper'
 
-if (options?.repos) {
-	const { identifier: projectId, name: projectName } = options.repos
+if (options?.projects) {
+	const { identifier: projectId, name: projectName } = options.projects
 	let issueName = args.filter(Boolean).join(' ')
 
 	if (!issueName) {

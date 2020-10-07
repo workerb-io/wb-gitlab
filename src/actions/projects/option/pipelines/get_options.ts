@@ -2,8 +2,8 @@ import { decodeApiResponse, handleErrors } from '../../../../utils/helper'
 import { getAllPipelines } from '../../../../utils/api'
 
 export default () => {
-	if (options?.repos) {
-		const { id: projectId } = options.repos
+	if (options?.projects) {
+		const { id: projectId } = options.projects
 		const response = getAllPipelines(projectId)
 		const result = decodeApiResponse(response)
 

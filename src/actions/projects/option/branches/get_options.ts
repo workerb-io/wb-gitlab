@@ -3,8 +3,8 @@ import { listAllBranches } from '../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../utils/helper'
 
 export default () => {
-	if (options?.repos) {
-		const { id } = options.repos
+	if (options?.projects) {
+		const { id } = options.projects
 
 		const response = listAllBranches(id)
 		const result = decodeApiResponse(response)

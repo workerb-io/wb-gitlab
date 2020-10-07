@@ -1,8 +1,8 @@
 import { updateProject } from '../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../utils/helper'
 
-if (options.repos) {
-	const { id, html_url } = options.repos
+if (options.projects) {
+	const { id, html_url } = options.projects
 
 	let description = args.filter(Boolean).join(' ')
 

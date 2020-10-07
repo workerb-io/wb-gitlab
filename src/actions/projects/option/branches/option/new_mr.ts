@@ -1,8 +1,8 @@
 import { createNewMR } from '../../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper'
 
-if (options?.repos && options?.branches) {
-	const { id, name: projectName } = options.repos
+if (options?.projects && options?.branches) {
+	const { id, name: projectName } = options.projects
 	const { name: sourceBranchName } = options.branches
 
 	let mrPayload = args.filter(Boolean).join(' ')

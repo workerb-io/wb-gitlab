@@ -1,8 +1,8 @@
 import { updateIssue } from '../../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper'
 
-if (options.repos && options.issues) {
-	const { id: projectId, name: projectName } = options.repos
+if (options.projects && options.issues) {
+	const { id: projectId, name: projectName } = options.projects
 	const { state, id } = options.issues
 
 	const newState = args[0]

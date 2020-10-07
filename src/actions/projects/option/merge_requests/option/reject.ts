@@ -2,8 +2,8 @@
 import { deleteMR } from '../../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper'
 
-if (options?.repos && options?.merge_requests) {
-	const { id: projectId, html_url, name: projectName } = options.repos
+if (options?.projects && options?.merge_requests) {
+	const { id: projectId, html_url, name: projectName } = options.projects
 	const { id } = options.merge_requests
 
 	const response = deleteMR(projectId, id)
