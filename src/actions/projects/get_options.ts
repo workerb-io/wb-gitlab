@@ -11,7 +11,7 @@ export default () => {
 	}
 
 	const projects = result.response.map((project: any) => ({
-		name: project.name_with_namespace,
+		name: project.name,
 		html_url: project.web_url,
 		id: project.id,
 		identifier: project.id,
