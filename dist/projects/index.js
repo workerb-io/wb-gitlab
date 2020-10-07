@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nif (args[0]) {\n    notify('dd: ' + args.join(' '), 'success', 1000);\n    open(\"https://gitlab.com/dashboard/projects?sort=latest_activity_desc&name=\" + args[0] + \"&sort=latest_activity_desc\");\n}\nelse {\n    open('https://gitlab.com/dashboard/projects');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/index.ts?");
+eval("\nif (args[0]) {\n    open(\"https://gitlab.com/dashboard/projects?sort=latest_activity_desc&name=\" + args[0] + \"&sort=latest_activity_desc\");\n}\nelse {\n    open('https://gitlab.com/dashboard/projects');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/index.ts?");
 
 /***/ })
 
