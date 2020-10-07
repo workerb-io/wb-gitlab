@@ -15,6 +15,7 @@ export default () => {
 		html_url: project.web_url,
 		id: project.id,
 		identifier: project.id,
+		description: project.web_url,
 	}))
 
 	return JSON.stringify({
