@@ -28,7 +28,7 @@ if (args[0]) {
 }
 
 if (!token) {
-	notify('GitHub auth token could not saved', 'error', 3000)
+	notify('Failed to save the auth token.', 'error', 3000)
 } else {
 	setVar('gitlab', [
 		{
@@ -36,6 +36,6 @@ if (!token) {
 			value: token,
 		},
 	])
-	notify('Gitlab auth token saved. Setup complete.', 'success', 3000)
+	notify('Auth token saved.', 'success', 3000)
 	reIndex()
 }

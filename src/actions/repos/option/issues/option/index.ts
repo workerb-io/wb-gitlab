@@ -1,5 +1,5 @@
 if (options.issues) {
-  open(options.issues.html_url);
+	open(options.issues.html_url)
 } else {
-  open('https://gitlab.com');
+	open('https://gitlab.com')
 }

@@ -1,24 +1,24 @@
 {
-  "name": "pipelines",
-  "description": "pipelines cheat sheet",
-  "scripts": [
-    {
-      "name": "run",
-      "file": "run.js",
-      "type": "action",
-      "description": "Create a new pipeline"
-    },
-    {
-      "name": "option",
-      "file": "option",
-      "type": "folder",
-      "description": "actions for selected pipeline"
-    },
-    {
-      "name": "get_options",
-      "file": "get_options.js",
-      "type": "action",
-      "description": "list options"
-    }
-  ]
+	"name": "pipelines",
+	"description": "pipelines cheat sheet",
+	"scripts": [
+		{
+			"name": "run",
+			"file": "run.js",
+			"type": "action",
+			"description": "Create a new pipeline"
+		},
+		{
+			"name": "option",
+			"file": "option",
+			"type": "folder",
+			"description": "actions for selected pipeline"
+		},
+		{
+			"name": "get_options",
+			"file": "get_options.js",
+			"type": "action",
+			"description": "list options"
+		}
+	]
 }
