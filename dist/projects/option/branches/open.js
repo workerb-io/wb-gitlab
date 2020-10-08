@@ -91,20 +91,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/projects/option/branches/index.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/projects/option/branches/open.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/actions/projects/option/branches/index.ts":
-/*!*******************************************************!*\
-  !*** ./src/actions/projects/option/branches/index.ts ***!
-  \*******************************************************/
+/***/ "./src/actions/projects/option/branches/open.ts":
+/*!******************************************************!*\
+  !*** ./src/actions/projects/option/branches/open.ts ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nif (options.projects) {\n    open(options.projects.html_url + \"/-/branches\");\n}\nelse {\n    notify('No repository found', 'error', 3000);\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/branches/index.ts?");
+eval("\nif (options.projects) {\n    open(options.projects.html_url + \"/-/branches\");\n}\nelse {\n    notify('No repository found', 'error', 3000);\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/branches/open.ts?");
 
 /***/ })
 

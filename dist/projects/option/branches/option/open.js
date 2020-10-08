@@ -91,20 +91,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/projects/option/branches/option/index.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/projects/option/branches/option/open.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/actions/projects/option/branches/option/index.ts":
-/*!**************************************************************!*\
-  !*** ./src/actions/projects/option/branches/option/index.ts ***!
-  \**************************************************************/
+/***/ "./src/actions/projects/option/branches/option/open.ts":
+/*!*************************************************************!*\
+  !*** ./src/actions/projects/option/branches/option/open.ts ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nif (options.branches) {\n    open(options.branches.html_url);\n}\nelse {\n    notify('No branch found', 'error', 3000);\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/branches/option/index.ts?");
+eval("\nif (options.branches) {\n    open(options.branches.html_url);\n}\nelse {\n    notify('No branch found', 'error', 3000);\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/branches/option/open.ts?");
 
 /***/ })
 
