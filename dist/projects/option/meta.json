@@ -7,13 +7,13 @@
 			"name": "remove",
 			"file": "remove.js",
 			"type": "action",
-			"description": "Remove a project"
+			"description": "Delete the project"
 		},
 		{
 			"name": "update",
 			"file": "update.js",
 			"type": "action",
-			"description": "Add/Edit description of a project"
+			"description": "Update description for the project"
 		},
 		{
 			"name": "branches",

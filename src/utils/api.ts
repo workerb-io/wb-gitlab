@@ -25,7 +25,8 @@ export const deleteMergedBranches = (projectId: string | number) =>
 export const createNewMR = (projectId: string | number, data: object) =>
 	request.post(`/projects/${projectId}/merge_requests`, data)
 
-export const getAllMergeRequest = (projectId: string | number) => request.get(`/projects/${projectId}/merge_requests`)
+export const getAllMergeRequest = (projectId: string | number) =>
+	request.get(`/projects/${projectId}/merge_requests?state=opened`)
 
 export const mergeMR = (projectId: string | number, mrId: number) =>
 	request.put(`/projects/${projectId}/merge_requests/${mrId}/merge`)
