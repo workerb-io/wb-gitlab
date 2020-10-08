@@ -1,6 +1,7 @@
 {
 	"name": "repos",
 	"description": "repos cheat sheet",
+	"default_action": "open",
 	"scripts": [
 		{
 			"name": "remove",
@@ -39,11 +40,10 @@
 			"description": "pipelines cheat sheet"
 		},
 		{
-			"name": "index",
-			"file": "index.js",
+			"name": "open",
+			"file": "open.js",
 			"type": "action",
-			"description": "Open the project",
-			"alternateName": "open"
+			"description": "Open the project"
 		}
 	]
 }

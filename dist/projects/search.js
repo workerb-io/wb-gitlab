@@ -91,20 +91,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/projects/index.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/projects/search.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/actions/projects/index.ts":
-/*!***************************************!*\
-  !*** ./src/actions/projects/index.ts ***!
-  \***************************************/
+/***/ "./src/actions/projects/search.ts":
+/*!****************************************!*\
+  !*** ./src/actions/projects/search.ts ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nif (args[0]) {\n    open(\"https://gitlab.com/dashboard/projects?sort=latest_activity_desc&name=\" + args[0] + \"&sort=latest_activity_desc\");\n}\nelse {\n    open('https://gitlab.com/dashboard/projects');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/index.ts?");
+eval("\nif (args[0]) {\n    open(\"https://gitlab.com/dashboard/projects?sort=latest_activity_desc&name=\" + args[0] + \"&sort=latest_activity_desc\");\n}\nelse {\n    open('https://gitlab.com/dashboard/projects');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/search.ts?");
 
 /***/ })
 

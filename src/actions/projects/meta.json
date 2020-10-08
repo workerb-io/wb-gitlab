@@ -1,6 +1,7 @@
 {
-	"name": "repos",
-	"description": "repos cheat sheet",
+	"name": "projects",
+	"description": "projects cheat sheet",
+	"default_action": "search",
 	"scripts": [
 		{
 			"name": "new",
@@ -21,8 +22,8 @@
 			"description": "list options"
 		},
 		{
-			"name": "index",
-			"file": "index.js",
+			"name": "search",
+			"file": "search.js",
 			"type": "action",
 			"description": "Search all projects"
 		}
