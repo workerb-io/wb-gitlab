@@ -3,7 +3,7 @@
 	"description": "branches cheatsheet",
 	"scripts": [
 		{
-			"name": "delete_merged",
+			"name": "cleanup",
 			"file": "delete_merged.js",
 			"type": "action",
 			"description": "Deletes all merged branches"
@@ -11,20 +11,18 @@
 		{
 			"name": "option",
 			"file": "option",
-			"type": "folder",
-			"description": "actions for selected branch"
+			"type": "folder"
 		},
 		{
 			"name": "get_options",
 			"file": "get_options.js",
-			"type": "action",
-			"description": "branch options"
+			"type": "action"
 		},
 		{
 			"name": "open",
 			"file": "open.js",
 			"type": "action",
-			"description": "index cheat sheet"
+			"description": "Open this branch"
 		}
 	]
 }
