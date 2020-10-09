@@ -19,25 +19,25 @@
 			"name": "branches",
 			"file": "branches",
 			"type": "folder",
-			"description": "branches cheat sheet"
+			"description": "List of branches"
 		},
 		{
 			"name": "merge_requests",
 			"file": "merge_requests",
 			"type": "folder",
-			"description": "merge requests cheat sheet"
+			"description": "List of merge requests"
 		},
 		{
 			"name": "issues",
 			"file": "issues",
 			"type": "folder",
-			"description": "issues cheat sheet"
+			"description": "List of issues"
 		},
 		{
 			"name": "pipelines",
 			"file": "pipelines",
 			"type": "folder",
-			"description": "pipelines cheat sheet"
+			"description": "List of pipelines"
 		},
 		{
 			"name": "open",
