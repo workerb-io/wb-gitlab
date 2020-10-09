@@ -1,0 +1,43 @@
+{
+	"name": "repos",
+	"description": "repos cheat sheet",
+	"default_action": "open",
+	"scripts": [
+		{
+			"name": "remove",
+			"file": "remove.js",
+			"type": "action",
+			"description": "Delete the project"
+		},
+		{
+			"name": "branches",
+			"file": "branches",
+			"type": "folder",
+			"description": "List of branches"
+		},
+		{
+			"name": "merge_requests",
+			"file": "merge_requests",
+			"type": "folder",
+			"description": "List of merge requests"
+		},
+		{
+			"name": "issues",
+			"file": "issues",
+			"type": "folder",
+			"description": "List of issues"
+		},
+		{
+			"name": "pipelines",
+			"file": "pipelines",
+			"type": "folder",
+			"description": "List of pipelines"
+		},
+		{
+			"name": "open",
+			"file": "open.js",
+			"type": "action",
+			"description": "Open the project"
+		}
+	]
+}

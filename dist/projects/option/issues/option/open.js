@@ -91,20 +91,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/setup.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/projects/option/issues/option/open.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/actions/setup.ts":
-/*!******************************!*\
-  !*** ./src/actions/setup.ts ***!
-  \******************************/
+/***/ "./src/actions/projects/option/issues/option/open.ts":
+/*!***********************************************************!*\
+  !*** ./src/actions/projects/option/issues/option/open.ts ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar token = null;\nif (args[0]) {\n    token = args[0];\n}\nelse {\n    open('https://gitlab.com/profile/personal_access_tokens');\n    var tokenName = \"workerb-\" + new Date().getTime();\n    type(tokenName, 'Name', { method: 'by_label' });\n    click('api', {});\n    click('read_user', {});\n    click('read_api', {});\n    click('read_repository', {});\n    click('write_repository', {});\n    click('read_registry', {});\n    click('write_registry', {});\n    //@ts-ignore\n    submit('Name', {\n        //@ts-ignore\n        method: 'by_label',\n        //@ts-ignore\n        expectReload: true,\n    });\n    token = read('#created-personal-access-token', { method: 'by_query_selector' });\n}\nif (!token) {\n    notify('Failed to save the auth token.', 'error', 3000);\n}\nelse {\n    setVar('gitlab', [\n        {\n            name: 'GITLAB_PERSONAL_TOKEN',\n            value: token,\n        },\n    ]);\n    notify('Auth token saved.', 'success', 3000);\n    reIndex();\n}\n\n\n//# sourceURL=webpack://main/./src/actions/setup.ts?");
+eval("\nif (options.issues) {\n    open(options.issues.html_url);\n}\nelse {\n    open('https://gitlab.com');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/issues/option/open.ts?");
 
 /***/ })
 

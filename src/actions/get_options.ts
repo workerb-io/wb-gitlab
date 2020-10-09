@@ -1,14 +1,14 @@
-import { token } from "../utils/constants";
+import { token } from '../utils/constants'
 
 const returnOptions = () => {
-  if (!token) {
-    return JSON.stringify({
-      remove: ["repos"],
-    });
-  }
-  return JSON.stringify({
-    remove: ["setup"],
-  });
-};
+	if (!token) {
+		return JSON.stringify({
+			remove: ['projects'],
+		})
+	}
+	return JSON.stringify({
+		remove: ['setup'],
+	})
+}
 
-export default returnOptions;
+export default returnOptions
