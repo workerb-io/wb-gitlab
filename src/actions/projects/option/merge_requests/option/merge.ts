@@ -5,8 +5,6 @@ if (options.projects && options.merge_requests) {
 	const { id: projectId, name: projectName } = options.projects
 	const { state, html_url, id } = options.merge_requests
 
-	notify(html_url, 'success', 3000)
-
 	if (state === 'closed' || state === 'merged') {
 		notify('This merged request is already merged', 'error', 3000)
 	} else {
@@ -19,6 +17,7 @@ if (options.projects && options.merge_requests) {
 			} else {
 				handleErrors(result.status, result.response.message ? result.response.message : result.response.error)
 			}
+			open(html_url)
 		} else {
 			notify('Request Merged', 'success', 3000)
 			reIndex(['gitlab', 'projects', projectName, 'merge_requests'])
