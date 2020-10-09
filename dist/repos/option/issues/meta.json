@@ -1,0 +1,24 @@
+{
+  "name": "issues",
+  "description": "issues cheat sheet",
+  "scripts": [
+    {
+      "name": "new",
+      "file": "new.js",
+      "type": "action",
+      "description": "create a new issue"
+    },
+    {
+      "name": "option",
+      "file": "option",
+      "type": "folder",
+      "description": "actions for selected issue"
+    },
+    {
+      "name": "get_options",
+      "file": "get_options.js",
+      "type": "action",
+      "description": "list options"
+    }
+  ]
+}
