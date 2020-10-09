@@ -7,7 +7,7 @@
 			"name": "new",
 			"file": "new.js",
 			"type": "action",
-			"description": "Create new project"
+			"description": "Create a new project"
 		},
 		{
 			"name": "option",

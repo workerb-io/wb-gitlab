@@ -10,10 +10,10 @@ if (options?.projects && options?.merge_requests) {
 	const result = decodeApiResponse(response)
 
 	if (result.status >= 400) {
+		open(html_url)
 		handleErrors(result.status, result.response.message)
 	} else {
 		notify('Merge Request Deleted', 'success', 3000)
-		open(html_url)
 		reIndex(['gitlab', 'projects', projectName, 'merge_requests'])
 	}
 }

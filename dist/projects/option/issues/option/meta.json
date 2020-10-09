@@ -3,16 +3,16 @@
 	"description": "merge requests cheat sheet",
 	"scripts": [
 		{
-			"name": "update",
-			"file": "update.js",
+			"name": "open",
+			"file": "open.js",
 			"type": "action",
-			"description": "merge request"
+			"description": "Open the issue"
 		},
 		{
 			"name": "delete",
 			"file": "delete.js",
 			"type": "action",
-			"description": "deletes an issue"
+			"description": "Delete the issue"
 		}
 	]
 }
