@@ -1,0 +1,16 @@
+{
+	"name": "merge_requests",
+	"description": "merge request cheatsheet",
+	"scripts": [
+		{
+			"name": "option",
+			"file": "option",
+			"type": "folder"
+		},
+		{
+			"name": "get_options",
+			"file": "get_options.js",
+			"type": "action"
+		}
+	]
+}
