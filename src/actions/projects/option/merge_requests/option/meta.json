@@ -3,6 +3,12 @@
 	"description": "merge requests cheat sheet",
 	"scripts": [
 		{
+			"name": "index",
+			"file": "index.js",
+			"type": "action",
+			"description": "merge request"
+		},
+		{
 			"name": "merge",
 			"file": "merge.js",
 			"type": "action",

@@ -13,7 +13,6 @@ if (options?.projects && options?.pipelines) {
 		handleErrors(result.status, result.response.message ? result.response.message : result.response.error)
 	} else {
 		notify('Pipeline Removed', 'success', 3000)
-		open(`${html_url}/-/pipelines`)
 		reIndex(['gitlab', 'projects', projectName, 'pipelines'])
 	}
 }

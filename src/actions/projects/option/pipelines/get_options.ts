@@ -33,7 +33,7 @@ export default () => {
 				id,
 				name: `Pipeline: #${id}`,
 				html_url: web_url,
-				description: `Created At: ${parseISOString(created_at)}. Status: ${status}`,
+				description: `Created on ${parseISOString(created_at)}. Status: ${status}`,
 			})
 		)
 
