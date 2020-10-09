@@ -12,10 +12,14 @@ if (options.projects && options.merge_requests) {
 		const result = decodeApiResponse(response)
 
 		if (result.status >= 400) {
-			handleErrors(result.status, result.response.message ? result.response.message : result.response.error)
+			if (result.status == 405 || result.status == 406) {
+				handleErrors(result.status, 'Branch cannot be merged')
+			} else {
+				handleErrors(result.status, result.response.message ? result.response.message : result.response.error)
+			}
+			open(result.response.web_url)
 		} else {
 			notify('Request Merged', 'success', 3000)
-			open(result.response.web_url)
 			reIndex(['gitlab', 'projects', projectName, 'merge_requests'])
 		}
 	}
