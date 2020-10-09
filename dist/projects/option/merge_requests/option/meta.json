@@ -1,9 +1,10 @@
 {
 	"name": "merge_requests",
 	"description": "merge requests cheat sheet",
+	"default_action": "open",
 	"scripts": [
 		{
-			"name": "index",
+			"name": "open",
 			"file": "index.js",
 			"type": "action",
 			"description": "merge request"
