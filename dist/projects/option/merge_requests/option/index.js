@@ -101,10 +101,9 @@ return /******/ (function(modules) { // webpackBootstrap
   !*** ./src/actions/projects/option/merge_requests/option/index.ts ***!
   \********************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("\nif (options.merge_requests) {\n    open(options.merge_requests.html_url);\n}\nelse {\n    open('https://gitlab.com');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/merge_requests/option/index.ts?");
+eval("throw new Error(\"Module build failed (from ./node_modules/ts-loader/index.js):\\nError: ENOENT: no such file or directory, open '/Users/workerb/workspace/packages/wb-gitlab/src/actions/projects/option/merge_requests/option/index.ts'\");\n\n//# sourceURL=webpack://main/./src/actions/projects/option/merge_requests/option/index.ts?");
 
 /***/ })
 

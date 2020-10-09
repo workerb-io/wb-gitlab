@@ -5,21 +5,21 @@
 	"scripts": [
 		{
 			"name": "open",
-			"file": "index.js",
+			"file": "open.js",
 			"type": "action",
-			"description": "merge request"
+			"description": "Open the merge request"
 		},
 		{
 			"name": "merge",
 			"file": "merge.js",
 			"type": "action",
-			"description": "merge request"
+			"description": "Merge the merge request"
 		},
 		{
 			"name": "reject",
 			"file": "reject.js",
 			"type": "action",
-			"description": "delete a merge request"
+			"description": "Reject the merge request"
 		}
 	]
 }
