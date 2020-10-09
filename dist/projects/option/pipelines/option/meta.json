@@ -7,6 +7,12 @@
 			"file": "remove.js",
 			"type": "action",
 			"description": "Remove a pipeline"
+		},
+		{
+			"name": "open",
+			"file": "open.js",
+			"type": "action",
+			"description": "Open the pipeline"
 		}
 	]
 }

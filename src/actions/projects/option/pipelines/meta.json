@@ -11,14 +11,12 @@
 		{
 			"name": "option",
 			"file": "option",
-			"type": "folder",
-			"description": "actions for selected pipeline"
+			"type": "folder"
 		},
 		{
 			"name": "get_options",
 			"file": "get_options.js",
-			"type": "action",
-			"description": "list options"
+			"type": "action"
 		}
 	]
 }

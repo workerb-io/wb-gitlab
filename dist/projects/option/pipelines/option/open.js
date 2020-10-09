@@ -91,20 +91,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/projects/option/pipelines/option/index.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/projects/option/pipelines/option/open.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/actions/projects/option/pipelines/option/index.ts":
-/*!***************************************************************!*\
-  !*** ./src/actions/projects/option/pipelines/option/index.ts ***!
-  \***************************************************************/
+/***/ "./src/actions/projects/option/pipelines/option/open.ts":
+/*!**************************************************************!*\
+  !*** ./src/actions/projects/option/pipelines/option/open.ts ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nif ((options === null || options === void 0 ? void 0 : options.projects) && (options === null || options === void 0 ? void 0 : options.pipelines)) {\n    open(options.pipelines.html_url);\n}\nelse {\n    open('https://gitlab.com');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/pipelines/option/index.ts?");
+eval("\nif ((options === null || options === void 0 ? void 0 : options.projects) && (options === null || options === void 0 ? void 0 : options.pipelines)) {\n    open(options.pipelines.html_url);\n}\nelse {\n    open('https://gitlab.com');\n}\n\n\n//# sourceURL=webpack://main/./src/actions/projects/option/pipelines/option/open.ts?");
 
 /***/ })
 
