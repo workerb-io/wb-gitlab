@@ -22,7 +22,7 @@
 			"name": "open",
 			"file": "open.js",
 			"type": "action",
-			"description": "Open this branch"
+			"description": "Open branches"
 		}
 	]
 }

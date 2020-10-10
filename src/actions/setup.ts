@@ -36,6 +36,6 @@ if (!token) {
 			value: token,
 		},
 	])
-	notify('Auth token saved.', 'success', 3000)
+	notify('Access token added successfully.', 'success', 3000)
 	reIndex()
 }

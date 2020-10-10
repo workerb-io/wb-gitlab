@@ -42,5 +42,6 @@ if (result.status >= 400) {
 	handleErrors(result.status, result.response.message ? result.response.message : result.response.error)
 } else {
 	notify('Project Created', 'success', 3000)
+	open(result.response.http_url_to_repo)
 	reIndex(['gitlab', 'projects'])
 }

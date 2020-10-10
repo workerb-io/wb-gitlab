@@ -6,25 +6,19 @@
 			"name": "remove",
 			"file": "remove.js",
 			"type": "action",
-			"description": "remove branch"
+			"description": "Remove the branch"
 		},
 		{
-			"name": "new_mr",
+			"name": "merge_request",
 			"file": "new_mr.js",
 			"type": "action",
-			"description": "Creates a new merge request from a branch"
-		},
-		{
-			"name": "new_sub_branch",
-			"file": "new_sub_branch.js",
-			"type": "action",
-			"description": "Create a new sub branch from a branch"
+			"description": "Creates a new merge request from this branch"
 		},
 		{
 			"name": "open",
 			"file": "open.js",
 			"type": "action",
-			"description": "index cheat sheet"
+			"description": "Open the branch"
 		}
 	]
 }
