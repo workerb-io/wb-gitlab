@@ -1,5 +1,5 @@
-if (options.repos) {
-	open(options.repos.html_url)
+if (options.project) {
+	open(options.project.html_url)
 } else {
-	notify('No repository found', 'error', 3000)
+	notify('Unable to open the project', 'error', 3000)
 }
