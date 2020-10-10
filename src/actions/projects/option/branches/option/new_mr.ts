@@ -7,10 +7,6 @@ if (options?.projects && options?.branches) {
 
 	let mrPayload = args.filter(Boolean).join(' ')
 
-	if (!mrPayload) {
-		mrPayload = prompt('Enter branch name')
-	}
-
 	const mrPayloadArgs: string[] = mrPayload.split(' ')
 
 	const refIndex = mrPayloadArgs.indexOf('ref')
