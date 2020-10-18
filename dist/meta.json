@@ -1,6 +1,7 @@
 {
 	"name": "gitlab",
 	"description": "workerB package for gitlab.com",
+	"icon": "https://raw.githubusercontent.com/workerb-io/wb-gitlab/master/src/actions/logo.png",
 	"sites": ["https://gitlab.com"],
 	"scripts": [
 		{
