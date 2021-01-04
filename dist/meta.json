@@ -2,7 +2,9 @@
 	"name": "gitlab",
 	"description": "workerB package for gitlab.com",
 	"icon": "https://raw.githubusercontent.com/workerb-io/wb-gitlab/master/src/actions/logo.png",
-	"sites": ["https://gitlab.com"],
+	"sites": [
+		"https://gitlab.com"
+	],
 	"scripts": [
 		{
 			"name": "projects",
@@ -21,6 +23,12 @@
 			"file": "setup.js",
 			"type": "action",
 			"description": "Setup Gitlab"
+		},
+		{
+			"name": "remove_token",
+			"file": "remove_token.js",
+			"type": "action",
+			"description": "Remove Gitlab Token"
 		}
 	]
 }

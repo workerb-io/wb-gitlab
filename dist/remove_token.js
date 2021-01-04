@@ -91,20 +91,32 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/setup.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/remove_token.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/actions/setup.ts":
-/*!******************************!*\
-  !*** ./src/actions/setup.ts ***!
-  \******************************/
+/***/ "./src/actions/remove_token.ts":
+/*!*************************************!*\
+  !*** ./src/actions/remove_token.ts ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nvar token = null;\r\nif (args[0]) {\r\n    token = args[0];\r\n}\r\nelse {\r\n    open('https://gitlab.com/profile/personal_access_tokens');\r\n    var tokenName = \"workerb-\" + new Date().getTime();\r\n    type(tokenName, 'Name', { method: 'by_label' });\r\n    click('api', {});\r\n    click('read_user', {});\r\n    click('read_api', {});\r\n    click('read_repository', {});\r\n    click('write_repository', {});\r\n    click('read_registry', {});\r\n    click('write_registry', {});\r\n    //@ts-ignore\r\n    submit('Name', {\r\n        //@ts-ignore\r\n        method: 'by_label',\r\n        //@ts-ignore\r\n        expectReload: true,\r\n    });\r\n    token = read('#created-personal-access-token', { method: 'by_query_selector' });\r\n}\r\nif (!token) {\r\n    notify('Failed to save the auth token.', 'error', 3000);\r\n}\r\nelse {\r\n    setVars([\r\n        {\r\n            name: 'GITLAB_PERSONAL_TOKEN',\r\n            value: token,\r\n        },\r\n    ], { local: true });\r\n    notify('Access token added successfully.', 'success', 3000);\r\n    reIndex();\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/setup.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar constants_1 = __webpack_require__(/*! ../utils/constants */ \"./src/utils/constants.ts\");\r\nif (constants_1.token) {\r\n    notify('Access token .' + constants_1.token, 'success', 3000);\r\n    setVars([\r\n        {\r\n            name: 'GITLAB_PERSONAL_TOKEN',\r\n            value: '',\r\n        },\r\n    ], { local: true });\r\n    notify('Access token removed successfully.', 'success', 3000);\r\n    reIndex();\r\n}\r\nelse {\r\n    notify('Access token is null....' + constants_1.token, 'success', 3000);\r\n    reIndex();\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/remove_token.ts?");
+
+/***/ }),
+
+/***/ "./src/utils/constants.ts":
+/*!********************************!*\
+  !*** ./src/utils/constants.ts ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nexports.store = exports.token = exports.uri = void 0;\r\n/* eslint-disable import/prefer-default-export */\r\nexports.uri = \"https://gitlab.com/api/v4\";\r\nexports.token = VARS['GITLAB_PERSONAL_TOKEN'];\r\nvar storageSetter = {\r\n    setData: function (key, data) {\r\n        localStorage.setItem(key, JSON.stringify(data));\r\n    },\r\n    getData: function (key) {\r\n        return JSON.parse(localStorage.getItem(key));\r\n    },\r\n};\r\nexports.store = storageSetter;\r\n\n\n//# sourceURL=webpack://main/./src/utils/constants.ts?");
 
 /***/ })
 
