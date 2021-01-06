@@ -1,0 +1,31 @@
+{
+	"name": "organizations",
+	"description": "organizations cheat sheet",
+	"default_action": "search",
+	"scripts": [
+		{
+			"name": "new",
+			"file": "new.js",
+			"type": "action",
+			"description": "Create a new organizations"
+		},
+		{
+			"name": "option",
+			"file": "option",
+			"type": "folder",
+			"description": "actions for selected organizations"
+		},
+		{
+			"name": "get_options",
+			"file": "get_options.js",
+			"type": "action",
+			"description": "list options"
+		},
+		{
+			"name": "search",
+			"file": "search.js",
+			"type": "action",
+			"description": "Search all organizations"
+		}
+	]
+}
