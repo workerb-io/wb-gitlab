@@ -13,8 +13,8 @@
 			"description": "List of projects"
 		},
 		{
-			"name": "organizations",
-			"file": "organizations",
+			"name": "org",
+			"file": "org",
 			"type": "folder",
 			"description": "List of organizations"
 		},
