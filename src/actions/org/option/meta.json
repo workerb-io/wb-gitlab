@@ -1,13 +1,13 @@
 {
-	"name": "orgprojects",
-	"description": "orgprojects cheat sheet",
-	"default_action": "search",
+	"name": "option",
+	"description": "option cheat sheet",
+	"default_action": "action",
 	"scripts": [
 		{
-			"name": "get_projects",
-			"file": "get_projects.js",
+			"name": "get_options",
+			"file": "get_options.js",
 			"type": "action",
-			"description": "get projects"
+			"description": "get option"
 		},
 		{
 			"name": "search",

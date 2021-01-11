@@ -1,10 +1,11 @@
 /* eslint-disable consistent-return */
-import { getAllOrgProjects, getAllProjects } from '../../utils/api'
-import { decodeApiResponse } from '../../utils/helper'
+import { getAllOrgProjects } from '../../../utils/api'
+import { decodeApiResponse } from '../../../utils/helper'
 
 export default () => {
-
-	const response = getAllOrgProjects("10593158")
+	if (options?.org) {
+	//const { id } = options.org.id
+	const response = getAllOrgProjects(options.org.id)
 	const result = decodeApiResponse(response)
 
 	if (result.status >= 400) {
@@ -13,13 +14,14 @@ export default () => {
 
 	const projects = result.response.map((project: any) => ({
 		name: project.name,
-		html_url: project.web_url,
 		id: project.id,
-		identifier: project.id,
-		description: project.web_url,
+		web_url: project.web_url,
+		path: project.path,
 	}))
 
 	return JSON.stringify({
 		add: projects,
 	})
+	}
 }
+

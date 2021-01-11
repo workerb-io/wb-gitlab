@@ -4,6 +4,12 @@
 	"default_action": "search",
 	"scripts": [
 		{
+			"name": "option",
+			"file": "option",
+			"type": "folder",
+			"description": "option folder"
+		},
+		{
 			"name": "get_options",
 			"file": "get_options.js",
 			"type": "action",
