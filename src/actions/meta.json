@@ -7,6 +7,12 @@
 	],
 	"scripts": [
 		{
+			"name": "orgprojects",
+			"file": "orgprojects",
+			"type": "folder",
+			"description": "List of orgprojects"
+		},
+		{
 			"name": "projects",
 			"file": "projects",
 			"type": "folder",

@@ -1,9 +1,10 @@
 /* eslint-disable consistent-return */
-import { getAllOrganizations, getAllProjects, getAllOrgProjects } from '../../utils/api'
+import { getAllOrgProjects, getAllProjects } from '../../utils/api'
 import { decodeApiResponse } from '../../utils/helper'
 
 export default () => {
-	const response = getAllOrganizations()
+
+	const response = getAllOrgProjects("10593158")
 	const result = decodeApiResponse(response)
 
 	if (result.status >= 400) {

@@ -1,0 +1,19 @@
+{
+	"name": "orgprojects",
+	"description": "orgprojects cheat sheet",
+	"default_action": "search",
+	"scripts": [
+		{
+			"name": "get_projects",
+			"file": "get_projects.js",
+			"type": "action",
+			"description": "get projects"
+		},
+		{
+			"name": "search",
+			"file": "search.js",
+			"type": "action",
+			"description": "Search all organizations"
+		}
+	]
+}

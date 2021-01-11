@@ -1,11 +1,13 @@
 /* eslint-disable consistent-return */
-import { getAllOrganizations, getAllProjects, getAllOrgProjects } from '../../utils/api'
-import { decodeApiResponse } from '../../utils/helper'
+import { getAllOrgProjects } from '../../../utils/api'
+import { decodeApiResponse } from '../../../utils/helper'
 
 export default () => {
-	const response = getAllOrganizations()
+	notify("10593158", "success", 3000);
+	//const { id: projectId } = options.get_options
+	const response = getAllOrgProjects("10593158")
 	const result = decodeApiResponse(response)
-
+	notify("10593158", "success", 3000);
 	if (result.status >= 400) {
 		return {}
 	}
