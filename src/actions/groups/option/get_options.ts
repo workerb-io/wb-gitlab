@@ -12,7 +12,7 @@ export default () => {
 		return {}
 	}
 
-	const projects = result.response.map((project: any) => ({
+	const projects = result.response.map((project: { name: string;id:number; web_url: string;path:string }) => ({
 		name: project.name,
 		id: project.id,
 		web_url: project.web_url,

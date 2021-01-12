@@ -13,10 +13,10 @@
 			"description": "List of projects"
 		},
 		{
-			"name": "org",
-			"file": "org",
+			"name": "groups",
+			"file": "groups",
 			"type": "folder",
-			"description": "List of organizations"
+			"description": "List of groups"
 		},
 		{
 			"name": "get_options",

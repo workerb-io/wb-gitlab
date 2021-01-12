@@ -91,20 +91,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/org/option/search.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/groups/search.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/actions/org/option/search.ts":
-/*!******************************************!*\
-  !*** ./src/actions/org/option/search.ts ***!
-  \******************************************/
+/***/ "./src/actions/groups/search.ts":
+/*!**************************************!*\
+  !*** ./src/actions/groups/search.ts ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nif (options.org) {\r\n    //notify(\"group id: \"+options.org.id,\"success\",3000)\r\n    //open(`https://gitlab.com/api/v4/groups/${options.org.id}/projects`)\r\n    open(\"\" + options.org.html_url);\r\n}\r\nelse {\r\n    notify('No repository found', 'error', 3000);\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/org/option/search.ts?");
+eval("\r\nif (args[0]) {\r\n    open(\"https://gitlab.com/dashboard/groups?sort=latest_activity_desc&name=\" + args[0] + \"&sort=latest_activity_desc\");\r\n}\r\nelse {\r\n    open('https://gitlab.com/dashboard/groups');\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/groups/search.ts?");
 
 /***/ })
 

@@ -91,20 +91,20 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/org/get_options.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/actions/groups/get_options.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/actions/org/get_options.ts":
-/*!****************************************!*\
-  !*** ./src/actions/org/get_options.ts ***!
-  \****************************************/
+/***/ "./src/actions/groups/get_options.ts":
+/*!*******************************************!*\
+  !*** ./src/actions/groups/get_options.ts ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n/* eslint-disable consistent-return */\r\nvar api_1 = __webpack_require__(/*! ../../utils/api */ \"./src/utils/api.ts\");\r\nvar helper_1 = __webpack_require__(/*! ../../utils/helper */ \"./src/utils/helper.ts\");\r\nexports.default = (function () {\r\n    var response = api_1.getAllOrganizations();\r\n    var result = helper_1.decodeApiResponse(response);\r\n    if (result.status >= 400) {\r\n        return {};\r\n    }\r\n    var projects = result.response.map(function (project) { return ({\r\n        name: project.name,\r\n        html_url: project.web_url,\r\n        id: project.id,\r\n        identifier: project.id,\r\n        description: project.web_url,\r\n    }); });\r\n    return JSON.stringify({\r\n        add: projects,\r\n    });\r\n});\r\n\n\n//# sourceURL=webpack://main/./src/actions/org/get_options.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n/* eslint-disable consistent-return */\r\nvar api_1 = __webpack_require__(/*! ../../utils/api */ \"./src/utils/api.ts\");\r\nvar helper_1 = __webpack_require__(/*! ../../utils/helper */ \"./src/utils/helper.ts\");\r\nexports.default = (function () {\r\n    var response = api_1.getAllOrganizations();\r\n    var result = helper_1.decodeApiResponse(response);\r\n    if (result.status >= 400) {\r\n        return {};\r\n    }\r\n    var projects = result.response.map(function (project) { return ({\r\n        name: project.name,\r\n        html_url: project.web_url,\r\n        id: project.id,\r\n        identifier: project.id,\r\n        description: project.web_url,\r\n    }); });\r\n    return JSON.stringify({\r\n        add: projects,\r\n    });\r\n});\r\n\n\n//# sourceURL=webpack://main/./src/actions/groups/get_options.ts?");
 
 /***/ }),
 
