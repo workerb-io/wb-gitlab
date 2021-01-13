@@ -19,7 +19,7 @@
 			"name": "search",
 			"file": "search.js",
 			"type": "action",
-			"description": "Search all organizations"
+			"description": "Search all groups"
 		}
 	]
 }

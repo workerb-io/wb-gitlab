@@ -3,7 +3,7 @@ import { token } from '../utils/constants'
 const returnOptions = () => {
 	if (!token) {
 		return JSON.stringify({
-			remove: ['reset', 'org'],
+			remove: ['reset','groups', 'projects'],
 		})
 	}
 	return JSON.stringify({

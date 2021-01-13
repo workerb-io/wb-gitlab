@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-import { getAllOrganizations, getAllProjects, getAllOrgProjects } from '../../utils/api'
+import { getAllOrganizations } from '../../utils/api'
 import { decodeApiResponse } from '../../utils/helper'
 
 export default () => {

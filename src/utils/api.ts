@@ -58,4 +58,4 @@ export const rerunPipeline = (projectId: string | number, pipelineId: number) =>
 
 export const getAllOrganizations = () => request.get(`/groups`)
 
-export const getAllOrgProjects = (id: string) => request.get(`/groups/${id}/projects`)
+export const getAllOrgProjects = (projectId: string | number) => request.get(`/groups/${projectId}/projects`)

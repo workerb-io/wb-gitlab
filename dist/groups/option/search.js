@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nif (options.org) {\r\n    //notify(\"group id: \"+options.org.id,\"success\",3000)\r\n    //open(`https://gitlab.com/api/v4/groups/${options.org.id}/projects`)\r\n    open(\"\" + options.org.html_url);\r\n}\r\nelse {\r\n    notify('No repository found', 'error', 3000);\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/groups/option/search.ts?");
+eval("\r\nif (options.groups) {\r\n    //notify(\"group id: \"+options.groups.id,\"success\",3000)\r\n    //open(`https://gitlab.com/api/v4/groups/${options.org.id}/projects`)\r\n    open(\"\" + options.groups.html_url);\r\n}\r\nelse {\r\n    notify('No repository found', 'error', 3000);\r\n}\r\n\n\n//# sourceURL=webpack://main/./src/actions/groups/option/search.ts?");
 
 /***/ })
 

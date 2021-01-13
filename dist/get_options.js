@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar constants_1 = __webpack_require__(/*! ../utils/constants */ \"./src/utils/constants.ts\");\r\nvar returnOptions = function () {\r\n    if (!constants_1.token) {\r\n        return JSON.stringify({\r\n            remove: ['reset', 'org'],\r\n        });\r\n    }\r\n    return JSON.stringify({\r\n        remove: ['setup'],\r\n    });\r\n};\r\nexports.default = returnOptions;\r\n\n\n//# sourceURL=webpack://main/./src/actions/get_options.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar constants_1 = __webpack_require__(/*! ../utils/constants */ \"./src/utils/constants.ts\");\r\nvar returnOptions = function () {\r\n    if (!constants_1.token) {\r\n        return JSON.stringify({\r\n            remove: ['reset', 'groups', 'projects'],\r\n        });\r\n    }\r\n    return JSON.stringify({\r\n        remove: ['setup'],\r\n    });\r\n};\r\nexports.default = returnOptions;\r\n\n\n//# sourceURL=webpack://main/./src/actions/get_options.ts?");
 
 /***/ }),
 
