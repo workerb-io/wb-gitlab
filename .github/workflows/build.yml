@@ -20,4 +20,6 @@ jobs:
         run: |
           yarn install
       - name: Yarn Build
-        run: yarn build
+        run: |
+          touch .env
+          yarn build
