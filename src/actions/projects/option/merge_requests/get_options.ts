@@ -1,3 +1,4 @@
+// @description Get all the merge request of the selected project
 import { getAllMergeRequest } from '../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../utils/helper'
 
@@ -6,6 +7,8 @@ export default function () {
 	if (options?.projects) {
 		const { id } = options.projects
 		const response = getAllMergeRequest(id)
+		log("______________")
+		log(response);
 		const result = decodeApiResponse(response)
 
 		if (result.status >= 400) {
@@ -17,10 +20,13 @@ export default function () {
 			html_url: mr.web_url,
 			id: mr.iid,
 			state: mr.state,
+		}));
+		log(JSON.stringify({
+			add: merge_requests
 		}))
 
 		return JSON.stringify({
-			add: merge_requests,
+			add: merge_requests
 		})
 	}
 	return {}

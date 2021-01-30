@@ -1,3 +1,4 @@
+// @description Get options for gitlab package
 import { token } from '../utils/constants'
 
 const returnOptions = () => {

@@ -1,3 +1,4 @@
+// @description Update project description
 import { updateProject } from '../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../utils/helper'
 

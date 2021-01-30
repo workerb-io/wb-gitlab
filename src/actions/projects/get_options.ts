@@ -1,4 +1,5 @@
 /* eslint-disable consistent-return */
+// @description List all the projects and its options
 import { getAllProjects } from '../../utils/api'
 import { decodeApiResponse } from '../../utils/helper'
 

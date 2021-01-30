@@ -1,16 +1,15 @@
 {
-	"name": "merge_requests",
-	"description": "merge request cheatsheet",
-	"scripts": [
-		{
-			"name": "option",
-			"file": "option",
-			"type": "folder"
-		},
-		{
-			"name": "get_options",
-			"file": "get_options.js",
-			"type": "action"
-		}
-	]
-}
+	  "name": "merge_requests",
+	  "description": "List of merge requests",
+	  "scripts": [{
+	  "name": "get_options",
+	  "file": "get_options.js",
+	  "type": "action",
+	  "description": "Get all the merge request of the selected project"
+	},{
+	  "name": "option",
+	  "file": "option",
+	  "type": "folder",
+	  "description": ""
+	}]
+	}

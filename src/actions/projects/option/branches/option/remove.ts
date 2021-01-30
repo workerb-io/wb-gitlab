@@ -1,3 +1,4 @@
+// @description Remove the branch
 import { removeBranch } from '../../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper'
 

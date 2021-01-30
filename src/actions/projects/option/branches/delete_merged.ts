@@ -1,3 +1,4 @@
+// @description Delete all merged branches
 import { deleteMergedBranches } from '../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../utils/helper'
 

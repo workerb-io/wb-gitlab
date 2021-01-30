@@ -1,3 +1,4 @@
+// @description Merge the merge request
 import { mergeMR } from '../../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper'
 

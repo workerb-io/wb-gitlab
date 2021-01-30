@@ -1,18 +1,20 @@
 {
-	"name": "merge_requests",
-	"description": "merge requests cheat sheet",
-	"scripts": [
-		{
-			"name": "open",
-			"file": "open.js",
-			"type": "action",
-			"description": "Open the issue"
-		},
-		{
-			"name": "delete",
-			"file": "delete.js",
-			"type": "action",
-			"description": "Delete the issue"
-		}
-	]
-}
+	  "name": "option",
+	  "description": "",
+	  "scripts": [{
+	  "name": "delete",
+	  "file": "delete.js",
+	  "type": "action",
+	  "description": "Delete the issue"
+	},{
+	  "name": "open",
+	  "file": "open.js",
+	  "type": "action",
+	  "description": "Open the issue"
+	},{
+	  "name": "update",
+	  "file": "update.js",
+	  "type": "action",
+	  "description": "Update an issue"
+	}]
+	}

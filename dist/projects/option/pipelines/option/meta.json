@@ -1,18 +1,15 @@
 {
-	"name": "pipelines",
-	"description": "pipelines cheat sheet",
-	"scripts": [
-		{
-			"name": "remove",
-			"file": "remove.js",
-			"type": "action",
-			"description": "Remove a pipeline"
-		},
-		{
-			"name": "open",
-			"file": "open.js",
-			"type": "action",
-			"description": "Open the pipeline"
-		}
-	]
-}
+	  "name": "option",
+	  "description": "",
+	  "scripts": [{
+	  "name": "open",
+	  "file": "open.js",
+	  "type": "action",
+	  "description": "Open the pipeline"
+	},{
+	  "name": "remove",
+	  "file": "remove.js",
+	  "type": "action",
+	  "description": "Remove a pipeline"
+	}]
+	}

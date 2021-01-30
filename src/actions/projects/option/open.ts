@@ -1,3 +1,4 @@
+// @description Open the project
 if (options.projects) {
 	open(options.projects.html_url)
 } else {

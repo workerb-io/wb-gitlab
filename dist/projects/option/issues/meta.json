@@ -1,24 +1,20 @@
 {
-  "name": "issues",
-  "description": "issues cheat sheet",
-  "scripts": [
-    {
-      "name": "new",
-      "file": "new.js",
-      "type": "action",
-      "description": "create a new issue"
-    },
-    {
-      "name": "option",
-      "file": "option",
-      "type": "folder",
-      "description": "actions for selected issue"
-    },
-    {
-      "name": "get_options",
-      "file": "get_options.js",
-      "type": "action",
-      "description": "list options"
-    }
-  ]
-}
+	  "name": "issues",
+	  "description": "List of issues",
+	  "scripts": [{
+	  "name": "get_options",
+	  "file": "get_options.js",
+	  "type": "action",
+	  "description": "List all the issues and its actions"
+	},{
+	  "name": "new",
+	  "file": "new.js",
+	  "type": "action",
+	  "description": "Create a new issue"
+	},{
+	  "name": "option",
+	  "file": "option",
+	  "type": "folder",
+	  "description": ""
+	}]
+	}

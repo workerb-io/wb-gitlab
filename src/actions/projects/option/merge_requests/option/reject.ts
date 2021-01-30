@@ -1,4 +1,5 @@
 // eslint-disable-next-line camelcase
+// @description Reject the merge request
 import { deleteMR } from '../../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper'
 

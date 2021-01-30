@@ -1,3 +1,4 @@
+// @description List all the issues and its actions
 import { getAllIssuesList } from '../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../utils/helper'
 

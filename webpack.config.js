@@ -1,7 +1,9 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const webpack = require("webpack");
 const helpers = require("./webpack.helpers.js");
+const WBMetaJsonGenerator = require("./plugins/index");
 
 const fileSystem = helpers.generateFS(`${__dirname}/src/actions`, "workerB");
 
@@ -13,6 +15,14 @@ const entryPaths = helpers
   .filter((f) => f.split(".")[1] !== "json");
 
 const metaFiles = helpers.getFiles(entryFiles, ".json");
+
+const folderDescriptionList = [
+  {path: "/projects", description: "List of projects"},
+  {path: "/projects/option/branches", description: "List of branches"},
+  {path: "/projects/option/issues", description: "List of issues"},
+  {path: "/projects/option/merge_requests", description: "List of merge requests"},
+  {path: "/projects/option/pipelines", description: "List of pipelines"}
+];
 
 module.exports = {
   entry: entryPaths.reduce((result, entryPath) => {
@@ -45,20 +55,22 @@ module.exports = {
     ],
   },
   plugins: [
-    new CopyPlugin({
-      patterns: metaFiles.map((metaFile) => {
-        const from = `./src/actions${metaFile}`;
-        const to = `./${metaFile}`;
-
-        return {
-          from,
-          to,
-        };
-      }),
-      options: {
-        concurrency: 100,
-      },
+    new WBMetaJsonGenerator({
+      package: "gitlab",
+      packageDescription: "workerB package for gitlab.com",
+      folderDescriptionList
     }),
     new webpack.DefinePlugin(helpers.envKeys),
   ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          output: {
+            comments: /(@description|@name|@ignore)/i,
+          },
+        }
+      }),
+    ],
+  }
 };

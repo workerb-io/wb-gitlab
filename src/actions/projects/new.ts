@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+// @description Create a new project
 import { createNewProject } from '../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../utils/helper'
 

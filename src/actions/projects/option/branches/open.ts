@@ -1,3 +1,4 @@
+// @description Open branches
 if (options.projects) {
 	open(`${options.projects.html_url}/-/branches`)
 } else {

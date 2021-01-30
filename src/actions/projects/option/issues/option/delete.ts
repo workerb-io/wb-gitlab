@@ -1,4 +1,5 @@
 // eslint-disable-next-line camelcase
+// @description Delete the issue
 import { deleteIssue } from '../../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper'
 

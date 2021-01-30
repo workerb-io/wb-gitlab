@@ -1,3 +1,4 @@
+// @description Remove a pipeline
 import { deletePipeline } from '../../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper'
 

@@ -1,3 +1,4 @@
+// @description Get all the pipelines and its actions
 import { decodeApiResponse, handleErrors } from '../../../../utils/helper'
 import { getAllPipelines } from '../../../../utils/api'
 

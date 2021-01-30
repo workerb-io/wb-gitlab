@@ -1,3 +1,4 @@
+// @description Creates a new merge request from this branch
 import { createNewMR } from '../../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper'
 
@@ -26,7 +27,7 @@ if (options?.projects && options?.branches) {
 		const result = decodeApiResponse(response)
 
 		if (result.status >= 400) {
-			handleErrors(result.status, result.response.message)
+			handleErrors(result.status, result.response.message.title.join(" "))
 		} else {
 			notify('Merge request created', 'success', 3000)
 			open(result.response.web_url)

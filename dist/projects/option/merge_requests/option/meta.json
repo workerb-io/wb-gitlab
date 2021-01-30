@@ -1,25 +1,20 @@
 {
-	"name": "merge_requests",
-	"description": "merge requests cheat sheet",
-	"default_action": "open",
-	"scripts": [
-		{
-			"name": "open",
-			"file": "open.js",
-			"type": "action",
-			"description": "Open the merge request"
-		},
-		{
-			"name": "merge",
-			"file": "merge.js",
-			"type": "action",
-			"description": "Merge the merge request"
-		},
-		{
-			"name": "reject",
-			"file": "reject.js",
-			"type": "action",
-			"description": "Reject the merge request"
-		}
-	]
-}
+	  "name": "option",
+	  "description": "",
+	  "scripts": [{
+	  "name": "merge",
+	  "file": "merge.js",
+	  "type": "action",
+	  "description": "Merge the merge request"
+	},{
+	  "name": "open",
+	  "file": "open.js",
+	  "type": "action",
+	  "description": "Open the merge request"
+	},{
+	  "name": "reject",
+	  "file": "reject.js",
+	  "type": "action",
+	  "description": "Reject the merge request"
+	}]
+	}

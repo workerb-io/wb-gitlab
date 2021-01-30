@@ -1,24 +1,25 @@
 {
-	"name": "branches",
-	"description": "branches description",
-	"scripts": [
-		{
-			"name": "remove",
-			"file": "remove.js",
-			"type": "action",
-			"description": "Remove the branch"
-		},
-		{
-			"name": "merge_request",
-			"file": "new_mr.js",
-			"type": "action",
-			"description": "Creates a new merge request from this branch"
-		},
-		{
-			"name": "open",
-			"file": "open.js",
-			"type": "action",
-			"description": "Open the branch"
-		}
-	]
-}
+	  "name": "option",
+	  "description": "",
+	  "scripts": [{
+	  "name": "new_mr",
+	  "file": "new_mr.js",
+	  "type": "action",
+	  "description": "Creates a new merge request from this branch"
+	},{
+	  "name": "new_sub_branch",
+	  "file": "new_sub_branch.js",
+	  "type": "action",
+	  "description": ""
+	},{
+	  "name": "open",
+	  "file": "open.js",
+	  "type": "action",
+	  "description": "Open the branch"
+	},{
+	  "name": "remove",
+	  "file": "remove.js",
+	  "type": "action",
+	  "description": "Remove the branch"
+	}]
+	}

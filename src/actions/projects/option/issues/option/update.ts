@@ -1,3 +1,4 @@
+// @description Update an issue
 import { updateIssue } from '../../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper'
 

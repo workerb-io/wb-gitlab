@@ -1,3 +1,4 @@
+// @description Create a new pipeline
 import { createNewPipeline } from '../../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../../utils/helper'
 

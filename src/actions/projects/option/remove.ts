@@ -1,3 +1,4 @@
+// @description Delete the project
 import { removeProject } from '../../../utils/api'
 import { decodeApiResponse, handleErrors } from '../../../utils/helper'
 
