@@ -12,9 +12,9 @@
 	  "type": "action",
 	  "description": "Setup Gitlab"
 	},{
-	  "name": "projects",
-	  "file": "projects",
+	  "name": "groups",
+	  "file": "groups",
 	  "type": "folder",
-	  "description": "List of projects"
+	  "description": "List of Groups / user"
 	}]
 	}

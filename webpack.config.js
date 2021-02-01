@@ -3,11 +3,17 @@ const CopyPlugin = require("copy-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const webpack = require("webpack");
 const helpers = require("./webpack.helpers.js");
-const WBMetaJsonGenerator = require("./plugins/index");
+const WBMetaJsonGenerator = require("meta-json-generator");
 
 const fileSystem = helpers.generateFS(`${__dirname}/src/actions`, "workerB");
 
 const entryFiles = helpers.generateEntryPaths(fileSystem.children);
+
+const mode = process.argv.filter(val => val.includes("--mode"));
+let environment = "production";
+if(mode.length > 0 && mode[0].includes("dev")) {
+  environment = "development";
+}
 
 const entryPaths = helpers
   .getFiles(entryFiles, ".ts")
@@ -17,11 +23,12 @@ const entryPaths = helpers
 const metaFiles = helpers.getFiles(entryFiles, ".json");
 
 const folderDescriptionList = [
-  {path: "/projects", description: "List of projects"},
-  {path: "/projects/option/branches", description: "List of branches"},
-  {path: "/projects/option/issues", description: "List of issues"},
-  {path: "/projects/option/merge_requests", description: "List of merge requests"},
-  {path: "/projects/option/pipelines", description: "List of pipelines"}
+  {path: "/groups", description: "List of Groups / user"},
+  {path: "/groups/option/projects", description: "List of projects"},
+  {path: "/groups/option/projects/option/branches", description: "List of branches"},
+  {path: "/groups/option/projects/option/issues", description: "List of issues"},
+  {path: "/groups/option/projects/option/merge_requests", description: "List of merge requests"},
+  {path: "/groups/option/projects/option/pipelines", description: "List of pipelines"}
 ];
 
 module.exports = {
@@ -56,6 +63,7 @@ module.exports = {
   },
   plugins: [
     new WBMetaJsonGenerator({
+      environment,
       package: "gitlab",
       packageDescription: "workerB package for gitlab.com",
       folderDescriptionList
