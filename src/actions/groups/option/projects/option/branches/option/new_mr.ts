@@ -1,6 +1,6 @@
 // @description Creates a new merge request from this branch
 import { createNewMR } from '../../../../../../../utils/api';
-import { BRANCHES, GITLAB, GROUPS, PROJECTS } from '../../../../../../../utils/constants';
+import { BRANCHES, GROUPS, PROJECTS } from '../../../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../../../utils/helper';
 import { BranchOptions, GroupOptions, ProjectOptions } from '../../../../../../../utils/interfaces';
 
@@ -34,7 +34,7 @@ if (options?.projects && options?.branches) {
 		} else {
 			notify('Merge request created', 'success', 3000);
 			open(result.response.web_url);
-			reIndex([GITLAB, GROUPS, groupName, PROJECTS, projectName, BRANCHES]);
+			reIndex([GROUPS, groupName, PROJECTS, projectName, BRANCHES]);
 		}
 	}
 }

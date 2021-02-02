@@ -1,6 +1,6 @@
 // @description Merge the merge request
 import { mergeMR } from '../../../../../../../utils/api';
-import { GITLAB, GROUPS, MERGE_REQUESTS, PROJECTS } from '../../../../../../../utils/constants';
+import { GROUPS, MERGE_REQUESTS, PROJECTS } from '../../../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../../../utils/helper';
 import { GroupOptions, MergeRequestOptions, ProjectOptions } from '../../../../../../../utils/interfaces';
 
@@ -24,7 +24,7 @@ if (options.projects && options.merge_requests) {
 			}
 		} else {
 			notify('Request Merged', 'success', 3000);
-			reIndex([GITLAB, GROUPS, groupName, PROJECTS, projectName, MERGE_REQUESTS]);
+			reIndex([GROUPS, groupName, PROJECTS, projectName, MERGE_REQUESTS]);
 		}
 	}
 }

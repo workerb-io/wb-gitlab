@@ -1,6 +1,6 @@
 // @description Remove a pipeline
 import { deletePipeline } from '../../../../../../../utils/api';
-import { GITLAB, GROUPS, PIPELINES, PROJECTS } from '../../../../../../../utils/constants';
+import { GROUPS, PIPELINES, PROJECTS } from '../../../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../../../utils/helper';
 import { GroupOptions, PipelineOptions, ProjectOptions } from '../../../../../../../utils/interfaces';
 
@@ -17,6 +17,6 @@ if (options?.projects && options?.pipelines) {
 		handleErrors(result.status, result.response.message ? result.response.message : result.response.error);
 	} else {
 		notify('Pipeline Removed', 'success', 3000);
-		reIndex([GITLAB, GROUPS, groupName, PROJECTS, projectName, PIPELINES]);
+		reIndex([GROUPS, groupName, PROJECTS, projectName, PIPELINES]);
 	}
 }

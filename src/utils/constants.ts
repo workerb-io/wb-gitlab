@@ -11,7 +11,6 @@ interface User {
 export const TYPE_GROUP: string = "GROUP";
 export const TYPE_USER: string = "USER";
 
-export const GITLAB: string = 'gitlab';
 export const GROUPS: string = 'groups';
 export const PROJECTS: string = 'projects';
 export const BRANCHES: string = 'branches';

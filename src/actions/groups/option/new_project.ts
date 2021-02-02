@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 // @description Create a new project
 import { createNewProject } from '../../../utils/api'
-import { GITLAB, GROUPS, PROJECTS, TYPE_GROUP } from '../../../utils/constants';
+import { GROUPS, PROJECTS, TYPE_GROUP } from '../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../utils/helper'
 import { AdditionalProjectOptions, GroupOptions, ProjectRequestData } from '../../../utils/interfaces';
 
@@ -61,5 +61,5 @@ if (projectResult.status >= 400) {
 } else {
 	notify('Project Created', 'success', 3000);
 	open(projectResult.response.http_url_to_repo);
-	reIndex([GITLAB, GROUPS, groupName, PROJECTS]);
+	reIndex([GROUPS, groupName, PROJECTS]);
 }

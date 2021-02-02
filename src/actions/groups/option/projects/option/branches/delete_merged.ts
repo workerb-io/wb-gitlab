@@ -1,6 +1,6 @@
 // @description Delete all merged branches
 import { deleteMergedBranches } from '../../../../../../utils/api';
-import { BRANCHES, GITLAB, GROUPS, PROJECTS } from '../../../../../../utils/constants';
+import { BRANCHES, GROUPS, PROJECTS } from '../../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../../utils/helper';
 import { GroupOptions, ProjectOptions } from '../../../../../../utils/interfaces';
 
@@ -15,6 +15,6 @@ if (options?.projects) {
 		handleErrors(result.status, result.response.message ? result.response.message : result.response.error);
 	} else {
 		notify('Branch removed', 'success', 300);
-		reIndex([GITLAB, GROUPS, groupName, PROJECTS, projectName, BRANCHES]);
+		reIndex([GROUPS, groupName, PROJECTS, projectName, BRANCHES]);
 	}
 }

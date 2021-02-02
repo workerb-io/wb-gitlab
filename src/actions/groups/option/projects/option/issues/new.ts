@@ -1,6 +1,6 @@
 // @description Create a new issue
 import { createNewIssue } from '../../../../../../utils/api';
-import { GITLAB, GROUPS, ISSUES, PROJECTS } from '../../../../../../utils/constants';
+import { GROUPS, ISSUES, PROJECTS } from '../../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../../utils/helper';
 import { GroupOptions, ProjectOptions } from '../../../../../../utils/interfaces';
 
@@ -24,6 +24,6 @@ if (options?.projects) {
 	} else {
 		notify('Issue Created', 'success', 3000);
 		open(result.response.web_url);
-		reIndex([GITLAB, GROUPS, groupName, PROJECTS, projectName, ISSUES]);
+		reIndex([GROUPS, groupName, PROJECTS, projectName, ISSUES]);
 	}
 }

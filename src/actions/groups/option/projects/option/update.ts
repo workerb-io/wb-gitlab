@@ -1,6 +1,6 @@
 // @description Update project description
 import { updateProject } from '../../../../../utils/api';
-import { GITLAB, GROUPS, PROJECTS } from '../../../../../utils/constants';
+import { GROUPS, PROJECTS } from '../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper';
 import { GroupOptions, ProjectOptions } from '../../../../../utils/interfaces';
 
@@ -22,6 +22,6 @@ if (options.projects) {
 	} else {
 		notify('Project Updated', 'success', 300);
 		open(projectUrl);
-		reIndex([GITLAB, GROUPS, groupName, PROJECTS]);
+		reIndex([GROUPS, groupName, PROJECTS]);
 	}
 }

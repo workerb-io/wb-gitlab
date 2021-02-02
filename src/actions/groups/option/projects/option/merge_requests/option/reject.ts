@@ -1,7 +1,7 @@
 // eslint-disable-next-line camelcase
 // @description Reject the merge request
 import { deleteMR } from '../../../../../../../utils/api';
-import { GITLAB, GROUPS, MERGE_REQUESTS, PROJECTS } from '../../../../../../../utils/constants';
+import { GROUPS, MERGE_REQUESTS, PROJECTS } from '../../../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../../../utils/helper';
 import { GroupOptions, MergeRequestOptions, ProjectOptions } from '../../../../../../../utils/interfaces';
 
@@ -18,6 +18,6 @@ if (options?.projects && options?.merge_requests) {
 		handleErrors(result.status, result.response.message);
 	} else {
 		notify('Merge Request Deleted', 'success', 3000);
-		reIndex([GITLAB, GROUPS, groupName, PROJECTS, projectName, MERGE_REQUESTS]);
+		reIndex([GROUPS, groupName, PROJECTS, projectName, MERGE_REQUESTS]);
 	}
 }

@@ -1,6 +1,6 @@
 // @description Remove the branch
 import { removeBranch } from '../../../../../../../utils/api';
-import { BRANCHES, GITLAB, GROUPS, PROJECTS } from '../../../../../../../utils/constants';
+import { BRANCHES, GROUPS, PROJECTS } from '../../../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../../../utils/helper';
 import { BranchOptions, GroupOptions, ProjectOptions } from '../../../../../../../utils/interfaces';
 
@@ -17,6 +17,6 @@ if (options?.projects && options.branches) {
 	} else {
 		notify('Branch removed', 'success', 3000);
 		open(projectUrl);
-		reIndex([GITLAB, GROUPS, groupName, PROJECTS, projectName, BRANCHES]);
+		reIndex([GROUPS, groupName, PROJECTS, projectName, BRANCHES]);
 	}
 }

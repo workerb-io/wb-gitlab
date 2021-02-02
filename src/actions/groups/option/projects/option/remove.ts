@@ -1,6 +1,6 @@
 // @description Delete the project
 import { removeProject } from '../../../../../utils/api'
-import { GITLAB, GROUPS, PROJECTS } from '../../../../../utils/constants';
+import { GROUPS, PROJECTS } from '../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../utils/helper'
 import { GroupOptions, ProjectOptions } from '../../../../../utils/interfaces'
 
@@ -15,6 +15,6 @@ if (options.projects) {
 		handleErrors(result.status, result.response.message ? result.response.message : result.response.error);
 	} else {
 		notify('Project Deleted', 'success', 3000);
-		reIndex([GITLAB, GROUPS, groupName, PROJECTS]);
+		reIndex([GROUPS, groupName, PROJECTS]);
 	}
 }

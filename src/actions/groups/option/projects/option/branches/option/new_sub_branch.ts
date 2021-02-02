@@ -1,6 +1,6 @@
 // @description Create New sub branch from current branch
 import { createNewBranch } from '../../../../../../../utils/api';
-import { BRANCHES, GITLAB, GROUPS, PROJECTS } from '../../../../../../../utils/constants';
+import { BRANCHES, GROUPS, PROJECTS } from '../../../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../../../utils/helper';
 import { BranchOptions, GroupOptions, ProjectOptions } from '../../../../../../../utils/interfaces';
 
@@ -25,6 +25,6 @@ if (options?.projects) {
 	} else {
 		notify('Branch Created', 'success', 3000);
 		open(result.response.web_url);
-		reIndex([GITLAB, GROUPS, groupName, PROJECTS, projectName, BRANCHES]);
+		reIndex([GROUPS, groupName, PROJECTS, projectName, BRANCHES]);
 	}
 }

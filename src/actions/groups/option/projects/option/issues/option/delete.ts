@@ -1,7 +1,7 @@
 // eslint-disable-next-line camelcase
 // @description Delete the issue
 import { deleteIssue } from '../../../../../../../utils/api';
-import { GITLAB, GROUPS, ISSUES, PROJECTS } from '../../../../../../../utils/constants';
+import { GROUPS, ISSUES, PROJECTS } from '../../../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../../../utils/helper';
 import { GroupOptions, IssueOptions, ProjectOptions } from '../../../../../../../utils/interfaces';
 
@@ -19,6 +19,6 @@ if (options?.projects && options?.issues) {
 	} else {
 		notify('Issue Deleted', 'success', 3000);
 		open(`${projectUrl}/-/issues`);
-		reIndex([GITLAB, GROUPS, groupName, PROJECTS, projectName, ISSUES]);
+		reIndex([GROUPS, groupName, PROJECTS, projectName, ISSUES]);
 	}
 }

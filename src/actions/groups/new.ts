@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 // @description Create a new group
 import { createNewGroup } from '../../utils/api'
-import { GITLAB, GROUPS } from '../../utils/constants';
+import { GROUPS } from '../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../utils/helper'
 import { NewGroupRequestBody } from '../../utils/interfaces';
 
@@ -56,7 +56,7 @@ if (!groupName) {
 	} else {
 		notify('Group Created', 'success', 3000);
 		open(result.response.web_url);
-		reIndex([GITLAB, GROUPS]);
+		reIndex([GROUPS]);
 	}
 }
 

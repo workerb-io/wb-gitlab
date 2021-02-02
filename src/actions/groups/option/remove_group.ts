@@ -1,6 +1,6 @@
 // @description Remove this group
 import { removeGroup } from "../../../utils/api";
-import { GITLAB, GROUPS } from "../../../utils/constants";
+import { GROUPS } from "../../../utils/constants";
 import { decodeApiResponse, handleErrors } from "../../../utils/helper";
 import { GroupOptions } from "../../../utils/interfaces";
 
@@ -14,6 +14,6 @@ if (options.groups) {
 		handleErrors(result.status, result.response.message ? result.response.message : result.response.error);
 	} else {
 		notify('Group Removed', 'success', 3000);
-		reIndex([GITLAB, GROUPS]);
+		reIndex([GROUPS]);
 	}
 }
