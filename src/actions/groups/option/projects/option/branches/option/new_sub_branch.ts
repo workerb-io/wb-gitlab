@@ -14,17 +14,25 @@ if (options?.projects) {
 	if (!branchName) {
 		branchName = prompt('Enter branch name');
 	}
-	const response = createNewBranch(projectId, {
-		branch: branchName,
-		ref: targetBranchName
-	});
-	const result = decodeApiResponse(response);
-
-	if (result.status >= 400) {
-		handleErrors(result.status, result.response.message);
+	if (!branchName) {
+		notify("Branch name is required", "error", 3000);
 	} else {
-		notify('Branch Created', 'success', 3000);
-		open(result.response.web_url);
-		reIndex([GROUPS, groupName, PROJECTS, projectName, BRANCHES]);
+		// replacing space with "-" from the name of the branch
+		// as it'llbe invalid for a branch name
+		branchName = branchName.split(" ").join("-");
+		const response = createNewBranch(projectId, {
+			branch: branchName,
+			ref: targetBranchName
+		});
+		const result = decodeApiResponse(response);
+
+		if (result.status >= 400) {
+			handleErrors(result.status, result.response.message);
+		} else {
+			notify('Branch Created', 'success', 3000);
+			// open(result.response.web_url);
+			reIndex([GROUPS, groupName, PROJECTS, projectName, BRANCHES]);
+		}
 	}
+
 }

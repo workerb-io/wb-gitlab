@@ -28,6 +28,7 @@ export const handleErrors = (status: number, response: any) => {
 		case 404:
 		case 405:
 		case 406:
+		case 409:
 		case 500:
 			notify(response, 'error', 3000)
 	}

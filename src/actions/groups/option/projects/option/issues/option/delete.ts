@@ -18,7 +18,7 @@ if (options?.projects && options?.issues) {
 		handleErrors(result.status, result.response.message);
 	} else {
 		notify('Issue Deleted', 'success', 3000);
-		open(`${projectUrl}/-/issues`);
+		// open(`${projectUrl}/-/issues`);
 		reIndex([GROUPS, groupName, PROJECTS, projectName, ISSUES]);
 	}
 }

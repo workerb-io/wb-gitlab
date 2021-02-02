@@ -1,4 +1,5 @@
 // @description Update an issue
+// @ignore
 import { updateIssue } from '../../../../../../../utils/api';
 import { GROUPS, ISSUES, PROJECTS } from '../../../../../../../utils/constants';
 import { decodeApiResponse, handleErrors } from '../../../../../../../utils/helper';
@@ -29,7 +30,7 @@ if (options.projects && options.issues) {
 			handleErrors(result.status, result.response.message ? result.response.message : result.response.error);
 		} else {
 			notify(`Issue ${newState} `, 'success', 3000);
-			open(result.response.web_url);
+			// open(result.response.web_url);
 			reIndex([GROUPS, groupName, PROJECTS, projectName, ISSUES]);
 		}
 	}

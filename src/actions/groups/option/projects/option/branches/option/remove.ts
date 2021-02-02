@@ -16,7 +16,7 @@ if (options?.projects && options.branches) {
 		handleErrors(result.status, result.response.message ? result.response.message : result.response.error);
 	} else {
 		notify('Branch removed', 'success', 3000);
-		open(projectUrl);
+		// open(projectUrl);
 		reIndex([GROUPS, groupName, PROJECTS, projectName, BRANCHES]);
 	}
 }

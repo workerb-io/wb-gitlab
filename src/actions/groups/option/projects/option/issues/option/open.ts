@@ -1,6 +1,4 @@
-import { IssueOptions } from "../../../../../../../utils/interfaces"
-
-// @description Open the issue
+// @description Open the issue in Gitlab
 if (options.issues) {
 	open(options.issues.html_url)
 } else {

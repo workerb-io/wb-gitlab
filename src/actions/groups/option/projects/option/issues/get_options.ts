@@ -14,12 +14,12 @@ export default function () {
 			return {};
 		}
 
-		const issues: Array<IssueOptions> = result.response.map((mr: GitlabIssueResponse) => {
+		const issues: Array<IssueOptions> = result.response.map((issue: GitlabIssueResponse) => {
 			const issueInfo: IssueOptions = {
-				name: mr.title,
-				html_url: mr.web_url,
-				id: mr.iid,
-				state: mr.state
+				name: issue.title,
+				html_url: issue.web_url,
+				id: issue.iid,
+				state: issue.state
 			};
 			return issueInfo;
 		});

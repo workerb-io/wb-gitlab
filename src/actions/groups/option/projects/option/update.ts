@@ -20,8 +20,8 @@ if (options.projects) {
 	if (result.status >= 400) {
 		handleErrors(result.status, result.response.message ? result.response.message : result.response.error);
 	} else {
-		notify('Project Updated', 'success', 300);
-		open(projectUrl);
+		notify('Project Description Updated', 'success', 300);
+		// open(projectUrl);
 		reIndex([GROUPS, groupName, PROJECTS]);
 	}
 }
