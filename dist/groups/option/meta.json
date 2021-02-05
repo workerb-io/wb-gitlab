@@ -1,0 +1,30 @@
+{
+	  "name": "option",
+	  "description": "",
+	  "scripts": [{
+	  "name": "get_options",
+	  "file": "get_options.js",
+	  "type": "action",
+	  "description": "Get options for selected group"
+	},{
+	  "name": "new_project",
+	  "file": "new_project.js",
+	  "type": "action",
+	  "description": "Create a new project"
+	},{
+	  "name": "remove_group",
+	  "file": "remove_group.js",
+	  "type": "action",
+	  "description": "Remove this group"
+	},{
+	  "name": "search_projects",
+	  "file": "search_projects.js",
+	  "type": "action",
+	  "description": "Search all projects"
+	},{
+	  "name": "projects",
+	  "file": "projects",
+	  "type": "folder",
+	  "description": "List of projects"
+	}]
+	}

@@ -1,0 +1,30 @@
+{
+	  "name": "option",
+	  "description": "",
+	  "scripts": [{
+	  "name": "close",
+	  "file": "close.js",
+	  "type": "action",
+	  "description": "Close the Issue"
+	},{
+	  "name": "delete",
+	  "file": "delete.js",
+	  "type": "action",
+	  "description": "Delete the issue"
+	},{
+	  "name": "get_options",
+	  "file": "get_options.js",
+	  "type": "action",
+	  "description": ""
+	},{
+	  "name": "open",
+	  "file": "open.js",
+	  "type": "action",
+	  "description": "Open the issue in Gitlab"
+	},{
+	  "name": "reopen",
+	  "file": "reopen.js",
+	  "type": "action",
+	  "description": "Reopen the Issue"
+	}]
+	}

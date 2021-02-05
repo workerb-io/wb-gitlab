@@ -1,0 +1,20 @@
+{
+	  "name": "option",
+	  "description": "",
+	  "scripts": [{
+	  "name": "merge",
+	  "file": "merge.js",
+	  "type": "action",
+	  "description": "Merge the merge request"
+	},{
+	  "name": "open",
+	  "file": "open.js",
+	  "type": "action",
+	  "description": "Open the merge request"
+	},{
+	  "name": "reject",
+	  "file": "reject.js",
+	  "type": "action",
+	  "description": "Reject the merge request"
+	}]
+	}

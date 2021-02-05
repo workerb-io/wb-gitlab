@@ -1,0 +1,25 @@
+{
+	  "name": "branches",
+	  "description": "List of branches",
+	  "scripts": [{
+	  "name": "delete_merged",
+	  "file": "delete_merged.js",
+	  "type": "action",
+	  "description": "Delete all merged branches"
+	},{
+	  "name": "get_options",
+	  "file": "get_options.js",
+	  "type": "action",
+	  "description": ""
+	},{
+	  "name": "open",
+	  "file": "open.js",
+	  "type": "action",
+	  "description": "Open branches"
+	},{
+	  "name": "option",
+	  "file": "option",
+	  "type": "folder",
+	  "description": ""
+	}]
+	}

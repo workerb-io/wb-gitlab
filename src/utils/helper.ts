@@ -1,23 +1,22 @@
 /* eslint-disable default-case */
 import { uri } from './constants'
+import { DecodeAPIResponse } from './interfaces'
 
 export function api(endpoint: string): string {
 	return `${uri}${endpoint}`
 }
 
-export function decodeApiResponse(apiResponse: any): { response: any; status: number } {
-	const result = apiResponse
-
-	if (!result.response) {
+export function decodeApiResponse(apiResponse: APIResponse): DecodeAPIResponse {
+	if (!apiResponse.response) {
 		return {
 			response: {},
-			status: result.status,
+			status: apiResponse.status,
 		}
 	}
 
 	return {
-		response: JSON.parse(result.response),
-		status: result.status,
+		response: JSON.parse(apiResponse.response),
+		status: apiResponse.status,
 	}
 }
 
@@ -29,6 +28,7 @@ export const handleErrors = (status: number, response: any) => {
 		case 404:
 		case 405:
 		case 406:
+		case 409:
 		case 500:
 			notify(response, 'error', 3000)
 	}

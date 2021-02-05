@@ -1,0 +1,25 @@
+{
+	  "name": "groups",
+	  "description": "List of Groups / user",
+	  "scripts": [{
+	  "name": "get_options",
+	  "file": "get_options.js",
+	  "type": "action",
+	  "description": "List all the projects and its options"
+	},{
+	  "name": "new",
+	  "file": "new.js",
+	  "type": "action",
+	  "description": "Create a new group"
+	},{
+	  "name": "search",
+	  "file": "search.js",
+	  "type": "action",
+	  "description": "Search all groups"
+	},{
+	  "name": "option",
+	  "file": "option",
+	  "type": "folder",
+	  "description": ""
+	}]
+	}

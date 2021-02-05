@@ -1,0 +1,20 @@
+{
+	  "name": "pipelines",
+	  "description": "List of pipelines",
+	  "scripts": [{
+	  "name": "get_options",
+	  "file": "get_options.js",
+	  "type": "action",
+	  "description": "Get all the pipelines and its actions"
+	},{
+	  "name": "run",
+	  "file": "run.js",
+	  "type": "action",
+	  "description": "Create a new pipeline"
+	},{
+	  "name": "option",
+	  "file": "option",
+	  "type": "folder",
+	  "description": ""
+	}]
+	}

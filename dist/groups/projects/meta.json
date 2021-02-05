@@ -1,0 +1,20 @@
+{
+	  "name": "projects",
+	  "description": "",
+	  "scripts": [{
+	  "name": "get_options",
+	  "file": "get_options.js",
+	  "type": "action",
+	  "description": "List all the projects and its options"
+	},{
+	  "name": "new_project",
+	  "file": "new_project.js",
+	  "type": "action",
+	  "description": "Create a new project"
+	},{
+	  "name": "search_projects",
+	  "file": "search_projects.js",
+	  "type": "action",
+	  "description": "Search all projects"
+	}]
+	}

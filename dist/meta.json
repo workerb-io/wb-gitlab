@@ -1,26 +1,20 @@
 {
-	"name": "gitlab",
-	"description": "workerB package for gitlab.com",
-	"icon": "https://raw.githubusercontent.com/workerb-io/wb-gitlab/master/src/actions/logo.png",
-	"sites": ["https://gitlab.com"],
-	"scripts": [
-		{
-			"name": "projects",
-			"file": "projects",
-			"type": "folder",
-			"description": "List of projects"
-		},
-		{
-			"name": "get_options",
-			"file": "get_options.js",
-			"type": "action",
-			"description": "get option"
-		},
-		{
-			"name": "setup",
-			"file": "setup.js",
-			"type": "action",
-			"description": "Setup Gitlab"
-		}
-	]
-}
+	  "name": "gitlab",
+	  "description": "workerB package for gitlab.com",
+	  "scripts": [{
+	  "name": "get_options",
+	  "file": "get_options.js",
+	  "type": "action",
+	  "description": "Get options for gitlab package"
+	},{
+	  "name": "setup",
+	  "file": "setup.js",
+	  "type": "action",
+	  "description": "Setup Gitlab"
+	},{
+	  "name": "groups",
+	  "file": "groups",
+	  "type": "folder",
+	  "description": "List of Groups / user"
+	}]
+	}
