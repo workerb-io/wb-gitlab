@@ -64,7 +64,7 @@ module.exports = {
   plugins: [
     new WBMetaJsonGenerator({
       environment,
-      package: "gitlab",
+      package: "Gitlab",
       packageDescription: "workerB package for gitlab.com",
       folderDescriptionList
     }),
