@@ -66,7 +66,7 @@ module.exports = {
       environment,
       package: "Gitlab",
       packageDescription: "workerB package for gitlab.com",
-      packageIcon: "https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png",      
+      packageIcon: "https://about.gitlab.com/images/press/logo/png/gitlab-icon-1-color-black-rgb.png",      
       sites: ["https://gitlab.com"],
       folderDescriptionList
     }),
