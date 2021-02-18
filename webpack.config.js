@@ -1,9 +1,8 @@
 const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
+const WBMetaJsonGenerator = require("wb-packager-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const webpack = require("webpack");
 const helpers = require("./webpack.helpers.js");
-const WBMetaJsonGenerator = require("meta-json-generator");
 
 const fileSystem = helpers.generateFS(`${__dirname}/src/actions`, "workerB");
 
@@ -23,12 +22,36 @@ const entryPaths = helpers
 const metaFiles = helpers.getFiles(entryFiles, ".json");
 
 const folderDescriptionList = [
-  {path: "/groups", description: "List of Groups / user"},
-  {path: "/groups/option/projects", description: "List of projects"},
-  {path: "/groups/option/projects/option/branches", description: "List of branches"},
-  {path: "/groups/option/projects/option/issues", description: "List of issues"},
-  {path: "/groups/option/projects/option/merge_requests", description: "List of merge requests"},
-  {path: "/groups/option/projects/option/pipelines", description: "List of pipelines"}
+  {
+    path: "/groups",
+    description: "List of Groups / user",
+    iconPath: "src/actions/groups/group_icons/group-icon.png"
+  },
+  {
+    path: "/groups/option/projects",
+    description: "List of projects",
+    iconPath: "src/actions/groups/option/projects/project_icons/project-icon.png"
+  },
+  {
+    path: "/groups/option/projects/option/branches",
+    description: "List of branches",
+    iconPath: "src/actions/groups/option/projects/option/branches/branch_icons/branch-icon.png"
+  },
+  {
+    path: "/groups/option/projects/option/issues", 
+    description: "List of issues",
+    iconPath: "src/actions/groups/option/projects/option/issues/issue_icons/issue-icon.png"
+  },
+  {
+    path: "/groups/option/projects/option/merge_requests",
+    description: "List of merge requests",
+    iconPath: "src/actions/groups/option/projects/option/merge_requests/mr_icons/mr-icon.png"
+  },
+  {
+    path: "/groups/option/projects/option/pipelines",
+    description: "List of pipelines",
+    iconPath: "src/actions/groups/option/projects/option/pipelines/pipeline_icons/pipeline-icon.png"
+  }
 ];
 
 module.exports = {
@@ -68,6 +91,7 @@ module.exports = {
       packageDescription: "workerB package for gitlab.com",
       packageIcon: "https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png",      
       sites: ["https://gitlab.com"],
+      readmeFile: "README.md",
       folderDescriptionList
     }),
     new webpack.DefinePlugin(helpers.envKeys),
