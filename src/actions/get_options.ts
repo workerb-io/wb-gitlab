@@ -4,7 +4,7 @@ import { token } from '../utils/constants'
 const returnOptions = () => {
 	if (!token) {
 		return JSON.stringify({
-			remove: ['groups'],
+			remove: ['groups', 'logout'],
 		})
 	}
 	return JSON.stringify({
