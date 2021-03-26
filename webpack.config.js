@@ -93,7 +93,7 @@ module.exports = {
     new WBMetaJsonGenerator({
       environment,
       package: "Gitlab",
-      packageDescription: "workerB package for gitlab.com",
+      packageDescription: "gitlab.com",
       packageIcon: "https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png",      
       sites: ["https://gitlab.com"],
       readmeFile: "README.md",
