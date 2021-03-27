@@ -29,7 +29,6 @@ export interface ProjectOptions {
 	name: string;
 	description: string;
 	html_url: string;
-	pipelines_url: string;
 }
 
 export interface BranchOptions {
