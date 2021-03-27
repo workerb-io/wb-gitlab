@@ -21,6 +21,7 @@ export default () => {
 				id: project.id,
 				identifier: project.id,
 				description: project.web_url,
+				pipelines_url: project.web_url + '/-/pipelines',
 			};
 			return projectInfo;
 		});
