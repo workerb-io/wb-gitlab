@@ -1,10 +1,13 @@
-// @description Logout from gitlab automation package
+// @description Logout
 
-setVars([
-	{
-		name: 'GITLAB_PERSONAL_TOKEN',
-		value: '',
-	},
-], { local: true });
-notify('Access token removed successfully', 'success', 3000);
-reIndex([]);
+setVars(
+	[
+		{
+			name: 'GITLAB_PERSONAL_TOKEN',
+			value: '',
+		},
+	],
+	{ local: true }
+)
+notify('Access token removed successfully', 'success', 3000)
+reIndex([])

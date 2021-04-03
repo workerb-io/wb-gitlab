@@ -28,33 +28,52 @@ const folderDescriptionList = [
     iconPath: "src/actions/groups/group_icons/group-icon.png"
   },
   {
+    path: "/groups/option",
+    defaultAction: "open"
+  },
+  {
     path: "/groups/option/projects",
     description: "List of projects",
     iconPath: "src/actions/groups/option/projects/project_icons/project-icon.png",
+  },
+  {
+    path: "/groups/option/projects/option",
     defaultAction: "open"
   },
   {
     path: "/groups/option/projects/option/branches",
     description: "List of branches",
     iconPath: "src/actions/groups/option/projects/option/branches/branch_icons/branch-icon.png",
+  },
+  {
+    path: "/groups/option/projects/option/branches/option",
     defaultAction: "open"
   },
   {
     path: "/groups/option/projects/option/issues", 
     description: "List of issues",
     iconPath: "src/actions/groups/option/projects/option/issues/issue_icons/issue-icon.png",
+  },
+  {
+    path: "/groups/option/projects/option/issues/option",
     defaultAction: "open"
   },
   {
     path: "/groups/option/projects/option/merge_requests",
     description: "List of merge requests",
     iconPath: "src/actions/groups/option/projects/option/merge_requests/mr_icons/mr-icon.png",
+  },
+  {
+    path: "/groups/option/projects/option/merge_requests/option",
     defaultAction: "open"
   },
   {
     path: "/groups/option/projects/option/pipelines",
     description: "List of pipelines",
     iconPath: "src/actions/groups/option/projects/option/pipelines/pipeline_icons/pipeline-icon.png",
+  },
+  {
+    path: "/groups/option/projects/option/pipelines/option",
     defaultAction: "open"
   }
 ];
